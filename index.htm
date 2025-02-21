@@ -1,34 +1,51 @@
+<!--
+    这是我Xingyuan55在21号晚上让AI写的网页，感觉更好看了一些qwq
+
+    styles/index.css 是 样式文件，就是把你的<style>标签里的内容独立到了这里
+
+    <nav class="navbar"> 是 导航栏，就是那个在页面顶部的导航栏
+        <div class="nav-links"> 是 导航链接，就是那个在导航栏中的链接
+        
+    <div class="hero"> 是 英雄部分，就是那个在页面居中的巨大标题和按钮
+        <button class="cta-button"> 是 主要行动按钮，就是那个在页面居中的按钮
+
+
+    我不会html，只能让AI这样改，个人觉得还不错，就放上来了。
+
+    另外，我建议以后写子页面的时候，可以使用markdown格式，这样更方便好写。
+
+            敬上
+-->
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>化联</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('background.jpg'); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: rgba(0, 0, 0, 0.8); 
-            color: rgba(20, 20, 0);
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            font-size: 48px;
-            margin-top: 20%;
-        }
-        h2 {
-            font-size: 24px;
-            margin-bottom: 50px;
-        }
-    </style>
+    <title>化学联合协会</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
-    <h1>化联</h1>
-    <h2>ChemUnionAsso-CN</h2>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#">首页</a>
+            <a href="about.md">关于我们</a>
+            <a href="blog.md">博客与文章</a>
+            <a href="contact.md">联系方式</a>
+            <!--
+                这些我都临时乱弄的，你改就好
+
+                "#" 代表当前页面，不进行跳转
+            -->
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>化学联合协会</h1>
+        <h2>ChemUnionAsso-CN</h2>
+        <a href="#" class="cta-button">了解更多（还没写）</a>
+    </div>
 </body>
 </html>
