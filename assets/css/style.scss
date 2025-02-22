@@ -16,13 +16,14 @@
 
 /* 修改页眉中的标题样式 */
 .project-name {
-    font-size: 2rem;  /* 减小标题字体 */
+    font-size: 1.5rem;  /* 减小标题字体 */
     margin: 0.5rem 0;  /* 减小标题间距 */
 }
 
 .project-tagline {
     font-size: 1.2rem;  /* 减小副标题字体 */
     margin: 0.5rem 0;  /* 减小副标题间距 */
+    display: none;
 }
 
 /* 如果想完全隐藏页眉 */

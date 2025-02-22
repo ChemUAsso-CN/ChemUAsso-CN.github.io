@@ -1,6 +1,6 @@
 ---
-title: [化学联合协会](index.htm) - [关于我们](#)
-description: 250202b9
+title: 关于我们
+description: 250202b10
 ---
 
 # [化学联合协会](index.htm) - [关于我们](#)
