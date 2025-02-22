@@ -1,0 +1,34 @@
+---
+--- 
+
+@import "{{ site.theme }}";
+
+/* 修改页眉样式 */
+.page-header {
+    padding: 1rem;
+    /* 减小内边距 */
+    background: linear-gradient(120deg, #155799, #159957);
+    /* 保持渐变背景 */
+
+    /* 如果想完全自定义背景 */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../background.jpg'); */
+    /* background-size: cover; */
+}
+
+/* 修改页眉中的标题样式 */
+.project-name {
+    font-size: 2rem;
+    /* 减小标题字体 */
+    margin: 0.5rem 0;
+    /* 减小标题间距 */
+}
+
+.project-tagline {
+    font-size: 1.2rem;
+    /* 减小副标题字体 */
+    margin: 0.5rem 0;
+    /* 减小副标题间距 */
+}
+
+/* 如果想完全隐藏页眉 */
+/* .page-header { display: none; } */
