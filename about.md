@@ -1,6 +1,6 @@
 ---
 title: 关于我们
-description: 化学联合协会简介
+description: 250202b8
 ---
 
 [化学联合协会](index.htm) - [关于我们](#)
