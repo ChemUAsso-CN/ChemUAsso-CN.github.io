@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>化学联合协会</title>
+        <link>https://ChemUAsso.github.io/</link>
+        <description>Recent content on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 23 Feb 2025 17:47:09 +0800</lastBuildDate><atom:link href="https://ChemUAsso.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Posts</title>
+        <link>https://ChemUAsso.github.io/posts/</link>
+        <pubDate>Sun, 23 Feb 2025 17:47:09 +0800</pubDate>
+        
+        <guid>https://ChemUAsso.github.io/posts/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会&#34;&gt;化学联合协会
+&lt;/h1&gt;&lt;p&gt;250223a Hugo测试&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
