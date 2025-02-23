@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>He&#39;che on 化学联合协会</title>
+        <link>http://localhost:1313/categories/heche/</link>
+        <description>Recent content in He&#39;che on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright><atom:link href="http://localhost:1313/categories/heche/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

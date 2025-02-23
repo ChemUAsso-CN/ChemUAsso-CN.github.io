@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>化联 - ChemUnionAsso-CN</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('C:/Users/MogicBook/Desktop/ChemUnionAsso-CN.github.io/background.jpg'); /* 使用绝对路径 */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5; /* 调整背景图片透明度 */
+            z-index: -1; /* 确保背景在所有内容之后 */
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* 确保导航栏在最上层 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #007BFF;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            position: relative;
+            z-index: 10; /* 确保内容区域在背景之上 */
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            z-index: 10; /* 确保页脚在背景之上 */
+        }
+        /* 动画效果 */
+        .animated {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        body.onload .animated {
+            opacity: 1;
+        }
+        /* 新增样式 */
+        .news, .team, .partners, .faq {
+            margin-bottom: 40px;
+        }
+        .news-item, .team-member, .partner, .faq-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="navbar">
+        <a href="#home">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#services">服务</a>
+        <a href="#news">新闻动态</a>
+        <a href="#team">团队介绍</a>
+        <a href="#partners">合作机会</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">联系我们</a>
+    </div>
+
+    <div class="content">
+        <h1>化联</h1>
+        <p>ChemUnionAsso-CN - 连接化学，共创未来。</p>
+
+        <div id="about" class="section">
+            <h2>关于化联</h2>
+            <p>化联成立于XXXX年，是一家专注于化学领域的研究和开发的机构。我们的使命是通过化学的力量改善人们的生活。</p>
+            <p>我们的团队由一群对化学充满热情的科学家和研究人员组成，他们在各自的领域拥有丰富的经验和知识。</p>
+        </div>
+
+        <div id="services" class="section">
+            <h2>我们的服务</h2>
+            <p>化联提供广泛的服务，包括但不限于：</p>
+            <ul>
+                <li>化学研究和开发</li>
+                <li>教育和培训</li>
+                <li>实验室服务</li>
+                <li>化学产品开发</li>
+                <li>技术咨询和支持</li>
+            </ul>
+        </div>
+
+        <div id="news" class="section news">
+            <h2>新闻动态</h2>
+            <div class="news-item">
+                <h3>最新研究成果发布</h3>
+                <p>2024年2月23日 - 化联在XXXX领域取得了重要突破，发布了最新的研究成果。</p>
+            </div>
+            <div class="news-item">
+                <h3>化学研讨会邀请</h3>
+                <p>2024年3月15日 - 化联将举办一场关于XXXX的化学研讨会，欢迎各位同行参加。</p>
+            </div>
+        </div>
+
+        <div id="team" class="section team">
+            <h2>团队介绍</h2>
+            <div class="team-member">
+                <h3>张三</h3>
+                <p>首席科学家，专注于XXXX领域研究。</p>
+            </div>
+            <div class="team-member">
+                <h3>李四</h3>
+                <p>实验室主任，负责实验室的日常运营和管理。</p>
+            </div>
+        </div>
+
+        <div id="partners" class="section partners">
+            <h2>合作机会</h2>
+            <p>化联正在寻找合作伙伴，共同开发XXXX项目。如果您对此感兴趣，请与我们联系。</p>
+            <a href="#contact" class="button">立即联系</a>
+        </div>
+
+        <div id="faq" class="section faq">
+            <h2>常见问题</h2>
+            <div class="faq-item">
+                <h3>化联的主要研究方向是什么？</h3>
+                <p>化联主要专注于XXXX领域的研究。</p>
+            </div>
+            <div class="faq-item">
+                <h3>如何加入化联的团队？</h3>
+                <p>请将您的简历发送到info@chemunionasso-cn.com，我们会尽快与您联系。</p>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>联系我们</h2>
+            <p>如果您对我们的服务感兴趣或有任何问题，请通过以下方式联系我们：</p>
+            <p>电话：123-456-7890</p>
+            <p>邮箱：info@chemunionasso-cn.com</p>
+            <p>地址：XXXX市XXXX区XXXX路XX号</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 化联</p>
+    </div>
+</body>
+</html>

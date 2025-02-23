@@ -13,3 +13,4 @@ draft = false
 
 - [mail:dus0963@outlook.com](mailto:dus0963@outlook.com)
 - [mail:ChemUnionAsso@outlook.com](mailto:ChemUnionAsso@outlook.com)
+- Xingyuan55微信：`xingyuan55awa`，请说明来意。
