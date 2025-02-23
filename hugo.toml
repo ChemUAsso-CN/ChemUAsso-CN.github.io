@@ -2,3 +2,21 @@ baseURL = 'https://ChemUAsso.github.io/'
 languageCode = 'zh-cn'
 title = '化学联合协会'
 theme = 'hugo-theme-stack'
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "关于我们"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "博客与文章"
+    url = "/blog/"
+    weight = 3
+  [[menu.main]]
+    name = "联系方式"
+    url = "/contact/"
+    weight = 4

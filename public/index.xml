@@ -2,18 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>化学联合协会</title>
-        <link>https://ChemUAsso.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 23 Feb 2025 17:47:09 +0800</lastBuildDate><atom:link href="https://ChemUAsso.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 23 Feb 2025 17:47:09 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Posts</title>
-        <link>https://ChemUAsso.github.io/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <pubDate>Sun, 23 Feb 2025 17:47:09 +0800</pubDate>
         
-        <guid>https://ChemUAsso.github.io/posts/</guid>
+        <guid>http://localhost:1313/posts/</guid>
         <description>&lt;h1 id=&#34;化学联合协会&#34;&gt;化学联合协会
 &lt;/h1&gt;&lt;p&gt;250223a Hugo测试&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>关于我们</title>
+        <link>http://localhost:1313/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/about/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;化学联合协会是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团，成立至今 10 余年，在这里可以探讨解决化学及其他问题，分享实验视频、发现和去世(?)、交换化学药品，至今已有上百成员和很多群聊。&lt;/p&gt;
+&lt;p&gt;（等待有文采的你补充）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>博客与文章</title>
+        <link>http://localhost:1313/blog/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---博客与文章&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;博客与文章&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;投稿列表&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;（等待有文采的你）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>联系方式</title>
+        <link>http://localhost:1313/contact/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/contact/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;不告诉你~&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;发送邮件至：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:du0963@outlook.com&#34; &gt;mail:du0963@outlook.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:ChemUnionAsso@outlook.com&#34; &gt;mail:ChemUnionAsso@outlook.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         
