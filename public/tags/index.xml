@@ -2,9 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 化学联合协会</title>
-        <link>https://ChemUAsso.github.io/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Recent content in Tags on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language><atom:link href="https://ChemUAsso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright>
+        <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Auth: 碱式醋酸铅</title>
+        <link>http://localhost:1313/tags/auth-%E7%A2%B1%E5%BC%8F%E9%86%8B%E9%85%B8%E9%93%85/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/auth-%E7%A2%B1%E5%BC%8F%E9%86%8B%E9%85%B8%E9%93%85/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>三草酸合铁酸钾</title>
+        <link>http://localhost:1313/tags/%E4%B8%89%E8%8D%89%E9%85%B8%E5%90%88%E9%93%81%E9%85%B8%E9%92%BE/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%E4%B8%89%E8%8D%89%E9%85%B8%E5%90%88%E9%93%81%E9%85%B8%E9%92%BE/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>产物制作</title>
+        <link>http://localhost:1313/tags/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>四氯络锰酸胍</title>
+        <link>http://localhost:1313/tags/%E5%9B%9B%E6%B0%AF%E7%BB%9C%E9%94%B0%E9%85%B8%E8%83%8D/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%E5%9B%9B%E6%B0%AF%E7%BB%9C%E9%94%B0%E9%85%B8%E8%83%8D/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>试剂</title>
+        <link>http://localhost:1313/tags/%E8%AF%95%E5%89%82/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%E8%AF%95%E5%89%82/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

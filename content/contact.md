@@ -11,5 +11,5 @@ draft = false
 
 发送邮件至：
 
-- [mail:du0963@outlook.com](mailto:du0963@outlook.com)
+- [mail:dus0963@outlook.com](mailto:dus0963@outlook.com)
 - [mail:ChemUnionAsso@outlook.com](mailto:ChemUnionAsso@outlook.com)
