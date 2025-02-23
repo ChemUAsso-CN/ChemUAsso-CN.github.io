@@ -1,7 +1,7 @@
 baseURL = 'https://ChemUAsso.github.io/'
 languageCode = 'zh-cn'
 title = '化学联合协会'
-theme = 'hugo-theme-stack'
+theme = 'kagome'
 copyright = 'ChemUnionAsso-CN'
 
 [menu]

@@ -64,8 +64,6 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/%E6%8C%87%E5%8D%97/</loc>
-  </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url>
 </urlset>
