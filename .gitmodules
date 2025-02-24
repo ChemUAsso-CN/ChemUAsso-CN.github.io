@@ -10,6 +10,3 @@
 [submodule "themes/maupassant"]
 	path = themes/maupassant
 	url = https://github.com/flysnow-org/maupassant-hugo
-[submodule "themes/kagome"]
-	path = themes/kagome
-	url = https://github.com/miiiku/hugo-theme-kagome

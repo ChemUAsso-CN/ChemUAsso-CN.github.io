@@ -117,12 +117,13 @@ jobs:
               // 清理和格式化元数据
               const cleanText = (text) => {
                 if (!text) return '';
+                // 保留内部空格，只处理特殊字符
                 return text
-                  .replace(/"/g, '\\"')     // 转义引号
-                  .replace(/\(/g, '\\(')    // 转义左括号
-                  .replace(/\)/g, '\\)')    // 转义右括号
-                  .replace(/:/g, '\\:')     // 转义冒号
-                  .trim();                  // 只清理首尾空格，保留内部空格
+                  .replace(/"/g, '\\"')        // 转义引号
+                  .replace(/\(/g, '\\(')       // 转义左括号
+                  .replace(/\)/g, '\\)')       // 转义右括号
+                  .replace(/:/g, '\\:')        // 转义冒号
+                  .replace(/^\s+|\s+$/g, '');  // 只清理首尾空格
               };
 
               const cleanTitle = cleanText(meta.title || '');
@@ -143,11 +144,11 @@ jobs:
               // 生成 Front Matter
               const frontMatterContent = [
                 '---',
-                `title: "${cleanTitle}"`,
+                `title: "${cleanTitle}"`,      // 标题会保留内部空格
                 `date: ${date}`,
                 `description: "${cleanDesc}"`,
-                `categories: [${formatArray(meta.categories)}]`,  // 格式化分类
-                `tags: [${formatArray(meta.tags)}]`,             // 格式化标签
+                `categories: [${formatArray(meta.categories)}]`,
+                `tags: [${formatArray(meta.tags)}]`,
                 `author: "${cleanAuthor}"`,
                 'draft: false',
                 '---'
