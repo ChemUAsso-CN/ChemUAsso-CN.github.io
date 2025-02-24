@@ -40,120 +40,138 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const issue = context.payload.issue;
-            const body = issue.body;
+            try {
+              const issue = context.payload.issue;
+              const body = issue.body;
 
-            // 提取 Front Matter 和正文
-            const matches = body.match(/---\n([\s\S]*?)\n---\n\n([\s\S]*)/);
-            if (!matches) {
+              // 提取 Front Matter 和正文
+              const matches = body.match(/---\n([\s\S]*?)\n---\n\n([\s\S]*)/);
+              if (!matches) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: '❌ 文章格式不正确，请使用正确的模板格式。'
+                });
+                return;
+              }
+
+              const frontMatter = matches[1];
+              const content = matches[2];
+
+              // 解析 Front Matter
+              const meta = {};
+              frontMatter.split('\n').forEach(line => {
+                // 忽略注释行
+                if (line.includes('#')) {
+                  line = line.split('#')[0];
+                }
+                // 替换中文标点为英文标点
+                line = line.replace(/：/g, ':')
+                         .replace(/，/g, ',')
+                         .replace(/（/g, '(')
+                         .replace(/）/g, ')');
+                
+                const [key, ...value] = line.split(':').map(s => s.trim());
+                if (key && value.length > 0) {
+                  meta[key] = value.join(':').trim();
+                }
+              });
+
+              // 分类映射
+              const categoryMap = {
+                '公告': 'announcement',
+                '产物制作': 'product',
+                '理论知识': 'theory',
+                '协会讨论': 'discussion',
+                '其他': 'uncategorized',
+                'announcement': 'announcement',
+                'product': 'product',
+                'theory': 'theory',
+                'experiment': 'experiment',
+                'discussion': 'discussion',
+                'uncategorized': 'uncategorized'
+              };
+
+              // 生成文件名
+              const date = new Date().toISOString().split('T')[0];
+              const rawCategory = (meta.categories || '')
+                .replace(/[\[\]"]/g, '')
+                .split(',')[0]
+                .trim();
+              
+              if (!rawCategory) {
+                throw new Error('Category is required');
+              }
+
+              const category = categoryMap[rawCategory];
+              if (!category) {
+                throw new Error(`Invalid category: ${rawCategory}`);
+              }
+
+              const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
+              console.log('Generated fileName:', fileName);
+
+              // 清理和格式化元数据
+              const cleanText = (text) => {
+                if (!text) return '';
+                return text
+                  .replace(/"/g, '\\"')     // 转义引号
+                  .replace(/\(/g, '\\(')    // 转义左括号
+                  .replace(/\)/g, '\\)')    // 转义右括号
+                  .replace(/:/g, '\\:');    // 转义冒号
+              };
+
+              const cleanTitle = cleanText(meta.title || '');
+              const cleanDesc = cleanText(meta.description || '');
+              const cleanTags = meta.tags || '[]';
+              const cleanAuthor = cleanText(meta.author || '');
+
+              // 格式化分类和标签
+              const formatArray = (str) => {
+                if (!str) return '[]';
+                return str
+                  .replace(/[\[\]]/g, '')  // 移除现有的方括号
+                  .split(',')              // 分割成数组
+                  .map(item => `"${item.trim()}"`)  // 给每项添加引号并去除空格
+                  .join(', ');             // 用逗号和空格连接
+              };
+
+              // 生成 Front Matter
+              const frontMatterContent = [
+                '---',
+                `title: "${cleanTitle}"`,
+                `date: ${date}`,
+                `description: "${cleanDesc}"`,
+                `categories: [${formatArray(meta.categories)}]`,  // 格式化分类
+                `tags: [${formatArray(meta.tags)}]`,             // 格式化标签
+                `author: "${cleanAuthor}"`,
+                'draft: false',
+                '---'
+              ].join('\n');
+
+              // 设置输出
+              core.setOutput('fileName', fileName);
+              core.setOutput('content', `${frontMatterContent}\n\n${content}`);
+
+            } catch (error) {
+              console.error('Error:', error);
+              core.setFailed(error.message);
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: issue.number,
-                body: '❌ 文章格式不正确，请使用正确的模板格式。'
+                issue_number: context.payload.issue.number,
+                body: `❌ 处理文章时出错：${error.message}`
               });
-              return;
             }
-
-            const frontMatter = matches[1];
-            const content = matches[2];
-
-            // 解析 Front Matter
-            const meta = {};
-            frontMatter.split('\n').forEach(line => {
-              // 忽略注释行
-              if (line.includes('#')) {
-                line = line.split('#')[0];
-              }
-              // 替换中文标点为英文标点
-              line = line.replace(/：/g, ':')
-                       .replace(/，/g, ',')
-                       .replace(/（/g, '(')
-                       .replace(/）/g, ')');
-              
-              const [key, ...value] = line.split(':').map(s => s.trim());
-              if (key && value.length > 0) {
-                meta[key] = value.join(':').trim();
-              }
-            });
-
-            // 分类映射
-            const categoryMap = {
-              '公告': 'announcement',
-              '产物制作': 'product',
-              '理论知识': 'theory',
-              '协会讨论': 'discussion',
-              '其他': 'uncategorized',
-              'announcement': 'announcement',
-              'product': 'product',
-              'theory': 'theory',
-              'experiment': 'experiment',
-              'discussion': 'discussion',
-              'uncategorized': 'uncategorized'
-            };
-
-            // 生成文件名
-            const date = new Date().toISOString().split('T')[0];
-            const rawCategory = (meta.categories || '')
-              .replace(/[\[\]"]/g, '')
-              .split(',')[0]
-              .trim();
-            const category = categoryMap[rawCategory] || 'uncategorized';
-
-            // 确保 fileName 不为空
-            if (!category || !date || !issue.number) {
-              throw new Error('Missing required fields for file name');
-            }
-
-            const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
-
-            // 验证 fileName
-            console.log('Generated fileName:', fileName);
-
-            // 清理和格式化元数据
-            const cleanText = (text) => {
-              if (!text) return '';
-              return text
-                .replace(/"/g, '\\"')     // 转义引号
-                .replace(/\(/g, '\\(')    // 转义左括号
-                .replace(/\)/g, '\\)')    // 转义右括号
-                .replace(/:/g, '\\:');    // 转义冒号
-            };
-
-            const cleanTitle = cleanText(meta.title || '');
-            const cleanDesc = cleanText(meta.description || '');
-            const cleanTags = meta.tags || '[]';
-            const cleanAuthor = cleanText(meta.author || '');
-
-            // 格式化分类和标签
-            const formatArray = (str) => {
-              if (!str) return '[]';
-              return str
-                .replace(/[\[\]]/g, '')  // 移除现有的方括号
-                .split(',')              // 分割成数组
-                .map(item => `"${item.trim()}"`)  // 给每项添加引号并去除空格
-                .join(', ');             // 用逗号和空格连接
-            };
-
-            // 生成 Front Matter
-            const frontMatterContent = [
-              '---',
-              `title: "${cleanTitle}"`,
-              `date: ${date}`,
-              `description: "${cleanDesc}"`,
-              `categories: [${formatArray(meta.categories)}]`,  // 格式化分类
-              `tags: [${formatArray(meta.tags)}]`,             // 格式化标签
-              `author: "${cleanAuthor}"`,
-              'draft: false',
-              '---'
-            ].join('\n');
-
-            // 输出结果供后续步骤使用
-            core.setOutput('fileName', fileName);
-            core.setOutput('content', `${frontMatterContent}\n\n${content}`);
 
       - name: Create article file
+        if: steps.extract.outputs.fileName != ''
         run: |
+          if [ -z "${{ steps.extract.outputs.fileName }}" ]; then
+            echo "Error: fileName is empty"
+            exit 1
+          fi
           echo "Creating file: ${{ steps.extract.outputs.fileName }}"
           mkdir -p "$(dirname "${{ steps.extract.outputs.fileName }}")"
           echo "${{ steps.extract.outputs.content }}" > "${{ steps.extract.outputs.fileName }}"
