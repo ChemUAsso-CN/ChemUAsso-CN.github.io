@@ -135,21 +135,35 @@ jobs:
           git commit -m "Add article from issue #${{ github.event.issue.number }}"
           git push
 
+      # 触发 Hugo 部署工作流
+      - name: Trigger Hugo deployment
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'hugo.yaml',
+              ref: 'main'
+            });
+
       - name: Comment on issue
         uses: actions/github-script@v6
         with:
           script: |
-            const category = '${{ steps.extract.outputs.fileName }}'.split('/')[2];  // 获取分类名
-            const filename = '${{ steps.extract.outputs.fileName }}'.split('/').pop().replace('.md', '');  // 获取文件名（不含扩展名）
-
+            const category = '${{ steps.extract.outputs.fileName }}'.split('/')[2];
+            const filename = '${{ steps.extract.outputs.fileName }}'.split('/').pop().replace('.md', '');
+            
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              body: '✅ 文章已成功转换并发布！\n\n您可以在网站上查看：' +
+              body: '✅ 文章已成功转换并提交！\n\n' +
+                    '⏳ 网站正在更新中，请等待 1-2 分钟后访问：\n' +
                     `https://chemuasso-cn.github.io/posts/${category}/${filename}/`
             });
-
+            
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
