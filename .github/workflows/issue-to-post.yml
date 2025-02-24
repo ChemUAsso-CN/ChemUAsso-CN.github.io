@@ -140,7 +140,7 @@ jobs:
                 categories = [];
               }
 
-              // 处理标签，恢复 auth: 标签的空格
+              // 处理标签，保持原样即可
               let tags = [];
               try {
                 const tagsStr = meta.tags || '[]';
@@ -148,7 +148,7 @@ jobs:
                   .map(tag => {
                     // 只处理 auth: 标签
                     if (tag.startsWith('auth:')) {
-                      return tag.replace('auth:', 'auth: ');
+                      return tag.replace('auth:', 'auth:');
                     }
                     return tag;
                   });
