@@ -2,7 +2,8 @@ name: Convert Issue to Post
 
 on:
   issues:
-    types: [labeled, opened]
+    # 只在创建 issue 时触发
+    types: [opened]
 
 # 添加工作流级别的权限
 permissions:
@@ -13,8 +14,8 @@ permissions:
 jobs:
   convert:
     name: Convert Issue to Post
-    if: |
-      contains(github.event.issue.labels.*.name, 'article')
+    # 只在 issue 有 article 标签时运行
+    if: contains(github.event.issue.labels.*.name, 'article')
     runs-on: ubuntu-latest
     steps:
       - name: Check duplicate run
@@ -98,10 +99,26 @@ jobs:
                 const [key, ...values] = line.split(':').map(s => s.trim());
                 if (key && values.length > 0) {
                   const value = values.join(':').trim();
-                  // 移除引号和方括号
-                  meta[key] = value.replace(/^["'\[]|["'\]]$/g, '');
+                  if (key === 'categories' || key === 'tags') {
+                    // 保持数组格式
+                    meta[key] = value;
+                  } else {
+                    // 移除其他字段的引号
+                    meta[key] = value.replace(/^["']|["']$/g, '');
+                  }
                 }
               });
+
+              // 解析 categories 来确定类型
+              let categories = [];
+              try {
+                // 尝试解析 categories 字符串为数组
+                const categoriesStr = meta.categories || '[]';
+                categories = JSON.parse(categoriesStr.replace(/'/g, '"'));
+              } catch (e) {
+                console.error('解析 categories 失败:', e);
+                categories = [];
+              }
 
               // 生成文件名
               const date = new Date();
@@ -109,13 +126,12 @@ jobs:
               const number = issue.number;
               
               // 根据 categories 确定文章类型
-              const categories = meta.categories ? meta.categories.split(',').map(c => c.trim()) : [];
               const type = categories.includes('产物制作') ? 'product' : 'announcement';
               
               // 构建完整路径
               const path = `content/posts/${type}/${dateStr}-${number}.md`;
 
-              // 生成新的 Front Matter
+              // 生成新的 Front Matter，保持数组格式
               const frontMatterContent = [
                 '---',
                 `title: "${meta.title || ''}"`,
