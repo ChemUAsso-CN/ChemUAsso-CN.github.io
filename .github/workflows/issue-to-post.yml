@@ -72,46 +72,31 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 文章格式不正确，请使用正确的模板格式。'
                 });
-                core.setOutput('result', 'invalid_format');
                 return;
               }
 
               const frontMatter = matches[1];
               const content = matches[2];
 
+              // 清理和格式化文本
+              const cleanText = (text) => {
+                if (!text) return '';
+                return text
+                  .replace(/"/g, '\\"')        // 转义引号
+                  .replace(/\(/g, '\\(')       // 转义左括号
+                  .replace(/\)/g, '\\)')       // 转义右括号
+                  .replace(/:/g, '\\:')        // 转义冒号
+                  .replace(/^\s+|\s+$/g, '');  // 只清理首尾空格
+              };
+
               // 解析 Front Matter
               const meta = {};
               frontMatter.split('\n').forEach(line => {
-                // 忽略注释行
-                if (line.includes('#')) {
-                  line = line.split('#')[0];
-                }
-                // 替换中文标点为英文标点
-                line = line.replace(/：/g, ':')
-                         .replace(/，/g, ',')
-                         .replace(/（/g, '(')
-                         .replace(/）/g, ')');
-                
                 const [key, ...value] = line.split(':').map(s => s.trim());
                 if (key && value.length > 0) {
-                  meta[key] = value.join(':').trim();
+                  meta[key] = value.join(':').trim().replace(/^["']|["']$/g, '');
                 }
               });
-
-              // 分类映射
-              const categoryMap = {
-                '公告': 'announcement',
-                '产物制作': 'product',
-                '理论知识': 'theory',
-                '协会讨论': 'discussion',
-                '其他': 'uncategorized',
-                'announcement': 'announcement',
-                'product': 'product',
-                'theory': 'theory',
-                'experiment': 'experiment',
-                'discussion': 'discussion',
-                'uncategorized': 'uncategorized'
-              };
 
               // 生成文件名
               const date = new Date();
@@ -122,46 +107,23 @@ jobs:
               const type = issue.labels.find(l => l.name === 'product') ? 'product' : 'announcement';
               
               // 构建完整路径
-              const path = `content/posts/${type}/${dateStr}-${number}.md`;  // 添加.md后缀
-              
-              // 调试输出
-              console.log('Generated post path:', path);
+              const path = `content/posts/${type}/${dateStr}-${number}.md`;
 
-              // 清理和格式化元数据
-              const cleanText = (text) => {
-                if (!text) return '';
-                // 保留内部空格，只处理特殊字符
-                return text
-                  .replace(/"/g, '\\"')        // 转义引号
-                  .replace(/\(/g, '\\(')       // 转义左括号
-                  .replace(/\)/g, '\\)')       // 转义右括号
-                  .replace(/:/g, '\\:')        // 转义冒号
-                  .replace(/^\s+|\s+$/g, '');  // 只清理首尾空格
-              };
-
+              // 清理标题和描述
               const cleanTitle = cleanText(meta.title || '');
               const cleanDesc = cleanText(meta.description || '');
+              const cleanCategories = meta.categories || '[]';
               const cleanTags = meta.tags || '[]';
               const cleanAuthor = cleanText(meta.author || '');
-
-              // 格式化分类和标签
-              const formatArray = (str) => {
-                if (!str) return '[]';
-                return str
-                  .replace(/[\[\]]/g, '')  // 移除现有的方括号
-                  .split(',')              // 分割成数组
-                  .map(item => `"${item.trim()}"`)  // 给每项添加引号并去除空格
-                  .join(', ');             // 用逗号和空格连接
-              };
 
               // 生成 Front Matter
               const frontMatterContent = [
                 '---',
-                `title: "${cleanTitle}"`,      // 标题会保留内部空格
+                `title: "${cleanTitle}"`,
                 `date: ${dateStr}`,
                 `description: "${cleanDesc}"`,
-                `categories: [${formatArray(meta.categories)}]`,
-                `tags: [${formatArray(meta.tags)}]`,
+                `categories: ${cleanCategories}`,
+                `tags: ${cleanTags}`,
                 `author: "${cleanAuthor}"`,
                 'draft: false',
                 '---'
