@@ -139,12 +139,15 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            const category = '${{ steps.extract.outputs.fileName }}'.split('/')[2];  // 获取分类名
+            const filename = '${{ steps.extract.outputs.fileName }}'.split('/').pop().replace('.md', '');  // 获取文件名（不含扩展名）
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
               body: '✅ 文章已成功转换并发布！\n\n您可以在网站上查看：' +
-                    `https://chemuasso-cn.github.io/posts/${context.payload.issue.number}/`
+                    `https://chemuasso-cn.github.io/posts/${category}/${filename}/`
             });
 
             await github.rest.issues.update({
