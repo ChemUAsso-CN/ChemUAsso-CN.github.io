@@ -10,6 +10,7 @@ labels: article
 请不要修改 "---" 标记和字段名称。
 只需修改引号内的内容和正文部分。
 注意：在“---”范围中，请使用英文标点符号（: , " 等），请留意一些标点和空格，如author: "你的名字"，请不要写成author：你的名字
+另外：{{ now.Format "2006-01-02" }} 一定不要修改，不用修改成当前日期，系统会自己弄的，date这行保持原样即可
 
 详细规范与格式请参考：https://chemuasso-cn.github.io/posts/announcement/getting-started/
 -->

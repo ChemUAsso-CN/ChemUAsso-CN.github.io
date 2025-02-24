@@ -38,8 +38,8 @@
 
 <div class="container">
     <h1>化学式转LaTeX公式</h1>
-    <p>在下面的输入框中输入化学式，然后点击“转换”按钮。</p>
-    <input type="text" id="equationInput" placeholder="例如: 2H₂ + O₂ → 2H₂O">
+    <p>在下面的输入框中输入化学式（用 _a 表示原子个数），然后点击“转换”按钮。</p>
+    <input type="text" id="equationInput" placeholder="例如: H_2O 或 2H_2 + O_2 -> 2H_2O">
     <button onclick="convertToLaTeX()">转换</button>
     <div class="output" id="output"></div>
 </div>
@@ -51,18 +51,10 @@
 
         // 转换化学式为LaTeX格式
         const latexEquation = input
-            .replace(/₂/g, '_2')  // 替换下标 ₂ 为 _2
-            .replace(/₃/g, '_3')  // 替换下标 ₃ 为 _3
-            .replace(/₄/g, '_4')  // 替换下标 ₄ 为 _4
-            .replace(/₅/g, '_5')  // 替换下标 ₅ 为 _5
-            .replace(/₆/g, '_6')  // 替换下标 ₆ 为 _6
-            .replace(/₇/g, '_7')  // 替换下标 ₇ 为 _7
-            .replace(/₈/g, '_8')  // 替换下标 ₈ 为 _8
-            .replace(/₉/g, '_9')  // 替换下标 ₉ 为 _9
-            .replace(/₀/g, '_0')  // 替换下标 ₀ 为 _0
-            .replace(/→/g, '\\rightarrow')  // 替换箭头 → 为 \rightarrow
-            .replace(/↑/g, '\\uparrow')      // 替换气体符号 ↑ 为 \uparrow
-            .replace(/↓/g, '\\downarrow');   // 替换沉淀符号 ↓ 为 \downarrow
+            .replace(/_(\d+)/g, '_$1')  // 将 _a 替换为 _a（保持不变）
+            .replace(/->/g, '\\rightarrow')  // 将 -> 替换为 \rightarrow
+            .replace(/\^/g, '\\uparrow')    // 将 ^ 替换为 \uparrow
+            .replace(/v/g, '\\downarrow');  // 将 v 替换为 \downarrow
 
         // 显示转换后的LaTeX公式
         document.getElementById('output').textContent = latexEquation;
