@@ -103,10 +103,19 @@ jobs:
             const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
 
             // 清理和格式化元数据
-            const cleanTitle = (meta.title || '').replace(/"/g, '\\"');
-            const cleanDesc = (meta.description || '').replace(/"/g, '\\"');
+            const cleanText = (text) => {
+              if (!text) return '';
+              return text
+                .replace(/"/g, '\\"')     // 转义引号
+                .replace(/\(/g, '\\(')    // 转义左括号
+                .replace(/\)/g, '\\)')    // 转义右括号
+                .replace(/:/g, '\\:');    // 转义冒号
+            };
+
+            const cleanTitle = cleanText(meta.title || '');
+            const cleanDesc = cleanText(meta.description || '');
             const cleanTags = meta.tags || '[]';
-            const cleanAuthor = (meta.author || '').replace(/"/g, '\\"');
+            const cleanAuthor = cleanText(meta.author || '');
 
             // 格式化分类和标签
             const formatArray = (str) => {
