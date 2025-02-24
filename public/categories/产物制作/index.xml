@@ -2,17 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>产物制作 on 化学联合协会</title>
-        <link>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
+        <link>https://ChemUAsso-CN.github.io/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
         <description>Recent content in 产物制作 on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>产物制作 64:普鲁士蓝</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/6/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/6/</guid>
+        <description>&lt;h2 id=&#34;步骤&#34;&gt;步骤：
+&lt;/h2&gt;&lt;h4 id=&#34;制作普鲁士蓝&#34;&gt;制作普鲁士蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9g 三氯化铁,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.2g 亚铁氰化钾,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;制作滕氏蓝&#34;&gt;制作滕氏蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;称取 9.3g 硫酸亚铁，配成溶液&lt;/li&gt;
+&lt;li&gt;称取 7.3g 铁氰化钾，配成溶液&lt;/li&gt;
+&lt;li&gt;混合，产出蓝色沉淀。过滤烘干&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;事实上，普鲁士蓝 与 滕氏蓝 是同种物质。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>产物制作 1: 三草酸合铁酸钾(1)</title>
-        <link>http://localhost:1313/posts/product/1/</link>
+        <link>https://ChemUAsso-CN.github.io/posts/product/1/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/posts/product/1/</guid>
+        <guid>https://ChemUAsso-CN.github.io/posts/product/1/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;
 &lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;
@@ -35,10 +63,10 @@
         </item>
         <item>
         <title>产物制作 2: 四氯络锰酸胍</title>
-        <link>http://localhost:1313/posts/product/2/</link>
+        <link>https://ChemUAsso-CN.github.io/posts/product/2/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/posts/product/2/</guid>
+        <guid>https://ChemUAsso-CN.github.io/posts/product/2/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -60,10 +88,10 @@
         </item>
         <item>
         <title>产物制作 3: 二氯化一氯五氨合钴</title>
-        <link>http://localhost:1313/posts/product/3/</link>
+        <link>https://ChemUAsso-CN.github.io/posts/product/3/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/posts/product/3/</guid>
+        <guid>https://ChemUAsso-CN.github.io/posts/product/3/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -95,10 +123,10 @@
         </item>
         <item>
         <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
-        <link>http://localhost:1313/posts/product/4/</link>
+        <link>https://ChemUAsso-CN.github.io/posts/product/4/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/posts/product/4/</guid>
+        <guid>https://ChemUAsso-CN.github.io/posts/product/4/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -124,10 +152,10 @@
         </item>
         <item>
         <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-        <link>http://localhost:1313/posts/product/5/</link>
+        <link>https://ChemUAsso-CN.github.io/posts/product/5/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/posts/product/5/</guid>
+        <guid>https://ChemUAsso-CN.github.io/posts/product/5/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
