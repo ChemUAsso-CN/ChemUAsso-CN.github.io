@@ -29,6 +29,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: true
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -119,7 +121,8 @@ jobs:
                   .replace(/"/g, '\\"')     // 转义引号
                   .replace(/\(/g, '\\(')    // 转义左括号
                   .replace(/\)/g, '\\)')    // 转义右括号
-                  .replace(/:/g, '\\:');    // 转义冒号
+                  .replace(/:/g, '\\:')     // 转义冒号
+                  .trim();                  // 只清理首尾空格，保留内部空格
               };
 
               const cleanTitle = cleanText(meta.title || '');
@@ -177,11 +180,12 @@ jobs:
           echo "${{ steps.extract.outputs.content }}" > "${{ steps.extract.outputs.fileName }}"
 
       - name: Commit and push changes
+        if: steps.extract.outputs.fileName != ''
         run: |
           echo "Committing changes..."
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add "${{ steps.extract.outputs.fileName }}"
+          git add "${{ steps.extract.outputs.fileName }}"  # 使用实际的文件路径
           git commit -m "Add article from issue #${{ github.event.issue.number }}"
           git push
 
@@ -224,3 +228,8 @@ jobs:
               state: 'closed',
               labels: ['published']
             });
+
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote --merge
