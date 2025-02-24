@@ -2,7 +2,8 @@ name: Convert Issue to Post
 
 on:
   issues:
-    types: [opened, labeled]
+    # 只监听标签变化
+    types: [labeled]
 
 # 添加工作流级别的权限
 permissions:
@@ -13,10 +14,8 @@ permissions:
 jobs:
   convert:
     name: Convert Issue to Post
-    # 检查是否有 article 标签
-    if: |
-      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
-      (github.event.action == 'labeled' && github.event.label.name == 'article')
+    # 只在添加 article 标签时运行
+    if: github.event.label.name == 'article'
     runs-on: ubuntu-latest
     steps:
       - name: Check duplicate run
@@ -99,6 +98,15 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 文章格式不正确，请使用正确的模板格式。'
                 });
+                
+                // 使用 not planned 关闭 issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'  // 使用 not_planned 原因
+                });
                 return;
               }
 
@@ -139,6 +147,15 @@ jobs:
                   repo: context.repo.repo,
                   issue_number: issue.number,
                   body: '❌ 日期格式不正确，请使用 YYYY-MM-DD 格式（如：2025-02-24）'
+                });
+                
+                // 使用 not planned 关闭 issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'
                 });
                 return;
               }
