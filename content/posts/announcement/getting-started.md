@@ -161,7 +161,7 @@ math: true
 >   公告: "announcement",
 >   产物制作: "product",
 >   理论知识: "theory",
->   实验技术: "experiment",
+>   协会讨论: "discussion",
 >   其他: "uncategorized",
 > };
 > ```

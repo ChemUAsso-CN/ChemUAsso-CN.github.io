@@ -9,7 +9,7 @@ labels: article
 请按照以下格式填写文章内容。
 请不要修改 "---" 标记和字段名称。
 只需修改引号内的内容和正文部分。
-注意：在“---”范围中，请使用英文标点符号（: , " 等）
+注意：在“---”范围中，请使用英文标点符号（: , " 等），请留意一些标点和空格，如author: "你的名字"，请不要写成author：你的名字
 -->
 
 ---
@@ -17,7 +17,7 @@ labels: article
 title: "文章标题"
 date: {{ now.Format "2006-01-02" }}
 description: "文章描述"
-categories: ["announcement"] # 可选：announcement, product, theory, experiment
+categories: ["公告"] # 可选：公告、产物制作、理论知识、协会讨论、其他
 tags: ["auth: 你的名字"] # 必须包含 auth 标签
 author: "你的名字"
 draft: false
@@ -34,4 +34,21 @@ draft: false
 - 使用 ``` ``` 表示代码块
 - 使用 $ $ 表示公式
 - 更多格式请参考：https://www.markdownguide.org/basic-syntax/
+
+markdown每段间应该空一行，如：
+
+✅正确示例：
+
+## 标题
+
+第一行
+
+第二行
+
+❌错误示例：
+
+## 标题
+第一行
+第二行
+
 -->
