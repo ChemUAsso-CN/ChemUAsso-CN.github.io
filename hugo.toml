@@ -1,13 +1,13 @@
 # 基础配置
-baseURL = 'https://ChemUAsso.github.io/'
+baseURL = 'https://ChemUAsso-CN.github.io/'
 languageCode = 'zh-cn'
 title = '化学联合协会'
 copyright = 'ChemUnionAsso-CN'
 
 # 主题配置
-theme = "kagome"  # 或 "kagome"
+theme = "hugo-theme-stack"  # 或 "kagome"
 
-# 输出配置（只在使用 kagome-search 主题时需要）
+# 输出配置
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
@@ -48,5 +48,3 @@ customText = "ChemUnionAsso-CN 化学联合协会"
 
 [markup.goldmark.renderer]
 unsafe = true
-
-

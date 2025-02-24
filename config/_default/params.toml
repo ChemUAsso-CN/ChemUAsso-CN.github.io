@@ -1,0 +1,32 @@
+# 主要设置
+mainSections = ["posts"]
+
+# 侧边栏设置
+[sidebar]
+emoji = "🧪"
+subtitle = "化学联合协会的博客"
+
+# 搜索设置
+[sidebar.search]
+enable = true
+
+# 小部件设置
+[widgets]
+enabled = ["search", "archives", "tag-cloud"]  # 启用搜索小部件
+
+# 搜索配置
+[search]
+enable = true
+
+[search.algolia]
+enable = false
+
+[search.fuse]
+enable = true
+isCaseSensitive = false
+minMatchCharLength = 2
+shouldSort = true
+location = 0
+distance = 100
+threshold = 0.3
+keys = ["title", "permalink", "summary", "content"] 
