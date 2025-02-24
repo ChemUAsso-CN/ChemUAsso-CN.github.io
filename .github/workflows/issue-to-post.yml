@@ -96,23 +96,18 @@ jobs:
               };
 
               // 生成文件名
-              const date = new Date().toISOString().split('T')[0];
-              const rawCategory = (meta.categories || '')
-                .replace(/[\[\]"]/g, '')
-                .split(',')[0]
-                .trim();
+              const date = new Date();
+              const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+              const number = issue.number;
               
-              if (!rawCategory) {
-                throw new Error('Category is required');
-              }
-
-              const category = categoryMap[rawCategory];
-              if (!category) {
-                throw new Error(`Invalid category: ${rawCategory}`);
-              }
-
-              const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
-              console.log('Generated fileName:', fileName);
+              // 确保所有路径组件都有值
+              const type = issue.labels.find(l => l.name === 'product') ? 'product' : 'announcement';
+              
+              // 构建完整路径
+              const path = `content/posts/${type}/${dateStr}-${number}`;
+              
+              // 调试输出
+              console.log('Generated post path:', path);
 
               // 清理和格式化元数据
               const cleanText = (text) => {
@@ -145,7 +140,7 @@ jobs:
               const frontMatterContent = [
                 '---',
                 `title: "${cleanTitle}"`,      // 标题会保留内部空格
-                `date: ${date}`,
+                `date: ${dateStr}`,
                 `description: "${cleanDesc}"`,
                 `categories: [${formatArray(meta.categories)}]`,
                 `tags: [${formatArray(meta.tags)}]`,
@@ -155,7 +150,7 @@ jobs:
               ].join('\n');
 
               // 设置输出
-              core.setOutput('fileName', fileName);
+              core.setOutput('fileName', path);
               core.setOutput('content', `${frontMatterContent}\n\n${content}`);
 
             } catch (error) {
