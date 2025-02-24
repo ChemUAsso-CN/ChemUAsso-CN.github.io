@@ -62,6 +62,10 @@
         </div>
       </div>
     </nav>
+    <div class="nav-search">
+        <input type="text" id="search-input" placeholder="搜索文章...">
+        <div id="search-results"></div>
+    </div>
   </div>
 </header><main id="content">
 
@@ -84,7 +88,7 @@
         
 
          
-          <p class="card-text--row">6 totals</p>
+          <p class="card-text--row">8 totals</p>
         
         
         
@@ -96,6 +100,56 @@
   
 
   <div class="article-list layout-block">
+    
+      <div class="article-item">
+  <section class="article-card card-container content-padding-large soft-size--large soft-style--box">
+    <div class="card-cover" ></div>
+    <div class="card-text">
+      <a href="http://localhost:1313/posts/announcement/2025-02-24-6/"><h4 class="card-text--title">支持使用Github Issue投稿了！</h4></a>
+
+      <p class="card-text--row">February 24, 2025</p>
+      
+      
+      
+        <ul class="card-text--tag">
+          
+            <li><a href="http://localhost:1313/categories/announcement/">announcement</a></li></ul>
+      
+
+      
+      
+        <ul class="card-text--tag">
+          
+            <li><a href="http://localhost:1313/tags/authxingyuan55/">auth:Xingyuan55</a></li></ul>
+      
+    </div>
+  </section>
+</div>
+    
+      <div class="article-item">
+  <section class="article-card card-container content-padding-large soft-size--large soft-style--box">
+    <div class="card-cover" ></div>
+    <div class="card-text">
+      <a href="http://localhost:1313/posts/announcement/2025-02-24-7/"><h4 class="card-text--title">支持使用Github Issue投稿了！</h4></a>
+
+      <p class="card-text--row">February 24, 2025</p>
+      
+      
+      
+        <ul class="card-text--tag">
+          
+            <li><a href="http://localhost:1313/categories/announcement/">announcement</a></li></ul>
+      
+
+      
+      
+        <ul class="card-text--tag">
+          
+            <li><a href="http://localhost:1313/tags/authxingyuan55/">auth:Xingyuan55</a></li></ul>
+      
+    </div>
+  </section>
+</div>
     
       <div class="article-item">
   <section class="article-card card-container content-padding-large soft-size--large soft-style--box">
@@ -266,6 +320,15 @@
   
 
 
+        <div class="search-container">
+    <input type="text" id="search-input" placeholder="搜索文章...">
+    <div id="search-results"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+
+</script> 
     </main><footer class="footer-container layout-block">
   
 
@@ -294,6 +357,46 @@
   
 
 
-</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            const options = {
+                keys: ['title', 'content', 'tags'],
+                threshold: 0.3
+            };
+            const fuse = new Fuse(data.posts, options);
+
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value;
+                if (query.length < 2) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+
+                const results = fuse.search(query);
+                searchResults.innerHTML = results
+                    .slice(0, 10)
+                    .map(result => `
+                        <div class="search-result">
+                            <a href="${result.item.permalink}">
+                                <h3>${result.item.title}</h3>
+                                <p>${result.item.description || ''}</p>
+                            </a>
+                        </div>
+                    `)
+                    .join('');
+            });
+        });
+});
+</script></body>
 
 </html>

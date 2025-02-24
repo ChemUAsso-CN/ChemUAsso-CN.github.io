@@ -1,0 +1,58 @@
+{{/* google analytics */}}
+{{- template "_internal/google_analytics.html" . -}}
+
+{{/* baidu analytics */}}
+{{ with .Site.Params.Analytics.baidu }}
+<script type="application/javascript">
+  var _hmt = _hmt || [];
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      return console.log("本地调试，未加载analytics代码")
+    }
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?{{ . }}";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+{{ end }}
+
+<!-- 在末尾添加搜索脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            const options = {
+                keys: ['title', 'content', 'tags'],
+                threshold: 0.3
+            };
+            const fuse = new Fuse(data.posts, options);
+
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value;
+                if (query.length < 2) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+
+                const results = fuse.search(query);
+                searchResults.innerHTML = results
+                    .slice(0, 10)
+                    .map(result => `
+                        <div class="search-result">
+                            <a href="${result.item.permalink}">
+                                <h3>${result.item.title}</h3>
+                                <p>${result.item.description || ''}</p>
+                            </a>
+                        </div>
+                    `)
+                    .join('');
+            });
+        });
+});
+</script>

@@ -75,6 +75,10 @@
         </div>
       </div>
     </nav>
+    <div class="nav-search">
+        <input type="text" id="search-input" placeholder="搜索文章...">
+        <div id="search-results"></div>
+    </div>
   </div>
 </header><main id="content">
     
@@ -223,6 +227,11 @@
         </li>
       
         <li>
+          <a href="http://localhost:1313/categories/announcement/">announcement</a>
+          <span>2</span>
+        </li>
+      
+        <li>
           <a href="http://localhost:1313/categories/%E5%85%AC%E5%91%8A/">公告</a>
           <span>1</span>
         </li>
@@ -252,6 +261,8 @@
       
         <a href="http://localhost:1313/tags/%E8%AF%95%E5%89%82/" data-count="5" class="soft-size--small soft-style--hover soft-style--active">试剂</a>
       
+        <a href="http://localhost:1313/tags/authxingyuan55/" data-count="2" class="soft-size--small soft-style--hover soft-style--active">auth:Xingyuan55</a>
+      
         <a href="http://localhost:1313/tags/auth-xingyuan55/" data-count="1" class="soft-size--small soft-style--hover soft-style--active">auth: Xingyuan55</a>
       
         <a href="http://localhost:1313/tags/%E4%B8%89%E8%8D%89%E9%85%B8%E5%90%88%E9%93%81%E9%85%B8%E9%92%BE/" data-count="1" class="soft-size--small soft-style--hover soft-style--active">三草酸合铁酸钾</a>
@@ -270,11 +281,19 @@
       
         <a href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/" data-count="1" class="soft-size--small soft-style--hover soft-style--active">教程</a>
       
-        <a href="http://localhost:1313/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/" data-count="1" class="soft-size--small soft-style--hover soft-style--active">硫氰酸三乙二胺合镍</a>
-      
     </div>
   </div>
 
+  
+    
+    <div class="widget-footer">
+      <a href="http://localhost:1313/tags/" class="more-link center">
+        show all
+        <svg class="icon icon-more" width="16" height="16" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60.928 247.808c-13.824-13.824-36.352-13.824-50.688 0-13.824 13.824-13.824 36.352 0 50.688L224.256 512 10.24 725.504c-13.824 13.824-13.824 36.352 0 50.688 7.168 7.168 15.872 10.24 25.088 10.24s18.432-3.584 25.088-10.24l239.104-239.104c13.824-13.824 13.824-36.352 0-50.688L60.928 247.808zM417.792 247.808c-13.824-13.824-36.352-13.824-50.688 0-13.824 13.824-13.824 36.352 0 50.688l213.504 213.504-213.504 213.504c-13.824 13.824-13.824 36.352 0 50.688 7.168 7.168 15.872 10.24 25.088 10.24s18.432-3.584 25.088-10.24l239.104-239.104c13.824-13.824 13.824-36.352 0-50.688L417.792 247.808zM1013.76 486.912l-239.104-239.104c-13.824-13.824-36.352-13.824-50.688 0-13.824 13.824-13.824 36.352 0 50.688l213.504 213.504-213.504 213.504c-13.824 13.824-13.824 36.352 0 50.688 7.168 7.168 15.872 10.24 25.088 10.24s18.432-3.584 25.088-10.24l239.104-239.104c14.336-13.824 14.336-36.352 0.512-50.176z"></path>
+        </svg>
+      </a>
+    </div>
   
 </section>
 
@@ -309,6 +328,46 @@
 
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            const options = {
+                keys: ['title', 'content', 'tags'],
+                threshold: 0.3
+            };
+            const fuse = new Fuse(data.posts, options);
+
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value;
+                if (query.length < 2) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+
+                const results = fuse.search(query);
+                searchResults.innerHTML = results
+                    .slice(0, 10)
+                    .map(result => `
+                        <div class="search-result">
+                            <a href="${result.item.permalink}">
+                                <h3>${result.item.title}</h3>
+                                <p>${result.item.description || ''}</p>
+                            </a>
+                        </div>
+                    `)
+                    .join('');
+            });
+        });
+});
+</script>
 
 
 

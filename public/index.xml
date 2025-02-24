@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>ChemUnionAsso-CN</copyright>
-    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>支持使用Github Issue投稿了！</title>
+      <link>http://localhost:1313/posts/announcement/2025-02-24-6/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/announcement/2025-02-24-6/</guid>
+      <description>支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！</description>
+    </item>
+    
+    <item>
+      <title>支持使用Github Issue投稿了！</title>
+      <link>http://localhost:1313/posts/announcement/2025-02-24-7/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/announcement/2025-02-24-7/</guid>
+      <description>支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！</description>
+    </item>
+    
     <item>
       <title>如何参与化联网站：从投稿到编辑</title>
       <link>http://localhost:1313/posts/announcement/getting-started/</link>
@@ -15,15 +33,15 @@
       
       <guid>http://localhost:1313/posts/announcement/getting-started/</guid>
       <description>如何协助化联网站 本指南将介绍两种参与化学联合协会网站的方式：
-通过投稿表单快速投稿（推荐） 配置环境后直接编辑（进阶） 方式一：通过投稿表单参与 这是最简单的参与方式，适合所有用户，但是您需要等待Xingyuan55审核并推送。
-或者您可以添加Xingyuan55的微信，直接将您的投稿内容发送给他，由他代为提交。请参见联系我们页面。
-1. 投稿方法 点击网站首页中间的绿色按钮&amp;ldquo;文章投稿&amp;rdquo;（链接位置可能有变化，请自行留意并查找，或者点击这里即可 在表单中填写您的投稿内容 内容会由管理员处理并发布 2. 投稿要求 内容范围：
-化学合成指南 实验注意事项 有趣的化学实验 其他化学相关内容 注意事项：
-标明分类与内容 尽量按照规范书写（规范见下文） 内容无需过于专业 如有图片可单独联系管理员 方式二：配置环境直接编辑（进阶） 如果您希望更深入地参与网站建设，可以配置环境后直接编辑文章。这可能需要一定的技术基础，但能够获得更好的编辑体验。
+通过投稿表单快速投稿（推荐） 配置环境后直接编辑（进阶） 方式一：通过投稿表单参与 这是最简单的参与方式，适合所有用户。您可以选择以下任一方式投稿：
+1. 通过表单投稿（最简单） 点击网站首页中间的绿色按钮&amp;ldquo;表单投稿&amp;rdquo; 在表单中填写您的投稿内容 内容会由管理员处理并发布 2. 通过 GitHub Issues 投稿（推荐） 如果您有 GitHub 账号，可以使用这种方式：
+点击网站首页的&amp;ldquo;通过 GitHub 投稿&amp;quot;按钮 按照模板格式填写文章内容 提交后会自动转换为文章并发布 优点：
+全自动处理，无需等待人工审核 可以实时预览 Markdown 格式 可以追踪文章处理状态 支持更丰富的格式和互动 管理员不会累死 注意事项：
+需要 GitHub 账号 请严格按照模板格式填写 使用英文标点符号（在 Front Matter 部分） 文章会在 1-2 分钟内发布 3. 通过微信投稿 如果您有图片等其他格式的化学资料，可以：
+添加 Xingyuan55 的微信 直接发送资料给他 由他代为提交 方式二：配置环境直接编辑（进阶） 如果您希望更深入地参与网站建设，可以配置环境后直接编辑文章。这可能需要一定的技术基础，但能够获得更好的编辑体验。
 一、基础环境配置 1. Git 安装与配置 下载安装包：
 访问 https://git-scm.com/downloads 点击 &amp;ldquo;Download for Windows&amp;rdquo; 等待下载完成 安装步骤：
-双击运行下载的安装包 点击 &amp;ldquo;Next&amp;rdquo; 直到看到 &amp;ldquo;Adjusting your PATH environment&amp;rdquo; 选择 &amp;ldquo;Git from the command line and also from 3rd-party software&amp;rdquo; 继续点击 &amp;ldquo;Next&amp;rdquo;，保持默认选项 最后点击 &amp;ldquo;Install&amp;rdquo; 配置个人信息：
-打开命令提示符（Win + R，输入 cmd） 设置用户名： git config --global user.</description>
+双击运行下载的安装包 点击 &amp;ldquo;Next&amp;rdquo; 直到看到 &amp;ldquo;Adjusting your PATH environment&amp;rdquo; 选择 &amp;ldquo;Git from the command line and also from 3rd-party software&amp;rdquo; 继续点击 &amp;ldquo;Next&amp;rdquo;，保持默认选项 最后点击 &amp;ldquo;Install&amp;rdquo; 配置个人信息：</description>
     </item>
     
     <item>

@@ -1,9 +1,17 @@
+# 基础配置
 baseURL = 'https://ChemUAsso.github.io/'
 languageCode = 'zh-cn'
 title = '化学联合协会'
-theme = 'kagome'
 copyright = 'ChemUnionAsso-CN'
 
+# 主题配置
+theme = "kagome"  # 或 "kagome"
+
+# 输出配置（只在使用 kagome-search 主题时需要）
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# 菜单配置
 [menu]
   [[menu.main]]
     name = "首页"
@@ -22,37 +30,23 @@ copyright = 'ChemUnionAsso-CN'
     url = "/contact/"
     weight = 4
 
+# 基础参数
 [params]
 mainSections = ["posts"]
 
 [params.article]
-showAuthor = true    # 显示作者信息
-math = true        # 启用数学公式支持
+showAuthor = true
+math = true
 
-[params.article.author]
-enabled = true       # 启用作者显示
-showName = true      # 显示作者名字
-# showBio = true       # 显示作者简介（如果有）
-
-# 可以定义默认作者信息
-# [params.author]
-# name = "化学联合协会"
-# bio = "化学联合协会的官方账号"
-
-# Stack 主题的特定配置
 [params.sidebar]
 emoji = "🧪"
 subtitle = "化学联合协会的博客"
-
-# 使用 Stack 主题推荐的嵌套格式
-[params.sidebar.avatar]
-enabled = true
-local = true
-src = "/img/avatar.png"  # 添加前导斜杠
 
 [params.footer]
 since = 2025
 customText = "ChemUnionAsso-CN 化学联合协会"
 
 [markup.goldmark.renderer]
-unsafe = true      # 允许 HTML 标签
+unsafe = true
+
+

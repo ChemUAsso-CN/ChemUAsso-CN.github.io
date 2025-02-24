@@ -62,6 +62,10 @@
         </div>
       </div>
     </nav>
+    <div class="nav-search">
+        <input type="text" id="search-input" placeholder="搜索文章...">
+        <div id="search-results"></div>
+    </div>
   </div>
 </header><main id="content">
   <div class="article-section layout-block layout-padding">
@@ -115,6 +119,15 @@
     
   </div>
 
+        <div class="search-container">
+    <input type="text" id="search-input" placeholder="搜索文章...">
+    <div id="search-results"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+
+</script> 
     </main><footer class="footer-container layout-block">
   
 
@@ -143,6 +156,46 @@
   
 
 
-</body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            const options = {
+                keys: ['title', 'content', 'tags'],
+                threshold: 0.3
+            };
+            const fuse = new Fuse(data.posts, options);
+
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value;
+                if (query.length < 2) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+
+                const results = fuse.search(query);
+                searchResults.innerHTML = results
+                    .slice(0, 10)
+                    .map(result => `
+                        <div class="search-result">
+                            <a href="${result.item.permalink}">
+                                <h3>${result.item.title}</h3>
+                                <p>${result.item.description || ''}</p>
+                            </a>
+                        </div>
+                    `)
+                    .join('');
+            });
+        });
+});
+</script></body>
 
 </html>
