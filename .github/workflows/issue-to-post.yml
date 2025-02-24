@@ -14,8 +14,7 @@ jobs:
   convert:
     name: Convert Issue to Post
     if: |
-      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
-      (github.event.action == 'labeled' && github.event.label.name == 'article')
+      contains(github.event.issue.labels.*.name, 'article')
     runs-on: ubuntu-latest
     steps:
       - name: Check duplicate run
@@ -99,8 +98,8 @@ jobs:
                 const [key, ...values] = line.split(':').map(s => s.trim());
                 if (key && values.length > 0) {
                   const value = values.join(':').trim();
-                  // 移除引号
-                  meta[key] = value.replace(/^["']|["']$/g, '');
+                  // 移除引号和方括号
+                  meta[key] = value.replace(/^["'\[]|["'\]]$/g, '');
                 }
               });
 
@@ -109,8 +108,9 @@ jobs:
               const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
               const number = issue.number;
               
-              // 确定文章类型
-              const type = issue.labels.find(l => l.name === 'product') ? 'product' : 'announcement';
+              // 根据 categories 确定文章类型
+              const categories = meta.categories ? meta.categories.split(',').map(c => c.trim()) : [];
+              const type = categories.includes('产物制作') ? 'product' : 'announcement';
               
               // 构建完整路径
               const path = `content/posts/${type}/${dateStr}-${number}.md`;
