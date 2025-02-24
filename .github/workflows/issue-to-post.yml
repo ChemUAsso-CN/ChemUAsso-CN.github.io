@@ -108,14 +108,24 @@ jobs:
             const cleanTags = meta.tags || '[]';
             const cleanAuthor = (meta.author || '').replace(/"/g, '\\"');
 
+            // 格式化分类和标签
+            const formatArray = (str) => {
+              if (!str) return '[]';
+              return str
+                .replace(/[\[\]]/g, '')  // 移除现有的方括号
+                .split(',')              // 分割成数组
+                .map(item => `"${item.trim()}"`)  // 给每项添加引号并去除空格
+                .join(', ');             // 用逗号和空格连接
+            };
+
             // 生成 Front Matter
             const frontMatterContent = [
               '---',
               `title: "${cleanTitle}"`,
               `date: ${date}`,
               `description: "${cleanDesc}"`,
-              `categories: ["${category}"]`,
-              `tags: ${cleanTags}`,
+              `categories: [${formatArray(meta.categories)}]`,  // 格式化分类
+              `tags: [${formatArray(meta.tags)}]`,             // 格式化标签
               `author: "${cleanAuthor}"`,
               'draft: false',
               '---'
