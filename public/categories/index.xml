@@ -10,17 +10,17 @@
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>产物制作</title>
-      <link>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>公告</title>
       <link>http://localhost:1313/categories/%E5%85%AC%E5%91%8A/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/%E5%85%AC%E5%91%8A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>产物制作</title>
+      <link>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</guid>
       <description></description>
     </item>
   </channel>

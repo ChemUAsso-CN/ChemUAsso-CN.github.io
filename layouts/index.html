@@ -63,7 +63,7 @@
         <section id="latest-posts" class="section animated">
             <a href="/posts"><h2>最新文章</h2></a>
             <div class="posts-grid">
-                {{ range last 4 (where .Site.RegularPages "Section" "posts") }}
+                {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
                 <div class="post-card">
                     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                     <p>{{ .Description }}</p>
