@@ -16,10 +16,11 @@ labels: article
 title: "文章标题"
 date: {{ now.Format "2006-01-02" }}
 description: "描述"
-categories: ["分类名称"] # 如：product, theory, experiment 等
-tags: ["auth: 你的名字", "标签 1", "标签 2"]    # 至少包含 auth 标签
+categories: ["announcement"] # 分类：announcement(公告), product(产物制作), theory(理论), experiment(实验)
+tags: ["auth: 你的名字", "标签 1", "标签 2"] # 至少包含 auth 标签
 author: "你的名字"
 draft: false
+
 ---
 
 在此处写入文章正文...

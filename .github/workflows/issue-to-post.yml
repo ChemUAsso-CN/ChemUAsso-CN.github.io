@@ -2,24 +2,36 @@ name: Convert Issue to Post
 
 on:
   issues:
-    types: [labeled]
+    types: [labeled, opened]
 
 jobs:
   convert:
-    if: github.event.label.name == 'article'
+    name: Convert Issue to Post
+    if: |
+      github.event_name == 'issues' && 
+      (github.event.action == 'labeled' && github.event.label.name == 'article' || 
+       github.event.action == 'opened')
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
-    
+
     steps:
+      - name: Debug event
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Action: ${{ github.event.action }}"
+          echo "Label: ${{ github.event.label.name }}"
+
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Extract article content
         id: extract
@@ -28,7 +40,7 @@ jobs:
           script: |
             const issue = context.payload.issue;
             const body = issue.body;
-            
+
             // 提取 Front Matter 和正文
             const matches = body.match(/---\n([\s\S]*?)\n---\n\n([\s\S]*)/);
             if (!matches) {
@@ -40,35 +52,68 @@ jobs:
               });
               return;
             }
-            
+
             const frontMatter = matches[1];
             const content = matches[2];
-            
+
             // 解析 Front Matter
             const meta = {};
             frontMatter.split('\n').forEach(line => {
               const [key, ...value] = line.split(':').map(s => s.trim());
               if (key && value) meta[key] = value.join(':');
             });
-            
+
+            // 分类映射
+            const categoryMap = {
+              '公告': 'announcement',
+              '产物制作': 'product',
+              '理论知识': 'theory',
+              '实验技术': 'experiment',
+              '其他': 'uncategorized',
+              '其它': 'uncategorized'
+            };
+
             // 生成文件名
             const date = new Date().toISOString().split('T')[0];
-            const category = meta.categories?.replace(/[\[\]"]/g, '').toLowerCase() || 'uncategorized';
+            const rawCategory = (meta.categories || '').replace(/[\[\]"]/g, '').toLowerCase();
+            const category = categoryMap[rawCategory] || rawCategory || 'uncategorized';
             const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
-            
+
+            // 清理和格式化元数据
+            const cleanTitle = (meta.title || '').replace(/"/g, '\\"');
+            const cleanDesc = (meta.description || '').replace(/"/g, '\\"');
+            const cleanCategory = category;
+            const cleanTags = meta.tags || '[]';
+            const cleanAuthor = (meta.author || '').replace(/"/g, '\\"');
+
+            // 生成 Front Matter
+            const frontMatterContent = [
+              '---',
+              `title: "${cleanTitle}"`,
+              `date: ${date}`,
+              `description: "${cleanDesc}"`,
+              `categories: ["${cleanCategory}"]`,
+              `tags: ${cleanTags}`,
+              `author: "${cleanAuthor}"`,
+              'draft: false',
+              '---'
+            ].join('\n');
+
             // 输出结果供后续步骤使用
             core.setOutput('fileName', fileName);
-            core.setOutput('content', `---\n${frontMatter}\n---\n\n${content}`);
+            core.setOutput('content', `${frontMatterContent}\n\n${content}`);
 
       - name: Create article file
         run: |
+          echo "Creating file: ${{ steps.extract.outputs.fileName }}"
           mkdir -p $(dirname "${{ steps.extract.outputs.fileName }}")
           echo "${{ steps.extract.outputs.content }}" > "${{ steps.extract.outputs.fileName }}"
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          echo "Committing changes..."
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add "${{ steps.extract.outputs.fileName }}"
           git commit -m "Add article from issue #${{ github.event.issue.number }}"
           git push
@@ -82,13 +127,13 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
               body: '✅ 文章已成功转换并发布！\n\n您可以在网站上查看：' +
-                    `https://chemuasso.github.io/posts/${context.payload.issue.number}/`
+                    `https://chemuasso-cn.github.io/posts/${context.payload.issue.number}/`
             });
-            
+
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
               state: 'closed',
               labels: ['published']
-            }); 
+            });

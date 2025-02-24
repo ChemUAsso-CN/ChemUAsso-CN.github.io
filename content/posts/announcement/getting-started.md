@@ -133,9 +133,23 @@ math: true
     ├── posts/           # 所有文章
     │   ├── announcement/# 公告类文章，分类名：公告
     │   └── product/     # 产物制作类文章，分类名：产物制作
-    │                    注：这里的一个子文件夹就是一个分类，更多分类您可以报备后自行创建
+    │   └── theory/      # 理论知识类文章，分类名：理论知识
+    │   └── experiment/  # 实验技术类文章，分类名：实验技术
+    │   └── uncategorized/ # 其他类文章，分类名：其他   （注意不要打错字）
+    │                    注：这里的一个子文件夹就是一个分类，如需更多分类请您提交Issues或联系管理者
     ├── about.md         # 关于页面
     └── contact.md       # 联系方式页面
+
+> issue-to-post.yml中的分类映射：
+>  ```js          
+>  const categoryMap = {
+>    '公告': 'announcement',
+>    '产物制作': 'product',
+>    '理论知识': 'theory',
+>    '实验技术': 'experiment',
+>    '其他': 'uncategorized'
+>  };
+>  ```
 
 只有`content/`文件夹下的文件是网站内容，其他文件夹都是网站的配置文件。
 
@@ -165,7 +179,10 @@ math: true
 
    - `announcement`: 公告类文章，分类名：公告
    - `product`: 产物制作类文章，分类名：产物制作
-   - 其他分类您可以报备后自行创建
+   - `theory`: 理论知识类文章，分类名：理论知识
+   - `experiment`: 实验技术类文章，分类名：实验技术
+   - `uncategorized`: 其他类文章，分类名：其他
+   - 如需更多分类请您提交Issues或联系管理者
 
 3. 标签规范：
    - 必须包含 `auth: 作者名` 标签
@@ -206,8 +223,6 @@ math: true
    - 关键控制点
    ```
 
-（以下是示例，可能暂时没有相应的分类）
-
 2. 理论知识类文章：
 
    ```markdown
@@ -215,7 +230,7 @@ math: true
    title: "理论知识：主题名称"
    date: 2025-02-23
    description: "知识点简述"
-   categories: ["theory"]
+   categories: ["理论知识"]
    tags: ["auth: 作者名", "具体领域", "关键概念"]
    author: "作者名"
    draft: false
@@ -238,7 +253,7 @@ math: true
 
    ```markdown
    ---
-   title: "实验技术：操作名称"
+   title: "实验技术：操作名称"   
    date: 2025-02-23
    description: "技术要点简述"
    categories: ["experiment"]
@@ -260,6 +275,8 @@ math: true
 
    安全提示
    ```
+
+以上只是示例，并没有涵盖所有分类。您模仿示例自行编写即可。
 
 ## 三、特殊语法说明
 
@@ -312,7 +329,10 @@ math: true
    ```bash
    content/posts/
    ├── announcement/ # 公告类
-   └── product/      # 产物制作
+   ├── product/      # 产物制作
+   ├── theory/       # 理论知识
+   ├── experiment/   # 实验技术
+   └── uncategorized/ # 其他
    ```
 
 2. 创建文件：
