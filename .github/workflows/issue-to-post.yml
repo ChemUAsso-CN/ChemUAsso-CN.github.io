@@ -2,8 +2,7 @@ name: Convert Issue to Post
 
 on:
   issues:
-    # 只在创建 issue 时触发
-    types: [opened]
+    types: [opened, labeled]
 
 # 添加工作流级别的权限
 permissions:
@@ -14,8 +13,10 @@ permissions:
 jobs:
   convert:
     name: Convert Issue to Post
-    # 只在 issue 有 article 标签时运行
-    if: contains(github.event.issue.labels.*.name, 'article')
+    # 检查是否有 article 标签
+    if: |
+      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
+      (github.event.action == 'labeled' && github.event.label.name == 'article')
     runs-on: ubuntu-latest
     steps:
       - name: Check duplicate run
@@ -74,6 +75,17 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            // 验证日期格式
+            function isValidDate(dateStr) {
+              // 检查格式是否为 YYYY-MM-DD
+              const regex = /^\d{4}-\d{2}-\d{2}$/;
+              if (!regex.test(dateStr)) return false;
+              
+              // 检查日期是否有效
+              const date = new Date(dateStr);
+              return date instanceof Date && !isNaN(date);
+            }
+
             try {
               const issue = context.payload.issue;
               const body = issue.body;
@@ -244,14 +256,3 @@ jobs:
         run: |
           git submodule update --init --recursive
           git submodule update --remote --merge
-
-// 验证日期格式
-function isValidDate(dateStr) {
-  // 检查格式是否为 YYYY-MM-DD
-  const regex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!regex.test(dateStr)) return false;
-  
-  // 检查日期是否有效
-  const date = new Date(dateStr);
-  return date instanceof Date && !isNaN(date);
-}
