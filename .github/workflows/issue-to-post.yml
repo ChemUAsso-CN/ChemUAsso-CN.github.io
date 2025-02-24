@@ -140,6 +140,24 @@ jobs:
                 categories = [];
               }
 
+              // 处理标签，恢复 auth: 标签的空格
+              let tags = [];
+              try {
+                const tagsStr = meta.tags || '[]';
+                tags = JSON.parse(tagsStr.replace(/'/g, '"'))
+                  .map(tag => {
+                    // 只处理 auth: 标签
+                    if (tag.startsWith('auth:')) {
+                      return tag.replace('auth:', 'auth: ');
+                    }
+                    return tag;
+                  });
+                meta.tags = JSON.stringify(tags);
+              } catch (e) {
+                console.error('解析 tags 失败:', e);
+                tags = [];
+              }
+
               // 验证日期
               if (!isValidDate(meta.date)) {
                 await github.rest.issues.createComment({
