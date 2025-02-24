@@ -97,14 +97,14 @@ jobs:
 
               // 生成文件名
               const date = new Date();
-              const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+              const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
               const number = issue.number;
               
-              // 确保所有路径组件都有值
+              // 确定文章类型
               const type = issue.labels.find(l => l.name === 'product') ? 'product' : 'announcement';
               
               // 构建完整路径
-              const path = `content/posts/${type}/${dateStr}-${number}`;
+              const path = `content/posts/${type}/${dateStr}-${number}.md`;  // 添加.md后缀
               
               // 调试输出
               console.log('Generated post path:', path);
@@ -205,8 +205,15 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const category = '${{ steps.extract.outputs.fileName }}'.split('/')[2];
-            const filename = '${{ steps.extract.outputs.fileName }}'.split('/').pop().replace('.md', '');
+            const fileName = '${{ steps.extract.outputs.fileName }}';
+            if (!fileName) {
+              console.log('No fileName output, skipping comment');
+              return;
+            }
+            
+            const pathParts = fileName.split('/');
+            const category = pathParts[2];  // 获取类别 (product 或 announcement)
+            const filename = pathParts[pathParts.length - 1].replace('.md', '');
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
