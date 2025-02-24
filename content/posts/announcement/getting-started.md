@@ -18,30 +18,44 @@ math: true
 
 ## 方式一：通过投稿表单参与
 
-这是最简单的参与方式，适合所有用户，但是您需要等待Xingyuan55审核并推送。
+这是最简单的参与方式，适合所有用户。您可以选择以下任一方式投稿：
 
-或者您可以添加Xingyuan55的微信，直接将您的投稿内容发送给他，由他代为提交。请参见[联系我们](/contact)页面。
+### 1. 通过表单投稿（最简单）
 
-### 1. 投稿方法
-
-- 点击网站首页中间的绿色按钮["文章投稿"（链接位置可能有变化，请自行留意并查找，或者点击这里即可](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u)
+- 点击网站首页中间的绿色按钮["表单投稿"](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u)
 - 在表单中填写您的投稿内容
 - 内容会由管理员处理并发布
 
-### 2. 投稿要求
+### 2. 通过 GitHub Issues 投稿（推荐）
 
-1. 内容范围：
+如果您有 GitHub 账号，可以使用这种方式：
 
-   - 化学合成指南
-   - 实验注意事项
-   - 有趣的化学实验
-   - 其他化学相关内容
+1. 点击网站首页的["通过 GitHub 投稿"按钮](https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md)
+2. 按照模板格式填写文章内容
+3. 提交后会自动转换为文章并发布
 
-2. 注意事项：
-   - 标明分类与内容
-   - 尽量按照规范书写（规范见[下文](#2-文章格式)）
-   - 内容无需过于专业
-   - 如有图片可单独联系管理员
+优点：
+
+- 全自动处理，无需等待人工审核
+- 可以实时预览 Markdown 格式
+- 可以追踪文章处理状态
+- 支持更丰富的格式和互动
+- 管理员不会累死
+
+注意事项：
+
+- 需要 GitHub 账号
+- 请严格按照模板格式填写
+- 使用英文标点符号（在 Front Matter 部分）
+- 文章会在 1-2 分钟内发布
+
+### 3. 通过微信投稿
+
+如果您有图片等其他格式的化学资料，可以：
+
+1. 添加 Xingyuan55 的微信
+2. 直接发送资料给他
+3. 由他代为提交
 
 ## 方式二：配置环境直接编辑（进阶）
 
@@ -140,16 +154,17 @@ math: true
     ├── about.md         # 关于页面
     └── contact.md       # 联系方式页面
 
-> issue-to-post.yml中的分类映射：
->  ```js          
->  const categoryMap = {
->    '公告': 'announcement',
->    '产物制作': 'product',
->    '理论知识': 'theory',
->    '实验技术': 'experiment',
->    '其他': 'uncategorized'
->  };
->  ```
+> issue-to-post.yml 中的分类映射：
+>
+> ```js
+> const categoryMap = {
+>   公告: "announcement",
+>   产物制作: "product",
+>   理论知识: "theory",
+>   实验技术: "experiment",
+>   其他: "uncategorized",
+> };
+> ```
 
 只有`content/`文件夹下的文件是网站内容，其他文件夹都是网站的配置文件。
 
@@ -182,7 +197,7 @@ math: true
    - `theory`: 理论知识类文章，分类名：理论知识
    - `experiment`: 实验技术类文章，分类名：实验技术
    - `uncategorized`: 其他类文章，分类名：其他
-   - 如需更多分类请您提交Issues或联系管理者
+   - 如需更多分类请您提交 Issues 或联系管理者
 
 3. 标签规范：
    - 必须包含 `auth: 作者名` 标签
@@ -253,7 +268,7 @@ math: true
 
    ```markdown
    ---
-   title: "实验技术：操作名称"   
+   title: "实验技术：操作名称"
    date: 2025-02-23
    description: "技术要点简述"
    categories: ["experiment"]
