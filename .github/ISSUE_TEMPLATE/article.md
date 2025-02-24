@@ -9,15 +9,16 @@ labels: article
 请按照以下格式填写文章内容。
 请不要修改 "---" 标记和字段名称。
 只需修改引号内的内容和正文部分。
+注意：请使用英文标点符号（: , " 等）
 -->
 
 ---
 
 title: "文章标题"
 date: {{ now.Format "2006-01-02" }}
-description: "描述"
-categories: ["announcement"] # 分类：announcement(公告), product(产物制作), theory(理论), experiment(实验)
-tags: ["auth: 你的名字", "标签 1", "标签 2"] # 至少包含 auth 标签
+description: "文章描述"
+categories: ["announcement"] # 可选：announcement, product, theory, experiment
+tags: ["auth: 你的名字"] # 必须包含 auth 标签
 author: "你的名字"
 draft: false
 

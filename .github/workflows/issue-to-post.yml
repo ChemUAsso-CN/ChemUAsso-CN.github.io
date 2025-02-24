@@ -59,8 +59,20 @@ jobs:
             // 解析 Front Matter
             const meta = {};
             frontMatter.split('\n').forEach(line => {
+              // 忽略注释行
+              if (line.includes('#')) {
+                line = line.split('#')[0];
+              }
+              // 替换中文标点为英文标点
+              line = line.replace(/：/g, ':')
+                       .replace(/，/g, ',')
+                       .replace(/（/g, '(')
+                       .replace(/）/g, ')');
+              
               const [key, ...value] = line.split(':').map(s => s.trim());
-              if (key && value) meta[key] = value.join(':');
+              if (key && value.length > 0) {
+                meta[key] = value.join(':').trim();
+              }
             });
 
             // 分类映射
@@ -69,20 +81,25 @@ jobs:
               '产物制作': 'product',
               '理论知识': 'theory',
               '实验技术': 'experiment',
-              '其他': 'uncategorized',
-              '其它': 'uncategorized'
+              'announcement': 'announcement',
+              'product': 'product',
+              'theory': 'theory',
+              'experiment': 'experiment'
             };
 
             // 生成文件名
             const date = new Date().toISOString().split('T')[0];
-            const rawCategory = (meta.categories || '').replace(/[\[\]"]/g, '').toLowerCase();
-            const category = categoryMap[rawCategory] || rawCategory || 'uncategorized';
+            const rawCategory = (meta.categories || '')
+              .replace(/[\[\]"]/g, '')
+              .split(',')[0]  // 只取第一个分类
+              .trim()
+              .toLowerCase();
+            const category = categoryMap[rawCategory] || 'uncategorized';
             const fileName = `content/posts/${category}/${date}-${issue.number}.md`;
 
             // 清理和格式化元数据
             const cleanTitle = (meta.title || '').replace(/"/g, '\\"');
             const cleanDesc = (meta.description || '').replace(/"/g, '\\"');
-            const cleanCategory = category;
             const cleanTags = meta.tags || '[]';
             const cleanAuthor = (meta.author || '').replace(/"/g, '\\"');
 
@@ -92,7 +109,7 @@ jobs:
               `title: "${cleanTitle}"`,
               `date: ${date}`,
               `description: "${cleanDesc}"`,
-              `categories: ["${cleanCategory}"]`,
+              `categories: ["${category}"]`,
               `tags: ${cleanTags}`,
               `author: "${cleanAuthor}"`,
               'draft: false',
@@ -106,7 +123,7 @@ jobs:
       - name: Create article file
         run: |
           echo "Creating file: ${{ steps.extract.outputs.fileName }}"
-          mkdir -p $(dirname "${{ steps.extract.outputs.fileName }}")
+          mkdir -p "$(dirname "${{ steps.extract.outputs.fileName }}")"
           echo "${{ steps.extract.outputs.content }}" > "${{ steps.extract.outputs.fileName }}"
 
       - name: Commit and push changes
