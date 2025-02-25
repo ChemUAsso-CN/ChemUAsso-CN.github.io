@@ -12,10 +12,10 @@
               return date instanceof Date && !isNaN(date);
             }
 
-            const issue = context.payload.issue;
-            const body = issue.body;
-
             try {
+              const issue = context.payload.issue;
+              const body = issue.body;
+
               // 提取 Front Matter 和正文
               const matches = body.match(/---\s*([\s\S]*?)\s*---\s*([\s\S]*)/);
               if (!matches) {
