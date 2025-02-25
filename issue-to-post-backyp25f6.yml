@@ -8,79 +8,81 @@ on:
 permissions:
   contents: write
   issues: write
-  pull-requests: write
-  actions: write
+  actions: write # 添加这个权限
 
 jobs:
   convert:
     name: Convert Issue to Post
+    # 检查是否有 article 标签
     if: |
       (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
       (github.event.action == 'labeled' && github.event.label.name == 'article')
     runs-on: ubuntu-latest
     steps:
-      - name: Check if should process
-        id: check
+      - name: Check duplicate run
+        id: check_duplicate
         uses: actions/github-script@v6
         with:
           script: |
             const issue = context.payload.issue;
-            
+
             // 检查是否已经有成功的评论
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number
             });
-            
+
             // 检查最近的评论是否是错误信息
             const recentComments = comments.data.slice(-2);
             const hasErrorComment = recentComments.some(comment => 
-              comment.body.includes('❌')
+              comment.body.includes('❌ 文章格式不正确')
             );
-            
+
             const hasSuccessComment = recentComments.some(comment => 
               comment.body.includes('✅ 文章已成功转换并提交！')
             );
-            
+
             if (hasErrorComment && !hasSuccessComment) {
               console.log('检测到错误评论，继续处理');
-              core.setOutput('should_process', 'true');
-              return;
+              return 'continue';
             }
-            
+
             if (hasSuccessComment) {
               console.log('已经有成功转换的评论，跳过本次运行');
-              core.setOutput('should_process', 'false');
-              return;
+              return 'skip';
             }
-            
-            console.log('首次运行，继续处理');
-            core.setOutput('should_process', 'true');
 
-      - name: Checkout
-        if: steps.check.outputs.should_process == 'true'
+            console.log('首次运行，继续处理');
+            return 'continue';
+
+      - name: Checkout repository
+        if: steps.check_duplicate.outputs.result != 'skip'
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
           submodules: true
+          fetch-depth: 0
 
-      - name: Process Issue
-        if: steps.check.outputs.should_process == 'true'
-        id: process
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Extract article content
+        if: steps.check_duplicate.outputs.result != 'skip'
+        id: extract
         uses: actions/github-script@v6
         with:
           script: |
+            // 验证日期格式
             function isValidDate(dateStr) {
-              // 检查格式是否为 YYYY-MM-DD，允许后面有注释
-              const regex = /^\d{4}-\d{2}-\d{2}(?:\s*#.*)?$/;
+              // 检查格式是否为 YYYY-MM-DD
+              const regex = /^\d{4}-\d{2}-\d{2}$/;
               if (!regex.test(dateStr)) return false;
               
-              // 提取日期部分（去掉注释）
-              const pureDateStr = dateStr.split('#')[0].trim();
-              
               // 检查日期是否有效
-              const date = new Date(pureDateStr);
+              const date = new Date(dateStr);
               return date instanceof Date && !isNaN(date);
             }
 
@@ -97,7 +99,7 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 文章格式不正确，请使用正确的模板格式。'
                 });
-                return '';
+                return;
               }
 
               let frontMatter = matches[1].trim();
@@ -109,9 +111,26 @@ jobs:
                 const [key, ...values] = line.split(':').map(s => s.trim());
                 if (key && values.length > 0) {
                   const value = values.join(':').trim();
-                  meta[key] = value.replace(/^["']|["']$/g, '');
+                  if (key === 'categories' || key === 'tags') {
+                    // 保持数组格式
+                    meta[key] = value;
+                  } else {
+                    // 移除其他字段的引号
+                    meta[key] = value.replace(/^["']|["']$/g, '');
+                  }
                 }
               });
+
+              // 解析 categories 来确定类型
+              let categories = [];
+              try {
+                // 尝试解析 categories 字符串为数组
+                const categoriesStr = meta.categories || '[]';
+                categories = JSON.parse(categoriesStr.replace(/'/g, '"'));
+              } catch (e) {
+                console.error('解析 categories 失败:', e);
+                categories = [];
+              }
 
               // 验证日期
               if (!isValidDate(meta.date)) {
@@ -121,26 +140,25 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 日期格式不正确，请使用 YYYY-MM-DD 格式（如：2025-02-24）'
                 });
-                return '';
+                return;
               }
 
-              // 解析 categories
-              let categories = [];
-              try {
-                categories = JSON.parse(meta.categories.replace(/'/g, '"'));
-              } catch (e) {
-                console.error('解析 categories 失败:', e);
-              }
-
-              // 确定文章类型和路径
+              // 生成文件名
+              const date = new Date();
+              const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+              const number = issue.number;
+              
+              // 根据 categories 确定文章类型
               const type = categories.includes('产物制作') ? 'product' : 'announcement';
-              const path = `content/posts/${type}/${meta.date}-${issue.number}.md`;
+              
+              // 构建完整路径
+              const path = `content/posts/${type}/${dateStr}-${number}.md`;
 
-              // 生成新的 Front Matter
-              const newFrontMatter = [
+              // 生成新的 Front Matter，保持数组格式
+              const frontMatterContent = [
                 '---',
                 `title: "${meta.title || ''}"`,
-                `date: ${meta.date}`,
+                `date: ${dateStr}`,
                 `description: "${meta.description || ''}"`,
                 `categories: ${meta.categories || '[]'}`,
                 `tags: ${meta.tags || '[]'}`,
@@ -150,62 +168,43 @@ jobs:
               ].join('\n');
 
               core.setOutput('fileName', path);
-              core.setOutput('content', `${newFrontMatter}\n\n${content}`);
-              core.setOutput('success', 'true');
-              return JSON.stringify({
-                fileName: path,
-                content: `${newFrontMatter}\n\n${content}`
-              });
+              core.setOutput('content', `${frontMatterContent}\n\n${content}`);
 
             } catch (error) {
               console.error('Error:', error);
+              core.setFailed(error.message);
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: issue.number,
+                issue_number: context.payload.issue.number,
                 body: `❌ 处理文章时出错：${error.message}`
               });
-              core.setOutput('success', 'false');
-              return '';
             }
 
-      - name: Create and commit file
-        if: |
-          steps.check.outputs.should_process == 'true' && 
-          steps.process.outputs.success == 'true'
-        env:
-          FILE_NAME: ${{ steps.process.outputs.fileName }}
-          FILE_CONTENT: ${{ steps.process.outputs.content }}
+      - name: Create article file
+        if: steps.extract.outputs.fileName != ''
         run: |
-          # 配置 Git
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
-          # 创建新分支
-          git checkout -b article/${{ github.event.issue.number }}
-          
-          # 写入文件
-          mkdir -p $(dirname "$FILE_NAME")
-          echo "$FILE_CONTENT" > "$FILE_NAME"
-          
-          # 提交更改
-          git add .
-          git commit -m "feat: add article from issue #${{ github.event.issue.number }}"
-          git push origin article/${{ github.event.issue.number }}
+          if [ -z "${{ steps.extract.outputs.fileName }}" ]; then
+            echo "Error: fileName is empty"
+            exit 1
+          fi
+          echo "Creating file: ${{ steps.extract.outputs.fileName }}"
+          mkdir -p "$(dirname "${{ steps.extract.outputs.fileName }}")"
+          echo "${{ steps.extract.outputs.content }}" > "${{ steps.extract.outputs.fileName }}"
 
-      - name: Create Pull Request
-        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
+        if: steps.extract.outputs.fileName != ''
         run: |
-          gh pr create \
-            --title "feat: add article from issue #${{ github.event.issue.number }}" \
-            --body "Converted from issue #${{ github.event.issue.number }}" \
-            --base main \
-            --head article/${{ github.event.issue.number }}
+          echo "Committing changes..."
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "${{ steps.extract.outputs.fileName }}"
+          git commit -m "Add article from issue #${{ github.event.issue.number }}"
+          git push
 
+      # 触发 Hugo 部署工作流
       - name: Trigger Hugo deployment
-        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
+        if: steps.extract.outputs.fileName != ''
         run: |
           curl -L \
             -X POST \
@@ -215,14 +214,25 @@ jobs:
             https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yaml/dispatches \
             -d '{"ref":"main"}'
 
-      - name: Comment on Issue
-        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
+      - name: Wait for deployment
+        if: steps.extract.outputs.fileName != ''
+        run: |
+          echo "等待 Hugo 部署完成..."
+          sleep 15  # 等待 15 秒
+
+      - name: Comment on issue
+        if: steps.extract.outputs.fileName != ''
         uses: actions/github-script@v6
         with:
           script: |
-            const fileName = '${{ steps.process.outputs.fileName }}';
+            const fileName = '${{ steps.extract.outputs.fileName }}';
+            if (!fileName) {
+              console.log('No fileName output, skipping comment');
+              return;
+            }
+
             const pathParts = fileName.split('/');
-            const category = pathParts[2];
+            const category = pathParts[2];  // 获取类别 (product 或 announcement)
             const filename = pathParts[pathParts.length - 1].replace('.md', '');
 
             await github.rest.issues.createComment({
@@ -240,4 +250,9 @@ jobs:
               issue_number: context.payload.issue.number,
               state: 'closed',
               labels: ['published']
-            }); 
+            });
+
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote --merge
