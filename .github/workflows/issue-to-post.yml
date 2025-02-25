@@ -1,7 +1,7 @@
 name: Convert Issue to Post
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 # 添加工作流级别的权限
 permissions:
   contents: write
@@ -11,9 +11,7 @@ permissions:
 jobs:
   convert:
     name: Convert Issue to Post
-    if: |
-      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
-      (github.event.action == 'labeled' && github.event.label.name == 'article')
+    if: github.event.label.name == 'article'
     runs-on: ubuntu-latest
     steps:
       - name: Check if should process
