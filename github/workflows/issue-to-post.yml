@@ -2,11 +2,21 @@ name: Convert Issue to Post
 
 on:
   issues:
-    types: [labeled]
+    types: [opened, labeled]
+
+# 添加工作流级别的权限
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  actions: write
 
 jobs:
   convert:
-    if: github.event.label.name == 'article'
+    name: Convert Issue to Post
+    if: |
+      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
+      (github.event.action == 'labeled' && github.event.label.name == 'article')
     runs-on: ubuntu-latest
     steps:
       - name: Check if should process
@@ -139,12 +149,10 @@ jobs:
                 '---'
               ].join('\n');
 
-              const result = JSON.stringify({
+              return JSON.stringify({
                 fileName: path,
                 content: `${newFrontMatter}\n\n${content}`
               });
-
-              return result;
 
             } catch (error) {
               console.error('Error:', error);
@@ -157,15 +165,17 @@ jobs:
               return '';
             }
 
-      - name: Create Pull Request
+      - name: Create and commit file
         if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
         env:
           FILE_NAME: ${{ fromJSON(steps.process.outputs.result).fileName }}
           FILE_CONTENT: ${{ fromJSON(steps.process.outputs.result).content }}
         run: |
-          # 创建新分支
+          # 配置 Git
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # 创建新分支
           git checkout -b article/${{ github.event.issue.number }}
           
           # 写入文件
@@ -176,22 +186,52 @@ jobs:
           git add .
           git commit -m "feat: add article from issue #${{ github.event.issue.number }}"
           git push origin article/${{ github.event.issue.number }}
-          
-          # 创建 PR
+
+      - name: Create Pull Request
+        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           gh pr create \
             --title "feat: add article from issue #${{ github.event.issue.number }}" \
             --body "Converted from issue #${{ github.event.issue.number }}" \
             --base main \
             --head article/${{ github.event.issue.number }}
 
+      - name: Trigger Hugo deployment
+        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yaml/dispatches \
+            -d '{"ref":"main"}'
+
       - name: Comment on Issue
         if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
         uses: actions/github-script@v6
         with:
           script: |
+            const fileName = '${{ fromJSON(steps.process.outputs.result).fileName }}';
+            const pathParts = fileName.split('/');
+            const category = pathParts[2];
+            const filename = pathParts[pathParts.length - 1].replace('.md', '');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              body: '✅ 文章已成功转换并提交！'
+              body: '✅ 文章已成功转换并提交！\n\n' +
+                    '⏳ 网站正在更新中，请等待 1-2 分钟后访问：\n' +
+                    `https://chemuasso-cn.github.io/posts/${category}/${filename}/`
+            });
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              state: 'closed',
+              labels: ['published']
             }); 
