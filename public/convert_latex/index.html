@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="化学联合协会的博客">
-<title>Tag: 普鲁士蓝 - 化学联合协会</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<title>化学式转LaTeX公式</title>
 
-<link rel='canonical' href='http://localhost:1313/tags/%E6%99%AE%E9%B2%81%E5%A3%AB%E8%93%9D/'>
+<link rel='canonical' href='http://localhost:1313/convert_latex/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Tag: 普鲁士蓝 - 化学联合协会">
-<meta property='og:description' content="化学联合协会的博客">
-<meta property='og:url' content='http://localhost:1313/tags/%E6%99%AE%E9%B2%81%E5%A3%AB%E8%93%9D/'>
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="化学式转LaTeX公式">
+<meta property='og:description' content="">
+<meta property='og:url' content='http://localhost:1313/convert_latex/'>
 <meta property='og:site_name' content='化学联合协会'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-24T00:00:00&#43;00:00 '/>
-<meta name="twitter:title" content="Tag: 普鲁士蓝 - 化学联合协会">
-<meta name="twitter:description" content="化学联合协会的博客"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/%E6%99%AE%E9%B2%81%E5%A3%AB%E8%93%9D/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='' />
+<meta name="twitter:title" content="化学式转LaTeX公式">
+<meta name="twitter:description" content="">
   
 
 
@@ -175,54 +175,176 @@
     </ol>
 </aside>
 
-    
-
             <main class="main full-width">
-    <header>
-        <h3 class="section-title">
-            
-                Tags
-            
-        </h3>
+<article class="article single">
+  <header class="article-header">
+    <div class="article-details">
+      <h1 class="article-title">化学式转LaTeX公式</h1>
+    </div>
+  </header>
 
-        <div class="section-card">
-            <div class="section-details">
-                <h3 class="section-count">1 page</h3>
-                <h1 class="section-term">普鲁士蓝</h1>
-                
-            </div>
+  <section class="article-content">
+    <div class="card">
+      <div class="input-group">
+        <label for="equationInput">输入化学式：</label>
+        <input
+          type="text"
+          id="equationInput"
+          placeholder="例如: H_2O 或 2H_2 + O_2 ->[delta] 2H_2O"
+        />
+      </div>
+
+      <button onclick="convertToLaTeX()">转换为LaTeX</button>
+      <div class="output" id="output"></div>
+    </div>
+
+    <div class="tips">
+      <h3>使用说明</h3>
+      <p>支持以下语法：</p>
+      <ul>
+        <li>下标：使用 _n 表示，如 H_2O</li>
+        <li>上标：使用 ^n 表示，如 Fe^{3+}</li>
+        <li>箭头：使用 -> 表示，如 A -> B</li>
+        <li>气体：使用 ^^ 表示上箭头，vv 表示下箭头</li>
+        <li>加热：使用 ->[delta] 表示加热条件</li>
+        <li>多个条件：使用 ->[条件1][条件2] 表示，如 ->[delta][Fe]</li>
+      </ul>
+
+      <h3>常用示例</h3>
+      <div class="examples">
+        <div class="example-item" onclick="setExample('2H_2 + O_2 -> 2H_2O')">
+          燃烧反应
         </div>
-    </header>
-    
-    <section class="article-list--compact">
-        
-            <article>
-    <a href="/posts/product/64/">
-        <div class="article-details">
-            <h2 class="article-title">产物制作 64: 普鲁士蓝</h2>
-            <footer class="article-time">
-                <time datetime='2025-02-24T00:00:00Z'>Feb 24, 2025</time>
-            </footer>
+        <div
+          class="example-item"
+          onclick="setExample('CaCO_3 ->[delta] CaO + CO_2 ^^')"
+        >
+          热分解反应
         </div>
-    </a>
+        <div
+          class="example-item"
+          onclick="setExample('Fe^{3+} + 3OH^- -> Fe(OH)_3 vv')"
+        >
+          沉淀反应
+        </div>
+        <div
+          class="example-item"
+          onclick="setExample('N_2 + 3H_2 ->[Fe][delta] 2NH_3')"
+        >
+          催化加热反应
+        </div>
+      </div>
+    </div>
+  </section>
 </article>
-        
-    </section>
-<footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2025 ChemUnionAsso-CN
-    </section>
-    
-    <section class="powerby">
-        
-            ChemUnionAsso-CN 化学联合协会 <br/>
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
 
+<style>
+  .card {
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    background: var(--card-background);
+    color: var(--body-text-color);
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    min-height: 50px;
+  }
+
+  .tips {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(43, 162, 69, 0.1);
+    border-radius: 4px;
+  }
+
+  .examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .example-item {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  .example-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+</style>
+
+<script>
+  function convertToLaTeX() {
+    const input = document.getElementById("equationInput").value;
+
+    let latexEquation = input
+      .replace(/_(\d+)/g, "_{$1}")
+      .replace(/->\[([^\]]+)\](?:\[([^\]]+)\])?/g, (match, cond1, cond2) => {
+        if (cond2) {
+          if (cond1.toLowerCase() === "delta") {
+            return `\\xrightarrow[${cond2}]{\\Delta}`;
+          }
+          return `\\xrightarrow[${cond1}]{${cond2}}`;
+        }
+        return `\\xrightarrow{${cond1}}`;
+      })
+      .replace(/->/g, " \\rightarrow ")
+      .replace(/\^\^/g, " \\uparrow ")
+      .replace(/vv/g, " \\downarrow ")
+      .replace(/delta/g, " \\Delta ");
+
+    latexEquation = `$\\mathrm{${latexEquation}}$`;
+    document.getElementById("output").textContent = latexEquation;
+  }
+
+  function setExample(example) {
+    document.getElementById("equationInput").value = example;
+    convertToLaTeX();
+  }
+</script>
 
             </main>
         </div>

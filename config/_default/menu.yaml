@@ -1,8 +1,12 @@
 # 菜单配置
-main: 
+main:
   - name: "首页"
     url: "/"
     weight: 1
+
+  - name: "化学式转LaTeX"
+    url: "/convert_latex/"
+    weight: 2
 
   - name: "博客与文章"
     url: "/posts/"
