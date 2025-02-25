@@ -2,7 +2,8 @@ name: Convert Issue to Post
 
 on:
   issues:
-    types: [labeled, opened]
+    # 只监听标签变化
+    types: [labeled]
 
 # 添加工作流级别的权限
 permissions:
@@ -13,9 +14,8 @@ permissions:
 jobs:
   convert:
     name: Convert Issue to Post
-    if: |
-      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'article')) || 
-      (github.event.action == 'labeled' && github.event.label.name == 'article')
+    # 只在添加 article 标签时运行
+    if: github.event.label.name == 'article'
     runs-on: ubuntu-latest
     steps:
       - name: Check duplicate run
@@ -23,21 +23,36 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            const issue = context.payload.issue;
+
             // 检查是否已经有成功的评论
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.payload.issue.number
+              issue_number: issue.number
             });
 
-            const hasSuccessComment = comments.data.some(comment => 
+            // 检查最近的评论是否是错误信息
+            const recentComments = comments.data.slice(-2);
+            const hasErrorComment = recentComments.some(comment => 
+              comment.body.includes('❌ 文章格式不正确')
+            );
+
+            const hasSuccessComment = recentComments.some(comment => 
               comment.body.includes('✅ 文章已成功转换并提交！')
             );
+
+            if (hasErrorComment && !hasSuccessComment) {
+              console.log('检测到错误评论，继续处理');
+              return 'continue';
+            }
 
             if (hasSuccessComment) {
               console.log('已经有成功转换的评论，跳过本次运行');
               return 'skip';
             }
+
+            console.log('首次运行，继续处理');
             return 'continue';
 
       - name: Checkout repository
@@ -59,12 +74,23 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            // 验证日期格式
+            function isValidDate(dateStr) {
+              // 检查格式是否为 YYYY-MM-DD
+              const regex = /^\d{4}-\d{2}-\d{2}$/;
+              if (!regex.test(dateStr)) return false;
+              
+              // 检查日期是否有效
+              const date = new Date(dateStr);
+              return date instanceof Date && !isNaN(date);
+            }
+
             try {
               const issue = context.payload.issue;
               const body = issue.body;
 
               // 提取 Front Matter 和正文
-              const matches = body.match(/---\n([\s\S]*?)\n---\n\n([\s\S]*)/);
+              const matches = body.match(/---\s*([\s\S]*?)\s*---\s*([\s\S]*)/);
               if (!matches) {
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
@@ -72,102 +98,110 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 文章格式不正确，请使用正确的模板格式。'
                 });
-                core.setOutput('result', 'invalid_format');
+                
+                // 使用 not planned 关闭 issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'  // 使用 not_planned 原因
+                });
                 return;
               }
 
-              const frontMatter = matches[1];
-              const content = matches[2];
+              let frontMatter = matches[1].trim();
+              const content = matches[2].trim();
 
               // 解析 Front Matter
               const meta = {};
               frontMatter.split('\n').forEach(line => {
-                // 忽略注释行
-                if (line.includes('#')) {
-                  line = line.split('#')[0];
-                }
-                // 替换中文标点为英文标点
-                line = line.replace(/：/g, ':')
-                         .replace(/，/g, ',')
-                         .replace(/（/g, '(')
-                         .replace(/）/g, ')');
-                
-                const [key, ...value] = line.split(':').map(s => s.trim());
-                if (key && value.length > 0) {
-                  meta[key] = value.join(':').trim();
+                const [key, ...values] = line.split(':').map(s => s.trim());
+                if (key && values.length > 0) {
+                  const value = values.join(':').trim();
+                  if (key === 'categories' || key === 'tags') {
+                    // 保持数组格式
+                    meta[key] = value;
+                  } else {
+                    // 移除其他字段的引号
+                    meta[key] = value.replace(/^["']|["']$/g, '');
+                  }
                 }
               });
 
-              // 分类映射
-              const categoryMap = {
-                '公告': 'announcement',
-                '产物制作': 'product',
-                '理论知识': 'theory',
-                '协会讨论': 'discussion',
-                '其他': 'uncategorized',
-                'announcement': 'announcement',
-                'product': 'product',
-                'theory': 'theory',
-                'experiment': 'experiment',
-                'discussion': 'discussion',
-                'uncategorized': 'uncategorized'
-              };
+              // 解析 categories 来确定类型
+              let categories = [];
+              try {
+                // 尝试解析 categories 字符串为数组
+                const categoriesStr = meta.categories || '[]';
+                categories = JSON.parse(categoriesStr.replace(/'/g, '"'));
+              } catch (e) {
+                console.error('解析 categories 失败:', e);
+                categories = [];
+              }
+
+              // 处理标签，保持原样即可
+              let tags = [];
+              try {
+                const tagsStr = meta.tags || '[]';
+                tags = JSON.parse(tagsStr.replace(/'/g, '"'))
+                  .map(tag => {
+                    // 只处理 auth: 标签
+                    if (tag.startsWith('auth:')) {
+                      return tag.replace('auth:', 'auth:');
+                    }
+                    return tag;
+                  });
+                meta.tags = JSON.stringify(tags);
+              } catch (e) {
+                console.error('解析 tags 失败:', e);
+                tags = [];
+              }
+
+              // 验证日期
+              if (!isValidDate(meta.date)) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: '❌ 日期格式不正确，请使用 YYYY-MM-DD 格式（如：2025-02-24）'
+                });
+                
+                // 使用 not planned 关闭 issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'
+                });
+                return;
+              }
 
               // 生成文件名
               const date = new Date();
               const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
               const number = issue.number;
               
-              // 确定文章类型
-              const type = issue.labels.find(l => l.name === 'product') ? 'product' : 'announcement';
+              // 根据 categories 确定文章类型
+              const type = categories.includes('产物制作') ? 'product' : 'announcement';
               
               // 构建完整路径
-              const path = `content/posts/${type}/${dateStr}-${number}.md`;  // 添加.md后缀
-              
-              // 调试输出
-              console.log('Generated post path:', path);
+              const path = `content/posts/${type}/${dateStr}-${number}.md`;
 
-              // 清理和格式化元数据
-              const cleanText = (text) => {
-                if (!text) return '';
-                // 保留内部空格，只处理特殊字符
-                return text
-                  .replace(/"/g, '\\"')        // 转义引号
-                  .replace(/\(/g, '\\(')       // 转义左括号
-                  .replace(/\)/g, '\\)')       // 转义右括号
-                  .replace(/:/g, '\\:')        // 转义冒号
-                  .replace(/^\s+|\s+$/g, '');  // 只清理首尾空格
-              };
-
-              const cleanTitle = cleanText(meta.title || '');
-              const cleanDesc = cleanText(meta.description || '');
-              const cleanTags = meta.tags || '[]';
-              const cleanAuthor = cleanText(meta.author || '');
-
-              // 格式化分类和标签
-              const formatArray = (str) => {
-                if (!str) return '[]';
-                return str
-                  .replace(/[\[\]]/g, '')  // 移除现有的方括号
-                  .split(',')              // 分割成数组
-                  .map(item => `"${item.trim()}"`)  // 给每项添加引号并去除空格
-                  .join(', ');             // 用逗号和空格连接
-              };
-
-              // 生成 Front Matter
+              // 生成新的 Front Matter，保持数组格式
               const frontMatterContent = [
                 '---',
-                `title: "${cleanTitle}"`,      // 标题会保留内部空格
+                `title: "${meta.title || ''}"`,
                 `date: ${dateStr}`,
-                `description: "${cleanDesc}"`,
-                `categories: [${formatArray(meta.categories)}]`,
-                `tags: [${formatArray(meta.tags)}]`,
-                `author: "${cleanAuthor}"`,
+                `description: "${meta.description || ''}"`,
+                `categories: ${meta.categories || '[]'}`,
+                `tags: ${meta.tags || '[]'}`,
+                `author: "${meta.author || ''}"`,
                 'draft: false',
                 '---'
               ].join('\n');
 
-              // 设置输出
               core.setOutput('fileName', path);
               core.setOutput('content', `${frontMatterContent}\n\n${content}`);
 
@@ -199,12 +233,13 @@ jobs:
           echo "Committing changes..."
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add "${{ steps.extract.outputs.fileName }}"  # 使用实际的文件路径
+          git add "${{ steps.extract.outputs.fileName }}"
           git commit -m "Add article from issue #${{ github.event.issue.number }}"
           git push
 
       # 触发 Hugo 部署工作流
       - name: Trigger Hugo deployment
+        if: steps.extract.outputs.fileName != ''
         run: |
           curl -L \
             -X POST \
@@ -215,11 +250,13 @@ jobs:
             -d '{"ref":"main"}'
 
       - name: Wait for deployment
+        if: steps.extract.outputs.fileName != ''
         run: |
           echo "等待 Hugo 部署完成..."
           sleep 15  # 等待 15 秒
 
       - name: Comment on issue
+        if: steps.extract.outputs.fileName != ''
         uses: actions/github-script@v6
         with:
           script: |
