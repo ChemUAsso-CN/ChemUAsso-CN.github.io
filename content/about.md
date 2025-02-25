@@ -18,6 +18,9 @@ draft = false
 
 排名不分先后。
 
+- Cursor Editor: Claude-3.5 Sonnet Model
+    - 协助绝大多数网页开发与纠错
+
 - 雷酸汞Ag(CNO)2
     - 网站创始人；网页开发；
 
