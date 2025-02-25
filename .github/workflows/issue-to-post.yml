@@ -25,36 +25,36 @@ jobs:
         with:
           script: |
             const issue = context.payload.issue;
-            
+
             // 检查是否已经有成功的评论
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number
             });
-            
+
             // 检查最近的评论是否是错误信息
             const recentComments = comments.data.slice(-2);
             const hasErrorComment = recentComments.some(comment => 
               comment.body.includes('❌')
             );
-            
+
             const hasSuccessComment = recentComments.some(comment => 
               comment.body.includes('✅ 文章已成功转换并提交！')
             );
-            
+
             if (hasErrorComment && !hasSuccessComment) {
               console.log('检测到错误评论，继续处理');
               core.setOutput('should_process', 'true');
               return;
             }
-            
+
             if (hasSuccessComment) {
               console.log('已经有成功转换的评论，跳过本次运行');
               core.setOutput('should_process', 'false');
               return;
             }
-            
+
             console.log('首次运行，继续处理');
             core.setOutput('should_process', 'true');
 
@@ -72,24 +72,22 @@ jobs:
         with:
           script: |
             function isValidDate(dateStr) {
-              // 检查格式是否为 YYYY-MM-DD，允许后面有注释
+              if (!dateStr) return false;
               const regex = /^\d{4}-\d{2}-\d{2}(?:\s*#.*)?$/;
               if (!regex.test(dateStr)) return false;
-              
-              // 提取日期部分（去掉注释）
               const pureDateStr = dateStr.split('#')[0].trim();
-              
-              // 检查日期是否有效
               const date = new Date(pureDateStr);
               return date instanceof Date && !isNaN(date);
             }
 
             try {
               const issue = context.payload.issue;
-              const body = issue.body;
+              if (!issue || !issue.body) {
+                throw new Error('Issue or issue body is missing');
+              }
 
               // 提取 Front Matter 和正文
-              const matches = body.match(/---\s*([\s\S]*?)\s*---\s*([\s\S]*)/);
+              const matches = issue.body.match(/---\s*([\s\S]*?)\s*---\s*([\s\S]*)/);
               if (!matches) {
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
@@ -97,10 +95,10 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 文章格式不正确，请使用正确的模板格式。'
                 });
-                return '';
+                return core.setFailed('Invalid article format');
               }
 
-              let frontMatter = matches[1].trim();
+              const frontMatter = matches[1].trim();
               const content = matches[2].trim();
 
               // 解析 Front Matter
@@ -113,6 +111,8 @@ jobs:
                 }
               });
 
+              console.log('Parsed meta:', meta);
+
               // 验证日期
               if (!isValidDate(meta.date)) {
                 await github.rest.issues.createComment({
@@ -121,15 +121,16 @@ jobs:
                   issue_number: issue.number,
                   body: '❌ 日期格式不正确，请使用 YYYY-MM-DD 格式（如：2025-02-24）'
                 });
-                return '';
+                return core.setFailed('Invalid date format');
               }
 
               // 解析 categories
               let categories = [];
               try {
-                categories = JSON.parse(meta.categories.replace(/'/g, '"'));
+                categories = JSON.parse((meta.categories || '[]').replace(/'/g, '"'));
               } catch (e) {
                 console.error('解析 categories 失败:', e);
+                categories = [];
               }
 
               // 确定文章类型和路径
@@ -149,24 +150,21 @@ jobs:
                 '---'
               ].join('\n');
 
+              const fileContent = `${newFrontMatter}\n\n${content}`;
+              
               core.setOutput('fileName', path);
-              core.setOutput('content', `${newFrontMatter}\n\n${content}`);
+              core.setOutput('content', fileContent);
               core.setOutput('success', 'true');
-              return JSON.stringify({
-                fileName: path,
-                content: `${newFrontMatter}\n\n${content}`
-              });
 
             } catch (error) {
               console.error('Error:', error);
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: issue.number,
+                issue_number: context.payload.issue.number,
                 body: `❌ 处理文章时出错：${error.message}`
               });
-              core.setOutput('success', 'false');
-              return '';
+              core.setFailed(error.message);
             }
 
       - name: Create and commit file
@@ -180,14 +178,14 @@ jobs:
           # 配置 Git
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
+
           # 创建新分支
           git checkout -b article/${{ github.event.issue.number }}
-          
+
           # 写入文件
           mkdir -p $(dirname "$FILE_NAME")
           echo "$FILE_CONTENT" > "$FILE_NAME"
-          
+
           # 提交更改
           git add .
           git commit -m "feat: add article from issue #${{ github.event.issue.number }}"
@@ -240,4 +238,4 @@ jobs:
               issue_number: context.payload.issue.number,
               state: 'closed',
               labels: ['published']
-            }); 
+            });
