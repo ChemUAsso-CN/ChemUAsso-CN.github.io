@@ -105,15 +105,34 @@ jobs:
 
               // 解析 Front Matter
               const meta = {};
+              console.log('Raw frontMatter:', frontMatter); // 添加调试日志
+              
               frontMatter.split('\n').forEach(line => {
-                const [key, ...values] = line.split(':').map(s => s.trim());
-                if (key && values.length > 0) {
-                  const value = values.join(':').trim();
-                  meta[key] = value.replace(/^["']|["']$/g, '');
+                line = line.trim();
+                if (!line) return; // 跳过空行
+                
+                // 使用正则表达式匹配键值对
+                const match = line.match(/^(\w+)\s*:\s*(.+)$/);
+                if (match) {
+                  const [, key, value] = match;
+                  // 移除值两端的引号
+                  meta[key] = value.replace(/^["']|["']$/g, '').trim();
+                  console.log(`Parsed ${key}:`, meta[key]); // 添加调试日志
                 }
               });
-
-              console.log('Parsed meta:', meta);
+              
+              console.log('Final meta:', meta);
+              
+              // 验证必需字段
+              if (!meta.title || !meta.date) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: '❌ 文章缺少必需的字段 (title 或 date)'
+                });
+                return core.setFailed('Missing required fields');
+              }
 
               // 验证日期
               if (!isValidDate(meta.date)) {
