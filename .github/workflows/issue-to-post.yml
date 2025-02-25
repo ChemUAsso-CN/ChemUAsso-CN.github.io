@@ -149,35 +149,15 @@ jobs:
               // 解析 categories
               let categories = [];
               try {
-                // 移除注释后再解析
-                const categoriesStr = (meta.categories || '[]').split('#')[0].trim();
-                categories = JSON.parse(categoriesStr.replace(/'/g, '"'));
+                categories = JSON.parse((meta.categories || '[]').replace(/'/g, '"'));
               } catch (e) {
                 console.error('解析 categories 失败:', e);
                 categories = [];
               }
 
               // 确定文章类型和路径
-              let type = 'announcement'; // 默认为公告
-              if (categories.includes('产物制作')) {
-                type = 'product';
-              } else if (categories.includes('公告')) {
-                type = 'announcement';
-              } else if (categories.includes('理论知识')) {
-                type = 'theory';
-              } else if (categories.includes('协会讨论')) {
-                type = 'discussion';
-              } else if (categories.includes('其他')) {
-                type = 'others';
-              }
-
-              // 生成文件名（使用日期和标题的组合）
-              const titleSlug = meta.title
-                .toLowerCase()
-                .replace(/[^\w\s-]/g, '') // 移除特殊字符
-                .replace(/\s+/g, '-'); // 空格替换为横线
-              
-              const path = `content/posts/${type}/${titleSlug}/index.md`;
+              const type = categories.includes('产物制作') ? 'product' : 'announcement';
+              const path = `content/posts/${type}/${meta.date}-${issue.number}.md`;
 
               // 生成新的 Front Matter
               const newFrontMatter = [
@@ -197,6 +177,10 @@ jobs:
               core.setOutput('fileName', path);
               core.setOutput('content', fileContent);
               core.setOutput('success', 'true');
+              return JSON.stringify({
+                fileName: path,
+                content: fileContent
+              });
 
             } catch (error) {
               console.error('Error:', error);
