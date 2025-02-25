@@ -149,26 +149,8 @@ jobs:
                 console.error('解析 categories 失败:', e);
                 categories = [];
               }
-
-              // 定义分类映射
-              const categoryMap = {
-                '公告': 'announcement',
-                '产物制作': 'product',
-                '理论知识': 'theory',
-                '协会讨论': 'discussion',
-                '其他': 'uncategorized'
-              };
-
-              // 确定文章类型
-              let type = 'uncategorized'; // 默认分类
-              for (const category of categories) {
-                if (categoryMap[category]) {
-                  type = categoryMap[category];
-                  break;
-                }
-              }
-
-              // 生成文件路径
+              // 确定文章类型和路径
+              const type = categories.includes('产物制作') ? 'product' : 'announcement';
               const path = `content/posts/${type}/${meta.date}-${issue.number}.md`;
               // 生成新的 Front Matter
               const newFrontMatter = [
