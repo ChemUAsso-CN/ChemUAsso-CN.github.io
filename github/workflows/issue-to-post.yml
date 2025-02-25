@@ -23,7 +23,6 @@ jobs:
         id: check
         uses: actions/github-script@v6
         with:
-          result-encoding: string
           script: |
             const issue = context.payload.issue;
             
@@ -46,30 +45,31 @@ jobs:
             
             if (hasErrorComment && !hasSuccessComment) {
               console.log('检测到错误评论，继续处理');
-              return 'continue';
+              core.setOutput('should_process', 'true');
+              return;
             }
             
             if (hasSuccessComment) {
               console.log('已经有成功转换的评论，跳过本次运行');
-              return 'skip';
+              core.setOutput('should_process', 'false');
+              return;
             }
             
             console.log('首次运行，继续处理');
-            return 'continue';
+            core.setOutput('should_process', 'true');
 
       - name: Checkout
-        if: steps.check.outputs.result == 'continue'
+        if: steps.check.outputs.should_process == 'true'
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           submodules: true
 
       - name: Process Issue
-        if: steps.check.outputs.result == 'continue'
+        if: steps.check.outputs.should_process == 'true'
         id: process
         uses: actions/github-script@v6
         with:
-          result-encoding: string
           script: |
             function isValidDate(dateStr) {
               // 检查格式是否为 YYYY-MM-DD，允许后面有注释
@@ -149,6 +149,9 @@ jobs:
                 '---'
               ].join('\n');
 
+              core.setOutput('fileName', path);
+              core.setOutput('content', `${newFrontMatter}\n\n${content}`);
+              core.setOutput('success', 'true');
               return JSON.stringify({
                 fileName: path,
                 content: `${newFrontMatter}\n\n${content}`
@@ -162,14 +165,17 @@ jobs:
                 issue_number: issue.number,
                 body: `❌ 处理文章时出错：${error.message}`
               });
+              core.setOutput('success', 'false');
               return '';
             }
 
       - name: Create and commit file
-        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        if: |
+          steps.check.outputs.should_process == 'true' && 
+          steps.process.outputs.success == 'true'
         env:
-          FILE_NAME: ${{ fromJSON(steps.process.outputs.result).fileName }}
-          FILE_CONTENT: ${{ fromJSON(steps.process.outputs.result).content }}
+          FILE_NAME: ${{ steps.process.outputs.fileName }}
+          FILE_CONTENT: ${{ steps.process.outputs.content }}
         run: |
           # 配置 Git
           git config --global user.name 'github-actions[bot]'
@@ -188,7 +194,7 @@ jobs:
           git push origin article/${{ github.event.issue.number }}
 
       - name: Create Pull Request
-        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -199,7 +205,7 @@ jobs:
             --head article/${{ github.event.issue.number }}
 
       - name: Trigger Hugo deployment
-        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         run: |
           curl -L \
             -X POST \
@@ -210,11 +216,11 @@ jobs:
             -d '{"ref":"main"}'
 
       - name: Comment on Issue
-        if: steps.check.outputs.result == 'continue' && fromJSON(steps.process.outputs.result).fileName != ''
+        if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         uses: actions/github-script@v6
         with:
           script: |
-            const fileName = '${{ fromJSON(steps.process.outputs.result).fileName }}';
+            const fileName = '${{ steps.process.outputs.fileName }}';
             const pathParts = fileName.split('/');
             const category = pathParts[2];
             const filename = pathParts[pathParts.length - 1].replace('.md', '');
