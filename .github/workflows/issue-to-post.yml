@@ -112,10 +112,10 @@ jobs:
                 if (!line) return; // 跳过空行
                 
                 // 使用正则表达式匹配键值对，允许带引号的值
-                const match = line.match(/^(\w+)\s*:\s*(.+)$/);
+                const match = line.match(/^(\w+)\s*:\s*(.+?)(?:\s*#.*)?$/);
                 if (match) {
                   const [, key, value] = match;
-                  // 移除值两端的引号
+                  // 移除值两端的引号和注释，并清理空格
                   meta[key] = value.replace(/^["']|["']$/g, '').trim();
                   console.log(`Parsed ${key}:`, meta[key]); // 添加调试日志
                 }
