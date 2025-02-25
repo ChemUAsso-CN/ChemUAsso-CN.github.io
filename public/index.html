@@ -15,7 +15,6 @@
             <a href="/about">关于我们</a>
             <a href="/posts">博客与文章</a>
             <a href="/contact">联系方式</a>
-            <a href="/convert_latex">化学式转LaTeX</a>
         </div>
     </nav>
 
@@ -24,8 +23,10 @@
         <h2>ChemUnionAsso-CN - 连接化学，共创未来</h2>
         
         <div class="cta-section">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u" class="cta-button">表单投稿</a>
-            <a href="https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md" class="cta-button github">通过 GitHub 投稿</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u " class="cta-button">表单投稿</a>
+            <a href="https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md " class="cta-button github">通过 GitHub 投稿</a>
+            
+            <a href="#chemical-converter" class="cta-button">化学式转LaTeX公式</a>
             <p class="cta-description">
                 您可以选择通过表单投稿或直接在 GitHub 上创建文章
                 <br>两种方式的内容都会由管理员处理并发布
@@ -46,6 +47,45 @@
         </section>
 
         
+        <section id="chemical-converter" class="chemical-converter">
+            <h1>化学式转LaTeX公式</h1>
+            <p>在下面的输入框中输入化学式（用 <code>_a</code> 表示原子个数），然后点击“转换”按钮。</p>
+            <input type="text" id="equationInput" placeholder="例如: H_2O 或 2H_2 + O_2 -> 2H_2O">
+            <button onclick="convertToLaTeX()">转换</button>
+            <div class="output" id="output"></div>
+
+            <div class="instructions">
+                <h2>使用说明</h2>
+                <p>1. 输入化学式时，使用 <code>_a</code> 表示原子个数。例如：</p>
+                <ul>
+                    <li>水：<code>H_2O</code></li>
+                    <li>二氧化碳：<code>CO_2</code></li>
+                    <li>葡萄糖：<code>C_6H_12O_6</code></li>
+                </ul>
+                <p>2. 反应箭头用 <code>-></code> 表示。例如：</p>
+                <ul>
+                    <li><code>2H_2 + O_2 -> 2H_2O</code></li>
+                </ul>
+                <p>3. 气体符号用 <code>^</code> 表示，沉淀符号用 <code>v</code> 表示。例如：</p>
+                <ul>
+                    <li>氧气气体：<code>O_2^</code></li>
+                    <li>沉淀：<code>AgClv</code></li>
+                </ul>
+                <p>4. 离子用 <code>(+n)</code> 或 <code>(-n)</code> 表示电荷。例如：</p>
+                <ul>
+                    <li>钠离子：<code>Na^+</code></li>
+                    <li>氯离子：<code>Cl^-</code></li>
+                </ul>
+                <p>5. 反应条件（如催化剂）用 <code>[ ]</code> 表示。例如：</p>
+                <ul>
+                    <li>过氧化氢分解：<code>2H_2O_2 -> 2H_2O + O_2^ \ [MnO_2]</code></li>
+                </ul>
+                <p>6. 点击“转换”按钮后，LaTeX 公式会显示在下方。</p>
+                <p>7. 复制生成的 LaTeX 公式，粘贴到 LaTeX 编辑器（如 Overleaf）中使用。</p>
+		</ul>
+		<p>作者:雷酸汞(化学联合会之网建部.闫梓航)<code>(wx:locate-Minecraftjava)</code></p>
+            </div>
+        </section>
 
         <section id="latest-posts" class="section animated">
             <a href="/posts"><h2>最新文章</h2></a>
@@ -82,5 +122,23 @@
     <section id="footer" class="section animated">
         <p>© 2025 化学联合协会 - ChemUnionAsso-CN</p>
     </section>
+
+    <script>
+        function convertToLaTeX() {
+            const input = document.getElementById('equationInput').value;
+            const latexEquation = input
+                .replace(/_(\d+)/g, '_{$1}')
+                .replace(/->/g, '\\rightarrow')
+                .replace(/\^(\+|\-)?(\d+)?/g, (match, p1, p2) => {
+                    return p2 ? `^{${p1 || '+'}${p2}}` : `^${p1}`;
+                })
+                .replace(/v/g, '\\downarrow')
+                .replace(/\[(.*?)\]/g, '$1')
+                .replace(/\((\+|\-)?(\d+)\)/g, (match, p1, p2) => {
+                    return p2 ? `\\left(${p1 || '+'}${p2}\\right)` : `\\left(${p1}\right)`;
+                });
+            document.getElementById('output').textContent = latexEquation;
+        }
+    </script>
 </body>
 </html>
