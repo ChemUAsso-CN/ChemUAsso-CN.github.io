@@ -199,8 +199,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;文章标题&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;date&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;2025-02-23&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;description&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;简短描述&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;分类&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 主分类，即相应文件夹名称的中文&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;tags&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auth: 作者&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签2&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 更细致的标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;公告&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 主分类，即相应文件夹名称的中文&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;tags&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auth:作者名&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签2&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 更细致的标签&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;author&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;作者名&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;draft&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# true 表示草稿，一般false即可&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
@@ -217,13 +217,19 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;标签规范：&lt;/p&gt;
+&lt;p&gt;标签说明：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;必须包含 &lt;code&gt;auth: 作者名&lt;/code&gt; 标签&lt;/li&gt;
+&lt;li&gt;必须包含 &lt;code&gt;auth:作者名&lt;/code&gt; 标签（注意：标签内不能有空格）&lt;/li&gt;
+&lt;li&gt;标签之间使用逗号分隔，每个标签被英文引号&lt;code&gt;&amp;quot;&lt;/code&gt;包裹&lt;/li&gt;
+&lt;li&gt;其它标签您可以报备后根据文章内容自行创建，请注意：
+&lt;ul&gt;
+&lt;li&gt;已存在的标签应优先选择&lt;/li&gt;
 &lt;li&gt;使用有意义的关键词&lt;/li&gt;
-&lt;li&gt;已存在的标签优先选择&lt;/li&gt;
 &lt;li&gt;避免过于宽泛的标签&lt;/li&gt;
-&lt;li&gt;其它标签您可以报备后自行创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;由于技术原因，标签内请不要添加任何空格&lt;/li&gt;
+&lt;li&gt;通过 GitHub Issues 提交时，引号可能会被自动去除，这是正常现象&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
