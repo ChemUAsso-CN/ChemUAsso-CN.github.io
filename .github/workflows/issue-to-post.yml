@@ -194,15 +194,24 @@ jobs:
           # 配置 Git
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # 删除可能存在的旧分支（本地和远程）
+          git branch -D article/${{ github.event.issue.number }} || true
+          git push origin --delete article/${{ github.event.issue.number }} || true
+
           # 创建新分支
           git checkout -b article/${{ github.event.issue.number }}
+
           # 写入文件
           mkdir -p $(dirname "$FILE_NAME")
           echo "$FILE_CONTENT" > "$FILE_NAME"
+
           # 提交更改
           git add .
           git commit -m "feat: add article from issue #${{ github.event.issue.number }}"
-          git push origin article/${{ github.event.issue.number }}
+
+          # 强制推送新分支
+          git push -f origin article/${{ github.event.issue.number }}
       - name: Create Pull Request
         if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         env:
