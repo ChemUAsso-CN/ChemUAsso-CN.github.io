@@ -183,44 +183,45 @@ jobs:
               });
               core.setFailed(error.message);
             }
-      - name: Create and Merge Pull Request
+      - name: Create and commit file
+        if: |
+          steps.check.outputs.should_process == 'true' && 
+          steps.process.outputs.success == 'true'
+        env:
+          FILE_NAME: ${{ steps.process.outputs.fileName }}
+          FILE_CONTENT: ${{ steps.process.outputs.content }}
+        run: |
+          # 配置 Git
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # 删除可能存在的旧分支（本地和远程）
+          git branch -D article/${{ github.event.issue.number }} || true
+          git push origin --delete article/${{ github.event.issue.number }} || true
+
+          # 创建新分支
+          git checkout -b article/${{ github.event.issue.number }}
+
+          # 写入文件
+          mkdir -p $(dirname "$FILE_NAME")
+          echo "$FILE_CONTENT" > "$FILE_NAME"
+
+          # 提交更改
+          git add .
+          git commit -m "feat: add article from issue #${{ github.event.issue.number }}"
+
+          # 强制推送新分支
+          git push -f origin article/${{ github.event.issue.number }}
+      - name: Create Pull Request
         if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 创建 PR
-          pr_url=$(gh pr create \
+          gh pr create \
             --title "feat: add article from issue #${{ github.event.issue.number }}" \
             --body "Converted from issue #${{ github.event.issue.number }}" \
             --base main \
-            --head article/${{ github.event.issue.number }} \
-            --json url -q .url)
-
-          echo "Created PR: $pr_url"
-
-          # 等待 1 秒确保 PR 创建完成
-          sleep 1
-
-          # 自动合并 PR
-          gh pr merge "$pr_url" \
-            --admin \
-            --squash \
-            --delete-branch \
-            --auto
-
-          # 等待合并完成
-          while true; do
-            status=$(gh pr view "$pr_url" --json state -q .state)
-            if [ "$status" = "MERGED" ]; then
-              echo "PR successfully merged"
-              break
-            elif [ "$status" = "CLOSED" ]; then
-              echo "PR was closed without merging"
-              exit 1
-            fi
-            echo "Waiting for PR to be merged..."
-            sleep 2
-          done
+            --head article/${{ github.event.issue.number }}
       - name: Trigger Hugo deployment
         if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         run: |
