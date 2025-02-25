@@ -2,21 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Announcement on 化学联合协会</title>
-        <link>https://ChemUAsso-CN.github.io/categories/announcement/</link>
+        <link>http://localhost:1313/categories/announcement/</link>
         <description>Recent content in Announcement on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/categories/announcement/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>支持使用Github Issue投稿了！</title>
-        <link>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</link>
-        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&amp;amp;template=article.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        
+        <copyright>ChemUnionAsso-CN</copyright><atom:link href="http://localhost:1313/categories/announcement/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

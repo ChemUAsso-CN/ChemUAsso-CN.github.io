@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>化学联合协会</title>
-        <link>https://ChemUAsso-CN.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>产物制作 64: 普鲁士蓝</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/64/</link>
+        <link>http://localhost:1313/posts/product/64/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/64/</guid>
+        <guid>http://localhost:1313/posts/product/64/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -39,10 +39,10 @@
         </item>
         <item>
         <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/65/</link>
+        <link>http://localhost:1313/posts/product/65/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/65/</guid>
+        <guid>http://localhost:1313/posts/product/65/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -67,20 +67,20 @@
         </item>
         <item>
         <title>支持使用Github Issue投稿了！</title>
-        <link>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</link>
+        <link>http://localhost:1313/posts/announcement/2025-02-24-6/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</guid>
+        <guid>http://localhost:1313/posts/announcement/2025-02-24-6/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&amp;amp;template=article.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>如何参与化联网站：从投稿到编辑</title>
-        <link>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</link>
+        <link>http://localhost:1313/posts/announcement/getting-started/</link>
         <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</guid>
+        <guid>http://localhost:1313/posts/announcement/getting-started/</guid>
         <description>&lt;h1 id=&#34;如何协助化联网站&#34;&gt;如何协助化联网站
 &lt;/h1&gt;&lt;p&gt;本指南将介绍两种参与化学联合协会网站的方式：&lt;/p&gt;
 &lt;ol&gt;
@@ -297,7 +297,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;由于技术原因，标签内请不要添加任何空格&lt;/li&gt;
-&lt;li&gt;通过 GitHub Issues 提交时，引号可能会被自动去除，这是正常现象&lt;/li&gt;
+&lt;li&gt;通过 GitHub Issues 提交时，包裹标签的引号可能会被自动去除，这是正常现象&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -593,10 +593,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 1: 三草酸合铁酸钾(1)</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/1/</link>
+        <link>http://localhost:1313/posts/product/1/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/1/</guid>
+        <guid>http://localhost:1313/posts/product/1/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;
 &lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;
@@ -619,10 +619,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 2: 四氯络锰酸胍</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/2/</link>
+        <link>http://localhost:1313/posts/product/2/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/2/</guid>
+        <guid>http://localhost:1313/posts/product/2/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -644,10 +644,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 3: 二氯化一氯五氨合钴</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/3/</link>
+        <link>http://localhost:1313/posts/product/3/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/3/</guid>
+        <guid>http://localhost:1313/posts/product/3/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -679,10 +679,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/4/</link>
+        <link>http://localhost:1313/posts/product/4/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/4/</guid>
+        <guid>http://localhost:1313/posts/product/4/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -708,10 +708,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/5/</link>
+        <link>http://localhost:1313/posts/product/5/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/5/</guid>
+        <guid>http://localhost:1313/posts/product/5/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -739,11 +739,11 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>关于我们</title>
-        <link>https://ChemUAsso-CN.github.io/about/</link>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/about/</guid>
-        <description>&lt;h1 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChemUAsso-CN.github.io/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
+        <guid>http://localhost:1313/about/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;化联简介&#34;&gt;化联简介
 &lt;/h2&gt;&lt;p&gt;化学联合协会是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团，成立至今 10 余年，在这里可以探讨解决化学及其他问题，分享实验视频、发现和去世(?)、交换化学药品，至今已有上百成员和很多群聊。&lt;/p&gt;
 &lt;p&gt;化联官网是由化学联合协会的成员们共同维护的，我们欢迎所有热爱化学、热爱科学、热爱生活、热爱分享的人们加入我们。&lt;/p&gt;
@@ -775,19 +775,19 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>搜索</title>
-        <link>https://ChemUAsso-CN.github.io/page/search/</link>
+        <link>http://localhost:1313/page/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/page/search/</guid>
+        <guid>http://localhost:1313/page/search/</guid>
         <description></description>
         </item>
         <item>
         <title>联系方式</title>
-        <link>https://ChemUAsso-CN.github.io/contact/</link>
+        <link>http://localhost:1313/contact/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/contact/</guid>
-        <description>&lt;h1 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChemUAsso-CN.github.io/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
+        <guid>http://localhost:1313/contact/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
 &lt;/h1&gt;&lt;p&gt;不告诉你~&lt;/p&gt;
 &lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;p&gt;发送邮件至：&lt;/p&gt;

@@ -11,24 +11,6 @@ theme = "hugo-theme-stack"  # 或 "kagome"
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-# 菜单配置
-[menu]
-  [[menu.main]]
-    name = "首页"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "关于我们"
-    url = "/about/"
-    weight = 2
-  [[menu.main]]
-    name = "博客与文章"
-    url = "/posts/"
-    weight = 3
-  [[menu.main]]
-    name = "联系方式"
-    url = "/contact/"
-    weight = 4
 
 # 基础参数
 [params]
@@ -48,3 +30,5 @@ customText = "ChemUnionAsso-CN 化学联合协会"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+

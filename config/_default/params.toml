@@ -12,7 +12,7 @@ enable = true
 
 # 小部件设置
 [widgets]
-enabled = ["search", "archives", "tag-cloud"]  # 启用搜索小部件
+enabled = ["search", "archives", "tag-cloud", "categories"]  # 启用搜索小部件
 
 # 搜索配置
 [search]
@@ -29,4 +29,8 @@ shouldSort = true
 location = 0
 distance = 100
 threshold = 0.3
-keys = ["title", "permalink", "summary", "content"] 
+keys = ["title", "permalink", "summary", "content"]
+
+[sidebar.nav]
+enable = true    # 启用导航
+expand = true    # 启用展开/折叠功能 

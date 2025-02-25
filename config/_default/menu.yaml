@@ -1,0 +1,21 @@
+# 菜单配置
+main:
+  - name: "首页"
+    url: "/"
+    weight: 1
+
+  - name: "博客与文章"
+    url: "/posts/"
+    weight: 3
+
+  - name: "分类导航"
+    url: "/categories/"
+    weight: 4
+
+  - name: "关于我们"
+    url: "/about/"
+    weight: 10
+
+  - name: "联系方式"
+    url: "/contact/"
+    weight: 11
