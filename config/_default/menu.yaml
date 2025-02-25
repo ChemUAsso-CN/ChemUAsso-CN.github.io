@@ -12,6 +12,10 @@ main:
     url: "/categories/"
     weight: 4
 
+  - name: "标签"
+    url: "/tags/"
+    weight: 5
+
   - name: "关于我们"
     url: "/about/"
     weight: 10
