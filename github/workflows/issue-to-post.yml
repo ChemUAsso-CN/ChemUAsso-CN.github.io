@@ -1,13 +1,35 @@
             // 验证日期格式
             function isValidDate(dateStr) {
-             // 检查格式是否为 YYYY-MM-DD，允许后面有可选的注释
+             // 检查格式是否为 YYYY-MM-DD，允许后面有注释
              const regex = /^\d{4}-\d{2}-\d{2}(?:\s*#.*)?$/;
              if (!regex.test(dateStr)) return false;
              
-             // 提取日期部分
+             // 提取日期部分（去掉注释）
              const pureDateStr = dateStr.split('#')[0].trim();
              
              // 检查日期是否有效
              const date = new Date(pureDateStr);
              return date instanceof Date && !isNaN(date);
            } 
+
+            try {
+              const issue = context.payload.issue;
+              const body = issue.body;
+
+              // 提取 Front Matter 和正文
+              const matches = body.match(/---\s*([\s\S]*?)\s*---\s*([\s\S]*)/);
+            } catch (error) {
+              console.error('Error extracting Front Matter and body:', error);
+            } 
+
+            // 验证日期
+            console.log('Validating date:', meta.date);
+            if (!isValidDate(meta.date)) {
+              console.log('Date validation failed');
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: '❌ 日期格式不正确，请使用 YYYY-MM-DD 格式（如：2025-02-24）'
+              });
+            } 
