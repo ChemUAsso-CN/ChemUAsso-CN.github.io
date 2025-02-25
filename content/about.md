@@ -31,9 +31,9 @@ draft = false
 - xingyuan555
     - 网站创始人；稿件处理；更新网页
 
--一坨过氧化氢
-    -网站推销；提意见的
+- 一坨过氧化氢
+    - 网站推销；提意见的
 
--其他参与者
-    -ascolta化;bendy and the ink machine；so
+- 其他参与者
+    - ascolta化;bendy and the ink machine；so
     
