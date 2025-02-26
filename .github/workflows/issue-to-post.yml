@@ -202,12 +202,15 @@ jobs:
 
               const fileContent = `${newFrontMatter}\n\n${content}`;
               
+              // 使用 base64 编码内容
+              const encodedContent = Buffer.from(fileContent).toString('base64');
+              
               core.setOutput('fileName', path);
-              core.setOutput('content', fileContent);
+              core.setOutput('content', encodedContent);
               core.setOutput('success', 'true');
               return JSON.stringify({
                 fileName: path,
-                content: fileContent
+                content: encodedContent
               });
             } catch (error) {
               console.error('Error:', error);
@@ -223,6 +226,7 @@ jobs:
         if: steps.check.outputs.should_process == 'true' && steps.process.outputs.success == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
           # 配置 Git
           git config --global user.name 'github-actions[bot]'
@@ -231,9 +235,9 @@ jobs:
           # 创建新分支
           git checkout -b article/${{ github.event.issue.number }}
 
-          # 写入文件
+          # 写入文件（使用 base64 编码避免 shell 转义问题）
           mkdir -p $(dirname "${{ steps.process.outputs.fileName }}")
-          echo "${{ steps.process.outputs.content }}" > "${{ steps.process.outputs.fileName }}"
+          echo "${{ steps.process.outputs.content }}" | base64 --decode > "${{ steps.process.outputs.fileName }}"
 
           # 提交更改
           git add .
