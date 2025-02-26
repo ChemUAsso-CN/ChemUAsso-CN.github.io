@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>硫氰酸三乙二胺合镍 on 化学联合协会</title>
-    <link>http://localhost:1313/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/</link>
-    <description>Recent content in 硫氰酸三乙二胺合镍 on 化学联合协会</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <copyright>ChemUnionAsso-CN</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-      <link>http://localhost:1313/posts/product/5/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/5/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&#xA;加热并不断搅拌直至固体完全溶解&#xA;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&#xA;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&#xA;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&#xA;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%</description>
-    </item>
-  </channel>
+    <channel>
+        <title>硫氰酸三乙二胺合镍 on 化学联合协会</title>
+        <link>https://ChemUAsso-CN.github.io/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/</link>
+        <description>Recent content in 硫氰酸三乙二胺合镍 on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright>
+        <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/5/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/5/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热并不断搅拌直至固体完全溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

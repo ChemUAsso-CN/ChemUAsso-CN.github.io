@@ -1,97 +1,901 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>化学联合协会</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on 化学联合协会</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <copyright>ChemUnionAsso-CN</copyright>
-    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>产物制作 64: 普鲁士蓝</title>
-      <link>http://localhost:1313/posts/product/64/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/64/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 制作普鲁士蓝： 称取 9g 三氯化铁,溶解&#xA;称取 9.2g 亚铁氰化钾,溶解&#xA;混合，产出蓝色沉淀。过滤烘干&#xA;制作滕氏蓝： 称取 9.3g 硫酸亚铁，配成溶液 称取 7.3g 铁氰化钾，配成溶液 混合，产出蓝色沉淀。过滤烘干 事实上，普鲁士蓝 与 滕氏蓝 是同种物质。</description>
-    </item>
-    <item>
-      <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
-      <link>http://localhost:1313/posts/product/65/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/65/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 称取5.8g氯化钠，溶解&#xA;称取1.2g王水和硫酸铜，溶解在10ml水中&#xA;称取6.8g咪嗟，溶解&#xA;加入大量无水乙醇醇析出硫酸钠&#xA;加热浓缩制水分蒸干，得到产物</description>
-    </item>
-    <item>
-      <title>支持使用Github Issue投稿了！</title>
-      <link>http://localhost:1313/posts/announcement/2025-02-24-6/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/announcement/2025-02-24-6/</guid>
-      <description>支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！</description>
-    </item>
-    <item>
-      <title>如何参与化联网站：从投稿到编辑</title>
-      <link>http://localhost:1313/posts/announcement/getting-started/</link>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/announcement/getting-started/</guid>
-      <description>如何协助化联网站 本指南将介绍两种参与化学联合协会网站的方式：&#xA;通过投稿表单快速投稿（推荐） 配置环境后直接编辑（进阶） 方式一：通过投稿表单参与 这是最简单的参与方式，适合所有用户。您可以选择以下任一方式投稿：&#xA;1. 通过表单投稿（最简单） 点击网站首页中间的绿色按钮&amp;ldquo;表单投稿&amp;rdquo; 在表单中填写您的投稿内容 内容会由管理员处理并发布 2. 通过 GitHub Issues 投稿（推荐） 如果您有 GitHub 账号，可以使用这种方式：&#xA;点击网站首页的&amp;ldquo;通过 GitHub 投稿&amp;quot;按钮 按照模板格式填写文章内容 提交后会自动转换为文章并发布 优点：&#xA;全自动处理，无需等待人工审核 可以实时预览 Markdown 格式 可以追踪文章处理状态 支持更丰富的格式和互动 管理员不会累死 注意事项：&#xA;需要 GitHub 账号 请严格按照模板格式填写 使用英文标点符号（在 Front Matter 部分） 文章会在 1-2 分钟内发布 3. 通过微信投稿 如果您有图片等其他格式的化学资料，可以：&#xA;添加 Xingyuan55 的微信 直接发送资料给他 由他代为提交 方式二：配置环境直接编辑（进阶） 如果您希望更深入地参与网站建设，可以配置环境后直接编辑文章。这可能需要一定的技术基础，但能够获得更好的编辑体验。&#xA;一、基础环境配置 1. Git 安装与配置 下载安装包：&#xA;访问 https://git-scm.com/downloads 点击 &amp;ldquo;Download for Windows&amp;rdquo; 等待下载完成 安装步骤：&#xA;双击运行下载的安装包 点击 &amp;ldquo;Next&amp;rdquo; 直到看到 &amp;ldquo;Adjusting your PATH environment&amp;rdquo; 选择 &amp;ldquo;Git from the command line and also from 3rd-party software&amp;rdquo; 继续点击 &amp;ldquo;Next&amp;rdquo;，保持默认选项 最后点击 &amp;ldquo;Install&amp;rdquo; 配置个人信息：</description>
-    </item>
-    <item>
-      <title>产物制作 1: 三草酸合铁酸钾(1)</title>
-      <link>http://localhost:1313/posts/product/1/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/1/</guid>
-      <description>反应方程式： $\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&#xA;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&#xA;步骤： 称取 24.3g 的六水合三氯化铁&#xA;称取 55.4g 一水合草酸钾&#xA;混合两种药品，加入 160ml 水溶解，加热并不断搅拌直至溶液变为绿色&#xA;停业加热，低温结晶(放入冰箱)，过滤即得产物</description>
-    </item>
-    <item>
-      <title>产物制作 2: 四氯络锰酸胍</title>
-      <link>http://localhost:1313/posts/product/2/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/2/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 称取 60g 四水合氯化锰 与 57.5g 盐酸胍，混合&#xA;量取 28mL 水，滴入 2mL 浓盐酸，并与混合物混合&#xA;60℃ 恒温加热 10min，直至溶液变为橙色略粘稠状溶液，其间不断搅拌&#xA;用滤纸覆盖烧杯，静置 3 天，产生红色结晶，即得产物</description>
-    </item>
-    <item>
-      <title>产物制作 3: 二氯化一氯五氨合钴</title>
-      <link>http://localhost:1313/posts/product/3/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/3/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 在锥形瓶中进行实验：&#xA;称取 3g 氯化铵，用 18mL 25% 氨水溶解，不断加热&#xA;称取 6g 六水合氧化钴，少量多次加入上述溶液中，溶液变为红橙色，后为绿色&#xA;量取 5mL 30% 过氧化氢，用胶头滴管缓慢加入溶液中，直至溶液不冒气泡&#xA;量取 18mL 37% 浓盐酸，滴加入溶液中，溶液变为深红色，冒白烟（系$NH_4Cl(g)$）&#xA;将溶液煮沸，并保持沸腾 15min ~ 20min&#xA;冷却至室温，产生红紫色沉淀&#xA;用冰水与冰乙醇洗涤杂物。得产物约 3.1g，产率 41.9%</description>
-    </item>
-    <item>
-      <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
-      <link>http://localhost:1313/posts/product/4/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/4/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 称取 9.8g 二水合氯化铜 和 5g 氯化钾，混合后用 10mL 水溶解&#xA;加热搅拌，溶液呈深绿色，热水（约60°C）保温&#xA;量取 120mL 冰乙酸，加热至 60°C&#xA;混合溶液，产生红色晶体&#xA;冷却至 40°C，用无水乙醇反复洗涤，干燥产物，得 6.1g，转化率 50.8%&#xA;注：产物暴露在空气中会吸水变蓝，加热后重新变红</description>
-    </item>
-    <item>
-      <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-      <link>http://localhost:1313/posts/product/5/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/5/</guid>
-      <description>反应方程式： &amp;hellip;&amp;hellip;&#xA;步骤 称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&#xA;加热并不断搅拌直至固体完全溶解&#xA;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&#xA;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&#xA;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&#xA;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%</description>
-    </item>
-    <item>
-      <title>关于我们</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>化学联合协会 - 关于我们 化联简介 化学联合协会是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团，成立至今 10 余年，在这里可以探讨解决化学及其他问题，分享实验视频、发现和去世(?)、交换化学药品，至今已有上百成员和很多群聊。&#xA;化联官网是由化学联合协会的成员们共同维护的，我们欢迎所有热爱化学、热爱科学、热爱生活、热爱分享的人们加入我们。&#xA;化联&#xA;另：网站页面效果其实不是开发者独自写的，Xingyuan55现在只会添加文章、更新网页，别的一窍不通。&#xA;致谢名单 排名不分先后。&#xA;雷酸汞Ag(CNO)2&#xA;网站创始人；页面编写 碱式醋酸铅&#xA;网站创始人；稿件撰写 小曹同学😋&#xA;网站创始人；稿件征集 </description>
-    </item>
-    <item>
-      <title>化学式转LaTeX公式</title>
-      <link>http://localhost:1313/convert_latex/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/convert_latex/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>联系方式</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>化学联合协会 - 联系方式 不告诉你~&#xA;&amp;hellip;&amp;hellip;&#xA;发送邮件至：&#xA;mail:dus0963@outlook.com mail:ChemUnionAsso@outlook.com Xingyuan55微信：xingyuan55awa，请说明来意。 </description>
-    </item>
-  </channel>
+    <channel>
+        <title>化学联合协会</title>
+        <link>https://ChemUAsso-CN.github.io/</link>
+        <description>Recent content on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright>
+        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>碳酸锰的制备</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</link>
+        <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</guid>
+        <description>&lt;p&gt;#制备过程&lt;/p&gt;
+&lt;p&gt;-称取19.7g四水合氯化锰溶解&lt;/p&gt;
+&lt;p&gt;-称取16.8g碳酸氢钠,溶解&lt;/p&gt;
+&lt;p&gt;-混合,过滤,洗涤,干燥&lt;/p&gt;
+&lt;!--
+支持 Markdown 格式：
+- 使用 # 表示标题
+- 使用 ** ** 表示粗体
+- 使用 * * 表示斜体
+- 使用  表示代码块
+- 使用 $ $ 表示公式
+- 更多格式请参考：https://www.markdownguide.org/basic-syntax/
+
+markdown每段间应该空一行，如：
+
+✅正确示例：
+
+## 标题
+
+第一行
+
+第二行
+
+❌错误示例：
+
+## 标题
+第一行
+第二行
+
+--&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 64: 普鲁士蓝</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/64/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/64/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;h4 id=&#34;制作普鲁士蓝&#34;&gt;制作普鲁士蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9g 三氯化铁,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.2g 亚铁氰化钾,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;制作滕氏蓝&#34;&gt;制作滕氏蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;称取 9.3g 硫酸亚铁，配成溶液&lt;/li&gt;
+&lt;li&gt;称取 7.3g 铁氰化钾，配成溶液&lt;/li&gt;
+&lt;li&gt;混合，产出蓝色沉淀。过滤烘干&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;事实上，普鲁士蓝 与 滕氏蓝 是同种物质。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/65/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/65/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取5.8g氯化钠，溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取1.2g王水和硫酸铜，溶解在10ml水中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取6.8g咪嗟，溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入大量无水乙醇醇析出硫酸钠&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热浓缩制水分蒸干，得到产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>化学联合会微信群聊介绍</title>
+        <link>https://ChemUAsso-CN.github.io/posts/discussion/2025-02-24-39/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/discussion/2025-02-24-39/</guid>
+        <description>&lt;p&gt;微信化学联合会由 化竞六价 铁创立，至今已经有了一至十二联合会、竞猜分会、化圈管理、视频号分会，达桑帮、化试中心等等分会。&lt;/p&gt;
+&lt;p&gt;现在让我们来介绍一下这些：&lt;/p&gt;
+&lt;p&gt;化学第一联合会.群主： &lt;strong&gt;六价铁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第二联合会.群主： &lt;strong&gt;六价铁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第三联合会:群主： &lt;strong&gt;六价铁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第四联合会:群主： &lt;strong&gt;六价铁&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第五联合会;群主： &lt;strong&gt;溴苯&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第六联合会:群主： （暂未知）&lt;/p&gt;
+&lt;p&gt;化学第七联合会:群主： &lt;strong&gt;（C₁₂H₁₄O₄）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第八联合会:群主： **HBrO₄ **&lt;/p&gt;
+&lt;p&gt;化学第九联合会:群主： （暂未知）&lt;/p&gt;
+&lt;p&gt;化学第十联合会:群主： **羿 **&lt;/p&gt;
+&lt;p&gt;化学第十一联合会:群主： &lt;strong&gt;单纯的过氧化氢⌬&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学第十二联合会:群主： &lt;strong&gt;寄雾.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学联合会之视频号分会:群主： &lt;strong&gt;一坨过氧化氢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学联合会之抖音分会:群主： &lt;strong&gt;一坨过氧化氢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学联合会之竞猜分会一群群主： &lt;strong&gt;up.F .K .Serissafoetida．&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;化学联合会之竞猜分会二群:群主： &lt;strong&gt;ʕᵕᴥᵕʔ（周末上线版 ⁧ （&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学有机基团联合会:群主： &lt;strong&gt;一只硫酸根离子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学联合会东部地区分会:群主： &lt;strong&gt;氯酸锰e&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;化学元素联合会无机:群主： **HBrO₄ **&lt;/p&gt;
+&lt;p&gt;此外&lt;em&gt;联合总会&lt;/em&gt;不作概诉&lt;/p&gt;
+&lt;p&gt;此描述均为标注化学联合会的群聊群名，其余未标注化学联合会的一些群聊或化联粉丝群未标出。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>支持使用Github Issue投稿了！</title>
+        <link>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&amp;amp;template=article.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>如何参与化联网站：从投稿到编辑</title>
+        <link>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</link>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</guid>
+        <description>&lt;h1 id=&#34;如何协助化联网站&#34;&gt;如何协助化联网站
+&lt;/h1&gt;&lt;p&gt;本指南将介绍两种参与化学联合协会网站的方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过投稿表单快速投稿（推荐）&lt;/li&gt;
+&lt;li&gt;配置环境后直接编辑（进阶）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;方式一通过投稿表单参与&#34;&gt;方式一：通过投稿表单参与
+&lt;/h2&gt;&lt;p&gt;这是最简单的参与方式，适合所有用户。您可以选择以下任一方式投稿：&lt;/p&gt;
+&lt;h3 id=&#34;1-通过表单投稿最简单&#34;&gt;1. 通过表单投稿（最简单）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;点击网站首页中间的绿色按钮&lt;a class=&#34;link&#34; href=&#34;https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;表单投稿&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在表单中填写您的投稿内容&lt;/li&gt;
+&lt;li&gt;内容会由管理员处理并发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-通过-github-issues-投稿推荐&#34;&gt;2. 通过 GitHub Issues 投稿（推荐）
+&lt;/h3&gt;&lt;p&gt;如果您有 GitHub 账号，可以使用这种方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击网站首页的&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&amp;amp;template=article.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;通过 GitHub 投稿&amp;quot;按钮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;按照模板格式填写文章内容&lt;/li&gt;
+&lt;li&gt;提交后会自动转换为文章并发布&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全自动处理，无需等待人工审核&lt;/li&gt;
+&lt;li&gt;可以实时预览 Markdown 格式&lt;/li&gt;
+&lt;li&gt;可以追踪文章处理状态&lt;/li&gt;
+&lt;li&gt;支持更丰富的格式和互动&lt;/li&gt;
+&lt;li&gt;管理员不会累死&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意事项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要 GitHub 账号&lt;/li&gt;
+&lt;li&gt;请严格按照模板格式填写&lt;/li&gt;
+&lt;li&gt;使用英文标点符号（在 Front Matter 部分）&lt;/li&gt;
+&lt;li&gt;文章会在 1-2 分钟内发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-通过微信投稿&#34;&gt;3. 通过微信投稿
+&lt;/h3&gt;&lt;p&gt;如果您有图片等其他格式的化学资料，可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;添加 Xingyuan55 的微信&lt;/li&gt;
+&lt;li&gt;直接发送资料给他&lt;/li&gt;
+&lt;li&gt;由他代为提交&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;方式二配置环境直接编辑进阶&#34;&gt;方式二：配置环境直接编辑（进阶）
+&lt;/h2&gt;&lt;p&gt;如果您希望更深入地参与网站建设，可以配置环境后直接编辑文章。这可能需要一定的技术基础，但能够获得更好的编辑体验。&lt;/p&gt;
+&lt;h2 id=&#34;一基础环境配置&#34;&gt;一、基础环境配置
+&lt;/h2&gt;&lt;h3 id=&#34;1-git-安装与配置&#34;&gt;1. Git 安装与配置
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装包：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问 &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://git-scm.com/downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;点击 &amp;ldquo;Download for Windows&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;等待下载完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;双击运行下载的安装包&lt;/li&gt;
+&lt;li&gt;点击 &amp;ldquo;Next&amp;rdquo; 直到看到 &amp;ldquo;Adjusting your PATH environment&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;选择 &amp;ldquo;Git from the command line and also from 3rd-party software&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;继续点击 &amp;ldquo;Next&amp;rdquo;，保持默认选项&lt;/li&gt;
+&lt;li&gt;最后点击 &amp;ldquo;Install&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置个人信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开命令提示符（Win + R，输入 cmd）&lt;/li&gt;
+&lt;li&gt;设置用户名：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;你的名字&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;设置邮箱：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.email &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;你的邮箱&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-hugo-安装与配置&#34;&gt;2. Hugo 安装与配置
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载 Hugo：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问 &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;hugo_extended_0.129.0_windows-amd64.zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点击下载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建目录：&lt;code&gt;C:\Hugo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;解压下载的文件到该目录&lt;/li&gt;
+&lt;li&gt;确认 &lt;code&gt;C:\Hugo&lt;/code&gt; 下有 &lt;code&gt;hugo.exe&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置环境变量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按 Win + X，选择&amp;quot;系统&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;高级系统设置&amp;quot;&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;环境变量&amp;quot;&lt;/li&gt;
+&lt;li&gt;在&amp;quot;系统变量&amp;quot;中找到&amp;quot;Path&amp;quot;&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;编辑&amp;quot;&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;新建&amp;quot;&lt;/li&gt;
+&lt;li&gt;输入 &lt;code&gt;C:\Hugo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点击&amp;quot;确定&amp;quot;保存所有对话框&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;验证安装：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重新打开命令提示符&lt;/li&gt;
+&lt;li&gt;输入：&lt;code&gt;hugo version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果显示版本信息，说明安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-vs-code-安装与配置&#34;&gt;3. VS Code 安装与配置
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载安装：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问 &lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;点击 &amp;ldquo;Download for Windows&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;运行安装包，保持默认选项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装必要扩展：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧扩展图标（或按 Ctrl+Shift+X）&lt;/li&gt;
+&lt;li&gt;搜索并安装以下扩展：
+&lt;ul&gt;
+&lt;li&gt;Chinese (Simplified) - 中文语言包&lt;/li&gt;
+&lt;li&gt;Markdown All in One - Markdown 支持&lt;/li&gt;
+&lt;li&gt;markdownlint - Markdown 语法检查&lt;/li&gt;
+&lt;li&gt;GitHub Pull Requests - Git 集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;二文章编写规范&#34;&gt;二、文章编写规范
+&lt;/h2&gt;&lt;h3 id=&#34;1-目录结构&#34;&gt;1. 目录结构
+&lt;/h3&gt;&lt;p&gt;网站内容按以下结构组织：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;content/
+├── posts/           # 所有文章
+│   ├── announcement/# 公告类文章，分类名：公告
+│   └── product/     # 产物制作类文章，分类名：产物制作
+│   └── theory/      # 理论知识类文章，分类名：理论知识
+│   └── experiment/  # 实验技术类文章，分类名：实验技术
+│   └── uncategorized/ # 其他类文章，分类名：其他   （注意不要打错字）
+│                    注：这里的一个子文件夹就是一个分类，如需更多分类请您提交Issues或联系管理者
+├── about.md         # 关于页面
+└── contact.md       # 联系方式页面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;issue-to-post.yml 中的分类映射：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;categoryMap&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;公告&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;announcement&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;产物制作&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;product&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;理论知识&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;theory&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;协会讨论&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;discussion&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;其他&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;uncategorized&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;只有&lt;code&gt;content/&lt;/code&gt;文件夹下的文件是网站内容，其他文件夹都是网站的配置文件。&lt;/p&gt;
+&lt;p&gt;您只需要在&lt;code&gt;content/posts/&lt;/code&gt;文件夹的各个子文件夹内，按照格式创建文件并创作即可。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;static/&lt;/code&gt;文件夹下是网站的静态资源，当您需要插入图片时候会涉及这里，您需要将图片放在&lt;code&gt;static/img/&lt;/code&gt;文件夹下。图片名字应该是有意义的英文名称。&lt;/p&gt;
+&lt;h3 id=&#34;2-文章格式&#34;&gt;2. 文章格式
+&lt;/h3&gt;&lt;p&gt;所有文章都需要包含以下部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;文件头（Front Matter）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;文章标题&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;date&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;2025-02-23&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;description&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;简短描述&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;公告&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 主分类，即相应文件夹名称的中文&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;tags&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auth:作者名&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;标签2&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# 更细致的标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;author&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;作者名&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;draft&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# true 表示草稿，一般false即可&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分类说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;announcement&lt;/code&gt;: 公告类文章，分类名：公告&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;product&lt;/code&gt;: 产物制作类文章，分类名：产物制作&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;theory&lt;/code&gt;: 理论知识类文章，分类名：理论知识&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;experiment&lt;/code&gt;: 实验技术类文章，分类名：实验技术&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uncategorized&lt;/code&gt;: 其他类文章，分类名：其他&lt;/li&gt;
+&lt;li&gt;如需更多分类请您提交 Issues 或联系管理者&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标签说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须包含 &lt;code&gt;auth:作者名&lt;/code&gt; 标签（注意：标签内不能有空格）&lt;/li&gt;
+&lt;li&gt;标签之间使用逗号分隔，每个标签被英文引号&lt;code&gt;&amp;quot;&lt;/code&gt;包裹&lt;/li&gt;
+&lt;li&gt;其它标签您可以报备后根据文章内容自行创建，请注意：
+&lt;ul&gt;
+&lt;li&gt;已存在的标签应优先选择&lt;/li&gt;
+&lt;li&gt;使用有意义的关键词&lt;/li&gt;
+&lt;li&gt;避免过于宽泛的标签&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;由于技术原因，标签内请不要添加任何空格&lt;/li&gt;
+&lt;li&gt;通过 GitHub Issues 提交时，包裹标签的引号可能会被自动去除，这是正常现象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-文章模板示例&#34;&gt;3. 文章模板示例
+&lt;/h3&gt;&lt;p&gt;根据不同类型的文章，我们有不同的模板：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;产物制作类文章：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;产物制作：化合物名称&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2025-02-23
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;description: &amp;#34;化合物的简短描述，包括外观、性质等&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;categories: [&amp;#34;product&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;auth: 作者名&amp;#34;, &amp;#34;无机合成&amp;#34;, &amp;#34;具体类别&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author: &amp;#34;作者名&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 反应方程式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$\mathrm{ X + 4Y_5 \space \xlongequal [\Delta] {阿巴阿巴催化剂} \space Z_4 \uparrow + CCF_2 \downarrow }$
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 实验步骤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; 步骤一
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; 步骤二
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 注意事项
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 安全提示
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 关键控制点
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;理论知识类文章：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;理论知识：主题名称&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2025-02-23
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;description: &amp;#34;知识点简述&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;categories: [&amp;#34;理论知识&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;auth: 作者名&amp;#34;, &amp;#34;具体领域&amp;#34;, &amp;#34;关键概念&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author: &amp;#34;作者名&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 基本概念
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;概念解释
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 详细说明
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;具体内容
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 应用示例
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;实际案例
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实验技术类文章：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;实验技术：操作名称&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2025-02-23
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;description: &amp;#34;技术要点简述&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;categories: [&amp;#34;experiment&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;auth: 作者名&amp;#34;, &amp;#34;实验技术&amp;#34;, &amp;#34;具体操作&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author: &amp;#34;作者名&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 原理说明
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;基本原理
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 操作步骤
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; 步骤一
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; 步骤二
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### 注意事项
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;安全提示
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上只是示例，并没有涵盖所有分类。您模仿示例自行编写即可。&lt;/p&gt;
+&lt;h2 id=&#34;三特殊语法说明&#34;&gt;三、特殊语法说明
+&lt;/h2&gt;&lt;h3 id=&#34;1-数学公式&#34;&gt;1. 数学公式
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;行内公式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;$公式$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;示例：$1+1=2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;独立公式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;$$公式$$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;示例：
+$$
+a^2+b^2=c^2
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;化学方程式：&lt;/p&gt;
+&lt;p&gt;请参见这篇文章：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/m0_69702929/article/details/128348095&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Latex / Katex 编辑基础化学方程式 - CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-图片插入&#34;&gt;2. 图片插入
+&lt;/h3&gt;&lt;p&gt;所有图片应该放在&lt;code&gt;static/img/&lt;/code&gt;文件夹下，然后您只需要在文章中像下面这样插入图片即可。图片名字应该是有意义的英文名称。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;基本语法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;图片描述&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/img/文件名.jpg&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;带链接的图片：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#f92672&#34;&gt;![图片描述&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/img/文件名.jpg&lt;/span&gt;)](链接地址)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图片尺寸控制：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;图片描述&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/img/文件名.jpg&lt;/span&gt;){width=300px}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;四工作流程&#34;&gt;四、工作流程
+&lt;/h2&gt;&lt;h3 id=&#34;1-创建新文章&#34;&gt;1. 创建新文章
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择合适的目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;content/posts/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── announcement/ &lt;span style=&#34;color:#75715e&#34;&gt;# 公告类&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── product/      &lt;span style=&#34;color:#75715e&#34;&gt;# 产物制作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── theory/       &lt;span style=&#34;color:#75715e&#34;&gt;# 理论知识&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── experiment/   &lt;span style=&#34;color:#75715e&#34;&gt;# 实验技术&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── uncategorized/ &lt;span style=&#34;color:#75715e&#34;&gt;# 其他&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用有意义的英文名称&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;.md&lt;/code&gt; 后缀&lt;/li&gt;
+&lt;li&gt;复制相应的模板内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-本地预览&#34;&gt;2. 本地预览
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;启动 Hugo 服务器：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd 项目目录
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;预览文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问 http://localhost:1313&lt;/li&gt;
+&lt;li&gt;实时查看修改效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-提交更改&#34;&gt;3. 提交更改
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;保存文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更新网站：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提交到 Git 并推送：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;添加新文章：xxx&amp;#34;&lt;/span&gt;  （自己写就行）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push    （推送，就是上传的意思）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但是您需要向 Xingyuan55 申请项目协作者权限，才能使用&lt;code&gt;git push&lt;/code&gt;进行推送。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;或者，您可以将修改好的.md 文件发送给 Xingyuan55，并注明文件夹，由他代为提交。（推荐这样做）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;五常见问题&#34;&gt;五、常见问题
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!Tips]
+请善用搜索引擎，您可以搜索到很多相关问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!Tips]
+您可以从以下链接（不限于）学习相关知识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.w3school.com.cn/html/index.asp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTML 教程 - W3School&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/html/html-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTML 教程 - 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/git/git-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git 教程 - 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown 教程 - 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.w3school.com.cn/markdown/index.asp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Markdown 教程 - W3School&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/hugo/hugo-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo 教程 - 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/vscode/vscode-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS Code 教程 - 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;世界上不只有菜鸟教程一个教程网站，您可以自己搜索到更多相关知识与解决方案。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;1-环境相关&#34;&gt;1. 环境相关
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Git 配置问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查用户名和邮箱配置&lt;/li&gt;
+&lt;li&gt;确认 GitHub 访问权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hugo 启动问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确认环境变量设置&lt;/li&gt;
+&lt;li&gt;检查主题文件是否完整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-编辑相关&#34;&gt;2. 编辑相关
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;图片不显示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查文件路径&lt;/li&gt;
+&lt;li&gt;确认图片已上传&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公式渲染错误：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查公式语法&lt;/li&gt;
+&lt;li&gt;确认是否启用了数学支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-部署相关&#34;&gt;3. 部署相关
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;提交失败：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先拉取最新更改&lt;/li&gt;
+&lt;li&gt;解决冲突后重试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;部署失败：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查 GitHub Actions 日志&lt;/li&gt;
+&lt;li&gt;确认文件格式正确&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语
+&lt;/h2&gt;&lt;p&gt;本指南涵盖了参与化学联合协会网站编辑的主要内容。如果遇到问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先查看本指南相关章节&lt;/li&gt;
+&lt;li&gt;在评论区提问&lt;/li&gt;
+&lt;li&gt;通过化联群联系管理员&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;记住：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保持文章格式规范&lt;/li&gt;
+&lt;li&gt;注意科学内容准确性&lt;/li&gt;
+&lt;li&gt;遵守安全信息发布规范&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!Warning]
+请您在编辑时，注意遵守中华人民共和国相关法律法规，以及社会主义核心价值观。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;祝你编辑愉快！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 1: 三草酸合铁酸钾(1)</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/1/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/1/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;
+&lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 24.3g 的六水合三氯化铁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 55.4g 一水合草酸钾&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合两种药品，加入 160ml 水溶解，加热并不断搅拌直至溶液变为绿色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;停业加热，低温结晶(放入冰箱)，过滤即得产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 2: 四氯络锰酸胍</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/2/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/2/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 60g 四水合氯化锰 与 57.5g 盐酸胍，混合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 28mL 水，滴入 2mL 浓盐酸，并与混合物混合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;60℃ 恒温加热 10min，直至溶液变为橙色略粘稠状溶液，其间不断搅拌&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用滤纸覆盖烧杯，静置 3 天，产生红色结晶，即得产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 3: 二氯化一氯五氨合钴</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/3/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/3/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;p&gt;在锥形瓶中进行实验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 3g 氯化铵，用 18mL 25% 氨水溶解，不断加热&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 6g 六水合氧化钴，少量多次加入上述溶液中，溶液变为红橙色，后为绿色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 5mL 30% 过氧化氢，用胶头滴管缓慢加入溶液中，直至溶液不冒气泡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 18mL 37% 浓盐酸，滴加入溶液中，溶液变为深红色，冒白烟（系$NH_4Cl(g)$）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将溶液煮沸，并保持沸腾 15min ~ 20min&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冷却至室温，产生红紫色沉淀&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用冰水与冰乙醇洗涤杂物。得产物约 3.1g，产率 41.9%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/4/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/4/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.8g 二水合氯化铜 和 5g 氯化钾，混合后用 10mL 水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热搅拌，溶液呈深绿色，热水（约60°C）保温&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 120mL 冰乙酸，加热至 60°C&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合溶液，产生红色晶体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冷却至 40°C，用无水乙醇反复洗涤，干燥产物，得 6.1g，转化率 50.8%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：产物暴露在空气中会吸水变蓝，加热后重新变红&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
+        <link>https://ChemUAsso-CN.github.io/posts/product/5/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/posts/product/5/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热并不断搅拌直至固体完全溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>关于我们</title>
+        <link>https://ChemUAsso-CN.github.io/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/about/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChemUAsso-CN.github.io/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;化联简介&#34;&gt;化联简介
+&lt;/h2&gt;&lt;p&gt;化学联合协会是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团，成立至今 10 余年，在这里可以探讨解决化学及其他问题，分享实验视频、发现和去世(?)、交换化学药品，至今已有上百成员和很多群聊。&lt;/p&gt;
+&lt;p&gt;化联官网是由化学联合协会的成员们共同维护的，我们欢迎所有热爱化学、热爱科学、热爱生活、热爱分享的人们加入我们。&lt;/p&gt;
+&lt;p&gt;另：网站页面效果其实不是开发者独自写的，Xingyuan55现在只会添加文章、更新网页，别的一窍不通。&lt;/p&gt;
+&lt;h3 id=&#34;致谢名单&#34;&gt;致谢名单
+&lt;/h3&gt;&lt;p&gt;排名不分先后。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cursor Editor: Claude-3.5 Sonnet Model&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;协助绝大多数网页开发与纠错&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;雷酸汞Ag(CNO)2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；网页开发；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;碱式醋酸铅&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；稿件撰写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小曹同学😋&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；稿件征集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xingyuan55&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；稿件处理；网页开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一坨过氧化氢&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；稿件撰写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ascolta化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；稿件征集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bendy and the ink machine&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站创始人；网页开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>化学式转LaTeX公式</title>
+        <link>https://ChemUAsso-CN.github.io/convert_latex/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/convert_latex/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>联系方式</title>
+        <link>https://ChemUAsso-CN.github.io/contact/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://ChemUAsso-CN.github.io/contact/</guid>
+        <description>&lt;h1 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChemUAsso-CN.github.io/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;不告诉你~&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;发送邮件至：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:dus0963@outlook.com&#34; &gt;mail:dus0963@outlook.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:ChemUnionAsso@outlook.com&#34; &gt;mail:ChemUnionAsso@outlook.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Xingyuan55微信：&lt;code&gt;xingyuan55awa&lt;/code&gt;，请说明来意。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

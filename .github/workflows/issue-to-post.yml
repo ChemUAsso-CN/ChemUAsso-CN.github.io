@@ -166,20 +166,37 @@ jobs:
                 }
               }
 
-              // 生成文件路径
-              const path = `content/posts/${type}/${meta.date}-${issue.number}.md`;
-              // 生成新的 Front Matter
+              // 清理标签
+              function sanitizeTags(tags) {
+                if (!tags) return '[]';
+                try {
+                  let tagArray = JSON.parse(tags.replace(/'/g, '"'));
+                  tagArray = tagArray.map(tag => {
+                    // 移除不安全的字符
+                    return tag.replace(/[.\s]+$/, '')  // 移除末尾的点和空格
+                             .replace(/[<>:"/\\|?*]+/g, '') // 移除 Windows 不允许的字符
+                             .trim();
+                  });
+                  return JSON.stringify(tagArray);
+                } catch (e) {
+                  console.error('解析 tags 失败:', e);
+                  return '[]';
+                }
+              }
+
+              // 生成新的 Front Matter 时清理标签
               const newFrontMatter = [
                 '---',
                 `title: "${meta.title || ''}"`,
                 `date: ${meta.date}`,
                 `description: "${meta.description || ''}"`,
                 `categories: ${meta.categories || '[]'}`,
-                `tags: ${meta.tags || '[]'}`,
+                `tags: ${sanitizeTags(meta.tags)}`,
                 `author: "${meta.author || ''}"`,
                 'draft: false',
                 '---'
               ].join('\n');
+
               const fileContent = `${newFrontMatter}\n\n${content}`;
               
               core.setOutput('fileName', path);
