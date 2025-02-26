@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="/styles/index.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID'); // 替换为你的跟踪ID
+    </script>
 </head>
 
 <body>
@@ -21,6 +30,9 @@
         <h1>{{ .Site.Title }}</h1>
         <h2>ChemUnionAsso-CN - 连接化学，共创未来</h2>
         
+        <!-- 显示访问者计数 -->
+        <p id="visitorCount" style="font-size: 14px; color: #666;">加载中...</p>
+
         <div class="cta-section">
             <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u" class="cta-button">表单投稿</a>
             <a href="https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md" class="cta-button github">通过 GitHub 投稿</a>
@@ -138,6 +150,20 @@
 
             document.getElementById('output').textContent = latexEquation;
         }
+
+        // 模拟访问者计数
+        function showVisitorCount() {
+            // 从localStorage中获取访问次数
+            let count = parseInt(localStorage.getItem('visitorCount')) || 0;
+            count += 1; // 增加访问次数
+            localStorage.setItem('visitorCount', count); // 保存到localStorage
+
+            // 显示访问次数
+            document.getElementById('visitorCount').textContent = `您是第 ${count} 位访问者`;
+        }
+
+        // 页面加载完成后显示访问者计数
+        window.onload = showVisitorCount;
     </script>
 
     <style>

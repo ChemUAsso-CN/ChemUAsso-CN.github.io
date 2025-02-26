@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>化学联合协会</title>
     <link rel="stylesheet" href="/styles/index.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID'); 
+    </script>
 </head>
 
 <body>
@@ -22,6 +31,9 @@
         <h1>化学联合协会</h1>
         <h2>ChemUnionAsso-CN - 连接化学，共创未来</h2>
         
+        
+        <p id="visitorCount" style="font-size: 14px; color: #666;">加载中...</p>
+
         <div class="cta-section">
             <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u" class="cta-button">表单投稿</a>
             <a href="https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md" class="cta-button github">通过 GitHub 投稿</a>
@@ -157,6 +169,20 @@
 
             document.getElementById('output').textContent = latexEquation;
         }
+
+        
+        function showVisitorCount() {
+            
+            let count = parseInt(localStorage.getItem('visitorCount')) || 0;
+            count += 1; 
+            localStorage.setItem('visitorCount', count); 
+
+            
+            document.getElementById('visitorCount').textContent = `您是第 ${count} 位访问者`;
+        }
+
+        
+        window.onload = showVisitorCount;
     </script>
 
     <style>
