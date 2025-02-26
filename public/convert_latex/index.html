@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
-<title>化学式转LaTeX公式</title>
+<title>化学式转LaTeX</title>
 
-<link rel='canonical' href='https://ChemUAsso-CN.github.io/convert_latex/'>
+<link rel='canonical' href='http://localhost:1313/convert_latex/'>
 
-<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="化学式转LaTeX公式">
+<link rel="stylesheet" href="/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="化学式转LaTeX">
 <meta property='og:description' content="">
-<meta property='og:url' content='https://ChemUAsso-CN.github.io/convert_latex/'>
+<meta property='og:url' content='http://localhost:1313/convert_latex/'>
 <meta property='og:site_name' content='化学联合协会'>
 <meta property='og:type' content='article'><meta property='article:section' content='' />
-<meta name="twitter:title" content="化学式转LaTeX公式">
+<meta name="twitter:title" content="化学式转LaTeX">
 <meta name="twitter:description" content="">
   
 
@@ -87,7 +87,7 @@
         </li>
         
         
-        <li >
+        <li  class='current' >
             <a href='/convert_latex/' >
                 
                 
@@ -179,7 +179,7 @@
 <article class="article single">
   <header class="article-header">
     <div class="article-details">
-      <h1 class="article-title">化学式转LaTeX公式</h1>
+      <h1 class="article-title">化学式转LaTeX</h1>
     </div>
   </header>
 
@@ -203,7 +203,7 @@
       <p>支持以下语法：</p>
       <ul>
         <li>下标：使用 _n 表示，如 H_2O</li>
-        <li>上标：使用 ^n 表示，如 Fe^{3+}</li>
+        <li>上标：使用 ^n 或 ^[n+] 表示，如 Fe^+ 或 SO_4^[2-]</li>
         <li>箭头：使用 -> 表示，如 A -> B</li>
         <li>气体：使用 ^^ 表示上箭头，vv 表示下箭头</li>
         <li>加热：使用 ->[delta] 表示加热条件</li>
@@ -322,6 +322,7 @@
 
     let latexEquation = input
       .replace(/_(\d+)/g, "_{$1}")
+      .replace(/\^\[([^\]]+)\]/g, "^{$1}")
       .replace(/->\[([^\]]+)\](?:\[([^\]]+)\])?/g, (match, cond1, cond2) => {
         if (cond2) {
           if (cond1.toLowerCase() === "delta") {
@@ -352,7 +353,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.fe7e5c048b014d65a72fd0be26b28d9bf594ae005ed8e8d0d816a68e3b51204b.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

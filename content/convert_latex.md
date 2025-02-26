@@ -1,4 +1,4 @@
 ---
-title: "化学式转LaTeX公式"
+title: "化学式转LaTeX"
 layout: "convert_latex"
---- 
+---

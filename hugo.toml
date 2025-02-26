@@ -23,6 +23,7 @@ math = true
 [params.sidebar]
 emoji = "🧪"
 subtitle = "化学联合协会的博客"
+highlight = true
 
 [params.footer]
 since = 2025

@@ -26,7 +26,7 @@
       <p>支持以下语法：</p>
       <ul>
         <li>下标：使用 _n 表示，如 H_2O</li>
-        <li>上标：使用 ^n 表示，如 Fe^{3+}</li>
+        <li>上标：使用 ^n 或 ^[n+] 表示，如 Fe^+ 或 SO_4^[2-]</li>
         <li>箭头：使用 -> 表示，如 A -> B</li>
         <li>气体：使用 ^^ 表示上箭头，vv 表示下箭头</li>
         <li>加热：使用 ->[delta] 表示加热条件</li>
@@ -145,6 +145,7 @@
 
     let latexEquation = input
       .replace(/_(\d+)/g, "_{$1}")
+      .replace(/\^\[([^\]]+)\]/g, "^{$1}")
       .replace(/->\[([^\]]+)\](?:\[([^\]]+)\])?/g, (match, cond1, cond2) => {
         if (cond2) {
           if (cond1.toLowerCase() === "delta") {

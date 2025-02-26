@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>碳酸锰 on 化学联合协会</title>
-        <link>https://ChemUAsso-CN.github.io/tags/%E7%A2%B3%E9%85%B8%E9%94%B0/</link>
+        <link>http://localhost:1313/tags/%E7%A2%B3%E9%85%B8%E9%94%B0/</link>
         <description>Recent content in 碳酸锰 on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/tags/%E7%A2%B3%E9%85%B8%E9%94%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%A2%B3%E9%85%B8%E9%94%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>碳酸锰的制备</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</link>
+        <link>http://localhost:1313/posts/product/2025-02-25-32/</link>
         <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</guid>
+        <guid>http://localhost:1313/posts/product/2025-02-25-32/</guid>
         <description>&lt;p&gt;#制备过程&lt;/p&gt;
 &lt;p&gt;-称取19.7g四水合氯化锰溶解&lt;/p&gt;
 &lt;p&gt;-称取16.8g碳酸氢钠,溶解&lt;/p&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 化学联合协会</title>
-        <link>https://ChemUAsso-CN.github.io/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>Recent content in Posts on 化学联合协会</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ChemUAsso-CN.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>碳酸锰的制备</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</link>
+        <link>http://localhost:1313/posts/product/2025-02-25-32/</link>
         <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/2025-02-25-32/</guid>
+        <guid>http://localhost:1313/posts/product/2025-02-25-32/</guid>
         <description>&lt;p&gt;#制备过程&lt;/p&gt;
 &lt;p&gt;-称取19.7g四水合氯化锰溶解&lt;/p&gt;
 &lt;p&gt;-称取16.8g碳酸氢钠,溶解&lt;/p&gt;
@@ -47,10 +47,10 @@ markdown每段间应该空一行，如：
         </item>
         <item>
         <title>产物制作 64: 普鲁士蓝</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/64/</link>
+        <link>http://localhost:1313/posts/product/64/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/64/</guid>
+        <guid>http://localhost:1313/posts/product/64/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -77,10 +77,10 @@ markdown每段间应该空一行，如：
         </item>
         <item>
         <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/65/</link>
+        <link>http://localhost:1313/posts/product/65/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/65/</guid>
+        <guid>http://localhost:1313/posts/product/65/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -105,10 +105,10 @@ markdown每段间应该空一行，如：
         </item>
         <item>
         <title>化学联合会微信群聊介绍</title>
-        <link>https://ChemUAsso-CN.github.io/posts/discussion/2025-02-24-39/</link>
+        <link>http://localhost:1313/posts/discussion/2025-02-24-39/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/discussion/2025-02-24-39/</guid>
+        <guid>http://localhost:1313/posts/discussion/2025-02-24-39/</guid>
         <description>&lt;p&gt;微信化学联合会由 化竞六价 铁创立，至今已经有了一至十二联合会、竞猜分会、化圈管理、视频号分会，达桑帮、化试中心等等分会。&lt;/p&gt;
 &lt;p&gt;现在让我们来介绍一下这些：&lt;/p&gt;
 &lt;p&gt;化学第一联合会.群主： &lt;strong&gt;六价铁&lt;/strong&gt;&lt;/p&gt;
@@ -135,21 +135,52 @@ markdown每段间应该空一行，如：
 </description>
         </item>
         <item>
-        <title>支持使用Github Issue投稿了！</title>
-        <link>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</link>
+        <title>史上最难竞猜题</title>
+        <link>http://localhost:1313/posts/theory/2025-02-24-59/</link>
         <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/announcement/2025-02-24-6/</guid>
+        <guid>http://localhost:1313/posts/theory/2025-02-24-59/</guid>
+        <description>&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;p&gt;一种盐无色针状晶体&lt;/p&gt;
+&lt;p&gt;阳离子无金属&lt;/p&gt;
+&lt;p&gt;阴离子含一种金属&lt;/p&gt;
+&lt;p&gt;阴离子有四种元素&lt;/p&gt;
+&lt;p&gt;两个五元环两个五元环结构相同&lt;/p&gt;
+&lt;p&gt;五元环上有四种元素&lt;/p&gt;
+&lt;p&gt;第四种元素在两个五元环间成桥&lt;/p&gt;
+&lt;p&gt;不含O和H&lt;/p&gt;
+&lt;p&gt;五元环上无金属元素&lt;/p&gt;
+&lt;p&gt;五元环上三种相邻的同种元素&lt;/p&gt;
+&lt;p&gt;五元环上无金属元素&lt;/p&gt;
+&lt;p&gt;五元环上两个双键三个单键&lt;/p&gt;
+&lt;p&gt;这个大阴离子是两个拟卤阴离子和一个金属原子络合的&lt;/p&gt;
+&lt;p&gt;阳离子三种元素四个六元环&lt;/p&gt;
+&lt;p&gt;单独的中心原子非金属&lt;/p&gt;
+&lt;p&gt;勉勉强强算个半金属吧&lt;/p&gt;
+&lt;p&gt;中心原子非金属&lt;/p&gt;
+&lt;p&gt;阳离子有苯环&lt;/p&gt;
+&lt;p&gt;有四个苯环连着中心原子&lt;/p&gt;
+&lt;h2 id=&#34;答案&#34;&gt;答案
+&lt;/h2&gt;&lt;p&gt;这个盐是(Ph4As[Au(SCSN3)2])&lt;/p&gt;
+&lt;p&gt;叫＂双(叠氮二硫代碳酸根)合金(I)四苯基鉮＂也可以&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>支持使用Github Issue投稿了！</title>
+        <link>http://localhost:1313/posts/announcement/2025-02-24-6/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/announcement/2025-02-24-6/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&amp;amp;template=article.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！支持使用Github Issue投稿了！&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>如何参与化联网站：从投稿到编辑</title>
-        <link>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</link>
+        <link>http://localhost:1313/posts/announcement/getting-started/</link>
         <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/announcement/getting-started/</guid>
+        <guid>http://localhost:1313/posts/announcement/getting-started/</guid>
         <description>&lt;h1 id=&#34;如何协助化联网站&#34;&gt;如何协助化联网站
 &lt;/h1&gt;&lt;p&gt;本指南将介绍两种参与化学联合协会网站的方式：&lt;/p&gt;
 &lt;ol&gt;
@@ -662,10 +693,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 1: 三草酸合铁酸钾(1)</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/1/</link>
+        <link>http://localhost:1313/posts/product/1/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/1/</guid>
+        <guid>http://localhost:1313/posts/product/1/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;
 &lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;
@@ -688,10 +719,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 2: 四氯络锰酸胍</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/2/</link>
+        <link>http://localhost:1313/posts/product/2/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/2/</guid>
+        <guid>http://localhost:1313/posts/product/2/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -713,10 +744,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 3: 二氯化一氯五氨合钴</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/3/</link>
+        <link>http://localhost:1313/posts/product/3/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/3/</guid>
+        <guid>http://localhost:1313/posts/product/3/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -748,10 +779,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/4/</link>
+        <link>http://localhost:1313/posts/product/4/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/4/</guid>
+        <guid>http://localhost:1313/posts/product/4/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤
@@ -777,10 +808,10 @@ $$&lt;/li&gt;
         </item>
         <item>
         <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-        <link>https://ChemUAsso-CN.github.io/posts/product/5/</link>
+        <link>http://localhost:1313/posts/product/5/</link>
         <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://ChemUAsso-CN.github.io/posts/product/5/</guid>
+        <guid>http://localhost:1313/posts/product/5/</guid>
         <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
 &lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;h3 id=&#34;步骤&#34;&gt;步骤

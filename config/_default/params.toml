@@ -5,6 +5,7 @@ mainSections = ["posts"]
 [sidebar]
 emoji = "🧪"
 subtitle = "化学联合协会的博客"
+highlight = true
 
 # 搜索设置
 [sidebar.search]
@@ -33,4 +34,16 @@ keys = ["title", "permalink", "summary", "content"]
 
 [sidebar.nav]
 enable = true    # 启用导航
-expand = true    # 启用展开/折叠功能 
+expand = true    # 启用展开/折叠功能
+
+# 添加列表页面配置
+[list]
+showHero = true
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+enableSidebar = true    # 这个很重要，确保列表页面启用侧边栏
+
+# 添加分类页面配置
+[taxonomy]
+showHero = true
+enableSidebar = true    # 确保分类页面启用侧边栏 
