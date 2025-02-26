@@ -1,6 +1,6 @@
 ---
 title: "方程式大全"
-date: 2025-02-22
+date: 2025-02-26
 description: "基本涵盖了初高中化学课程中的重要反应"
 categories: ["理论知识"]
 tags: ["auth:雷酸汞Ag(CNO)2", "auth:Xingyuan55", "方程式"]
