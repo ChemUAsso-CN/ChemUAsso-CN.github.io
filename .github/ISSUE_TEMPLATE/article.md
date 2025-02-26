@@ -30,15 +30,11 @@ draft: false
 在此处写入文章正文...
 
 <!--
-支持 Markdown 格式：
-- 使用 # 表示标题
-- 使用 ** ** 表示粗体
-- 使用 * * 表示斜体
-- 使用 ``` ``` 表示代码块
-- 使用 $ $ 表示公式
-- 更多格式请参考：https://www.markdownguide.org/basic-syntax/
 
-markdown每段间应该空一行，如：
+
+支持 Markdown 格式，语法请参考：https://markdown.com.cn/basic-syntax/
+
+注意：每段间应该空一行，例如
 
 ✅正确示例：
 
@@ -53,5 +49,4 @@ markdown每段间应该空一行，如：
 ## 标题
 第一行
 第二行
-
 -->
