@@ -2,9 +2,9 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "化学联合协会",
     "items": [{
-                "title": "产物制作 68: 六氟砷酸五氮",
-                "url": "http://localhost:1313/posts/product/68/",
-                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 由N₂FAsF₆和氨于-196°C在氟化氢中合成 "
+                "title": "化学竞猜1",
+                "url": "http://localhost:1313/posts/theory/2025-02-24-59/",
+                "content": "题目 一种盐无色针状晶体\n阳离子无金属\n阴离子含一种金属\n阴离子有四种元素\n两个五元环两个五元环结构相同\n五元环上有四种元素\n第四种元素在两个五元环间成桥\n不含O和H\n五元环上无金属元素\n五元环上三种相邻的同种元素\n五元环上无金属元素\n五元环上两个双键三个单键\n这个大阴离子是两个拟卤阴离子和一个金属原子络合的\n阳离子三种元素四个六元环\n单独的中心原子非金属\n勉勉强强算个半金属吧\n中心原子非金属\n阳离子有苯环\n有四个苯环连着中心原子\n答案 这个盐是(Ph₄As[Au(SCSN₃)₂])\n叫＂双(叠氮二硫代碳酸根)合金(I)四苯基鉮＂也可以\n"
             },{
                 "title": "化学竞猜2",
                 "url": "http://localhost:1313/posts/theory/2025-02-26-66/",
@@ -13,26 +13,6 @@
                 "title": "方程式大全",
                 "url": "http://localhost:1313/posts/theory/equations/",
                 "content": "$\\mathrm{2H_2O \\xlongequal{通电} 2H_2 \\uparrow + O_2 \\uparrow}$,\n$\\mathrm{2NaOH + H_2SO_4 \\rightarrow Na_2SO_4 + 2H_2O}$,\n$\\mathrm{CaCO_3 \\xrightarrow{\\Delta} CaO + CO_2 \\uparrow}$,\n$\\mathrm{Zn + 2HCl \\rightarrow ZnCl_2 + H_2 \\uparrow}$,\n$\\mathrm{2KMnO_4 \\xrightarrow{\\Delta} K_2MnO_4 + MnO_2 + O_2 \\uparrow}$,\n$\\mathrm{2KClO_3 \\xrightarrow{MnO_2} 2KCl + 3O_2 \\uparrow}$,\n$\\mathrm{Cu + 2H_2SO_4(浓) \\xrightarrow CuSO_4 + SO_2 \\uparrow + 2H_2O}$,\n$\\mathrm{4Fe + 3O_2 \\rightarrow 2Fe_2O_3}$,\n$\\mathrm{2Al + Fe_2O_3 \\xrightarrow{\\Delta} Al_2O_3 + 2Fe}$,\n$\\mathrm{CuO + H_2 \\xrightarrow{\\Delta} Cu + H_2O}$,\n$\\mathrm{2Na + 2H_2O \\rightarrow 2NaOH + H_2 \\uparrow}$,\n$\\mathrm{Fe + CuSO_4 \\rightarrow FeSO_4 + Cu}$,\n$\\mathrm{AgNO_3 + NaCl \\rightarrow AgCl \\downarrow + NaNO_3}$,\n$\\mathrm{CaO + H_2O \\rightarrow Ca(OH)_2}$,\n$\\mathrm{NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-}$,\n$\\mathrm{CO_2 + H_2O \\rightleftharpoons H_2CO_3}$,\n$\\mathrm{N_2 + 3H_2 \\xlongequal{Fe,450℃} 2NH_3}$,\n$\\mathrm{2SO_2 + O_2 \\xlongequal{V_2O_5} 2SO_3}$,\n$\\mathrm{CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O}$,\n$\\mathrm{C_2H_5OH + 3O_2 \\rightarrow 2CO_2 + 3H_2O}$,\n$\\mathrm{Fe^{3+} + 3OH^- \\rightarrow Fe(OH)_3 \\downarrow}$,\n$\\mathrm{Ba^{2+} + SO_4^{2-} \\rightarrow BaSO_4 \\downarrow}$,\n$\\mathrm{2FeCl_3 + 3H_2S \\rightarrow 2FeS \\downarrow + 6HCl + S \\downarrow}$,\n$\\mathrm{Cu(OH)_2 \\xrightarrow{\\Delta} CuO + H_2O}$,\n$\\mathrm{2H_2O_2 \\xrightarrow{MnO_2} 2H_2O + O_2 \\uparrow}$,\n$\\mathrm{C_6H_{12}O_6 \\xrightarrow{发酵} 2C_2H_5OH + 2CO_2 \\uparrow}$,\n$\\mathrm{CH_3COOH + CH_3OH \\xlongequal{H^+} CH_3COOCH_3 + H_2O}$,\n$\\mathrm{C_2H_4 + H_2O \\xlongequal{H^+} C_2H_5OH}$,\n$\\mathrm{C_2H_2 + 2H_2 \\xlongequal{Pd} C_2H_6}$,\n$\\mathrm{2KI + Cl_2 \\rightarrow 2KCl + I_2}$,\n$\\mathrm{2FeCl_2 + Cl_2 \\rightarrow 2FeCl_3}$,\n$\\mathrm{Cu + 4HNO_3 \\xrightarrow{浓} Cu(NO_3)_2 + 2NO_2 \\uparrow + 2H_2O}$,\n$\\mathrm{3Cu + 8HNO_3 \\xrightarrow{稀} 3Cu(NO_3)_2 + 2NO \\uparrow + 4H_2O}$,\n$\\mathrm{Zn + 2NaOH \\rightarrow Na_2ZnO_2 + H_2 \\uparrow}$,\n$\\mathrm{Al_2O_3 + 2NaOH + 3H_2O \\rightarrow 2Na[Al(OH)_4]}$,\n$\\mathrm{CuSO_4 + 4NH_3·H_2O \\rightarrow [Cu(NH_3)_4]SO_4 + 4H_2O}$,\n$\\mathrm{Fe^{3+} + 3SCN^- \\rightarrow [Fe(SCN)_3]}$,\n$\\mathrm{Ag^+ + 2NH_3·H_2O \\rightarrow [Ag(NH_3)_2]^+ + 2H_2O}$,\n$\\mathrm{CuSO_4·5H_2O \\xrightarrow{\\Delta} CuSO_4 + 5H_2O}$,\n$\\mathrm{NaHCO_3 \\xrightarrow{\\Delta} Na_2CO_3 + CO_2 \\uparrow + H_2O}$,\n$\\mathrm{2NaHCO_3 + Ca(OH)_2 \\rightarrow CaCO_3 \\downarrow + Na_2CO_3 + 2H_2O}$,\n$\\mathrm{Zn + 2NaOH + 2H_2O \\rightarrow Na_2[Zn(OH)_4] + H_2 \\uparrow}$,\n$\\mathrm{2KMnO_4 + 16HCl \\rightarrow 2KCl + 2MnCl_2 + 8H_2O + 5Cl_2 \\uparrow}$,\n$\\mathrm{K_2Cr_2O_7 + 14HCl \\rightarrow 2KCl + 2CrCl_3 + 7H_2O + 3Cl_2 \\uparrow}$,\n$\\mathrm{2KMnO_4 + 5H_2C_2O_4 + 3H_2SO_4 \\rightarrow K_2SO_4 + 2MnSO_4 + 10CO_2 \\uparrow + 8H_2O}$,\n$\\mathrm{CH_3CH_2OH \\xrightarrow{K_2Cr_2O_7/H^+} CH_3COOH + H_2O}$,\n$\\mathrm{C_6H_6 + Cl_2 \\xlongequal{FeCl_3} C_6H_5Cl + HCl}$,\n$\\mathrm{C_6H_6 + HNO_3 \\xlongequal{H_2SO_4} C_6H_5NO_2 + H_2O}$,\n$\\mathrm{CH_3COOH + NaHCO_3 \\rightarrow CH_3COONa + H_2O + CO_2 \\uparrow}$,\n$\\mathrm{2C_8H_{18} + 25O_2 \\rightarrow 16CO_2 + 18H_2O}$,\n$\\mathrm{2NaCl \\xlongequal{电解} 2Na + Cl_2 \\uparrow}$,\n$\\mathrm{2CuCl_2 \\xlongequal{电解} 2Cu + 2Cl_2 \\uparrow}$,\n$\\mathrm{Pb^{2+} + 2I^- \\rightarrow PbI_2 \\downarrow}$,\n$\\mathrm{Pb^{2+} + 2Cl^- \\rightarrow PbCl_2 \\downarrow}$,\n$\\mathrm{Ag^+ + Cl^- \\rightarrow AgCl \\downarrow}$,\n$\\mathrm{Ca^{2+} + CO_3^{2-} \\rightarrow CaCO_3 \\downarrow}$,\n$\\mathrm{Fe^{2+} + 2OH^- \\rightarrow Fe(OH)_2 \\downarrow}$,\n$\\mathrm{4Fe(OH)_2 + O_2 + 2H_2O \\rightarrow 4Fe(OH)_3 \\downarrow}$,\n$\\mathrm{2FeSO_4 + 2H_2SO_4 + H_2O_2 \\rightarrow Fe_2(SO_4)_3 + 2H_2O}$,\n$\\mathrm{3Fe + 4H_2O \\xlongequal{高温} Fe_3O_4 + 4H_2 \\uparrow}$,\n$\\mathrm{Fe_3O_4 + 4CO \\xlongequal{高温} 3Fe + 4CO_2 \\uparrow}$,\n$\\mathrm{CaC_2 + 2H_2O \\rightarrow Ca(OH)_2 + C_2H_2 \\uparrow}$,\n$\\mathrm{Na_2CO_3 + H_2O \\rightleftharpoons NaHCO_3 + NaOH}$,\n$\\mathrm{NH_4Cl + NaOH \\xrightarrow{\\Delta} NH_3 \\uparrow + NaCl + H_2O}$,\n$\\mathrm{2NH_4NO_2 \\xrightarrow{\\Delta} 2N_2 \\uparrow + 4H_2O}$,\n$\\mathrm{(NH_4)_2Cr_2O_7 \\xrightarrow{\\Delta} N_2 \\uparrow + Cr_2O_3 + 4H_2O}$,\n$\\mathrm{CH_3COOC_2H_5 + NaOH \\rightarrow CH_3COONa + C_2H_5OH}$,\n$\\mathrm{C_6H_5NO_2 + 6H \\xrightarrow{Fe/HCl} C_6H_5NH_2 + 2H_2O}$,\n$\\mathrm{C_6H_5NH_2 + HCl \\rightarrow C_6H_5NH_3Cl}$,\n$\\mathrm{C_6H_5NH_2 + HONO \\xrightarrow{0-5℃} C_6H_5N_2^+Cl^-}$,\n$\\mathrm{C_6H_5N_2^+Cl^- + H_2O \\rightarrow C_6H_5OH + N_2 \\uparrow + HCl}$,\n$\\mathrm{C_2H_5OH \\xrightarrow{浓H_2SO_4,170℃} C_2H_4 + H_2O}$,\n$\\mathrm{CH_3COOH + PCl_5 \\rightarrow CH_3COCl + POCl_3 + HCl}$,\n$\\mathrm{C_6H_6 + CH_3Cl \\xlongequal{AlCl_3} C_6H_5CH_3 + HCl}$,\n$\\mathrm{C_2H_5OH \\xrightarrow{Cu,300℃} CH_3CHO + H_2}$,\n$\\mathrm{CH_3CHO + 2[Ag(NH_3)_2]OH \\rightarrow CH_3COOH + 2Ag \\downarrow + 4NH_3 + H_2O}$,\n$\\mathrm{C_6H_5CHO + 2Cu(OH)_2 \\rightarrow C_6H_5COOH + Cu_2O \\downarrow + 2H_2O}$,\n$\\mathrm{CH_3MgBr + H_2O \\rightarrow CH_4 + Mg(OH)Br}$,\n$\\mathrm{C_6H_5OH + FeCl_3 \\rightarrow [C_6H_5O]_3Fe + 3HCl}$,\n$\\mathrm{C_2H_2 + 2Br_2 \\rightarrow C_2H_2Br_4}$,\n$\\mathrm{CH_3COOH + NaHCO_3 \\rightarrow CH_3COONa + H_2O + CO_2 \\uparrow}$,\n$\\mathrm{2KClO_3 \\xrightarrow{\\Delta} 2KCl + 3O_2 \\uparrow}$,\n$\\mathrm{4HCl + MnO_2 \\rightarrow MnCl_2 + Cl_2 \\uparrow + 2H_2O}$,\n$\\mathrm{2KMnO_4 + 10KI + 8H_2SO_4 \\rightarrow 2MnSO_4 + 5I_2 + 6K_2SO_4 + 8H_2O}$,\n$\\mathrm{5CO + I_2O_5 \\rightarrow 5CO_2 + I_2}$,\n$\\mathrm{4Zn + 10HNO_3 \\xrightarrow{稀} 4Zn(NO_3)_2 + NH_4NO_3 + 3H_2O}$,\n$\\mathrm{3Zn + 8HNO_3 \\xrightarrow{稀} 3Zn(NO_3)_2 + 2NO + 4H_2O}$,\n$\\mathrm{Cu + 4HNO_3 \\xrightarrow{浓} Cu(NO_3)_2 + 2NO_2 \\uparrow + 2H_2O}$,\n$\\mathrm{3Cu + 8HNO_3 \\xrightarrow{稀} 3Cu(NO_3)_2 + 2NO \\uparrow + 4H_2O}$,\n$\\mathrm{4Zn + 10H^+ + 2NO_3^- \\rightarrow 4Zn^{2+} + NH_4^+ + 3H_2O}$,\n$\\mathrm{CH_4 + Cl_2 \\xrightarrow{光} CH_3Cl + HCl}$,\n$\\mathrm{CH_3Cl + Cl_2 \\xrightarrow{光} CH_2Cl_2 + HCl}$,\n$\\mathrm{CH_2Cl_2 + Cl_2 \\xrightarrow{光} CHCl_3 + HCl}$,\n$\\mathrm{CHCl_3 + Cl_2 \\xrightarrow{光} CCl_4 + HCl}$,\n$\\mathrm{C_2H_4 + Br_2 \\rightarrow C_2H_4Br_2}$,\n$\\mathrm{C_2H_2 + 2Br_2 \\rightarrow C_2H_2Br_4}$,\n$\\mathrm{C_6H_6 + 3Cl_2 \\xrightarrow{光} C_6H_6Cl_6}$,\n$\\mathrm{C_6H_6 + 3H_2 \\xlongequal{Ni} C_6H_{12}}$,\n$\\mathrm{C_2H_4 + H_2O \\xlongequal{H_2SO_4} C_2H_5OH}$,\n$\\mathrm{C_6H_5Cl + 2Na + C_2H_5Cl \\rightarrow C_6H_5C_2H_5 + 2NaCl}$ ]\n"
-            },{
-                "title": "产物制作 63: 翠绿色一价铬盐",
-                "url": "http://localhost:1313/posts/product/63/",
-                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 将由1.4g三氧化铬配成的浓溶液、由2g氯化羟胺配成的浓溶液加入100ml锥形瓶中,开启磁搅\n将4g氢氧化钾溶于少量水\n混合溶液,冷却\n称取7g氯化钾,配成饱和溶液,混合\n加入2克氯化羟胺溶液 加热搅拌2h至溶液变成深棕色\n冷却，加入50ml乙醇醇析，过滤后得到粗产物(可将粗产物溶于少量水并加入两倍体积的乙醇析晶提纯)\n"
-            },{
-                "title": "产物制作 66: 碳酸锰",
-                "url": "http://localhost:1313/posts/product/66/",
-                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 称取19.7g四水合氯化锰溶解\n称取16.8g碳酸氢钠,溶解\n混合,过滤,洗涤,干燥\n"
-            },{
-                "title": "产物制作 64: 普鲁士蓝",
-                "url": "http://localhost:1313/posts/product/64/",
-                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 制作普鲁士蓝： 称取 9g 三氯化铁,溶解\n称取 9.2g 亚铁氰化钾,溶解\n混合，产出蓝色沉淀。过滤烘干\n制作滕氏蓝： 称取 9.3g 硫酸亚铁，配成溶液\n称取 7.3g 铁氰化钾，配成溶液\n混合，产出蓝色沉淀。过滤烘干\n事实上，普鲁士蓝 与 滕氏蓝 是同种物质。\n"
-            },{
-                "title": "产物制作 65: 深蓝色二氯二味唑合铜",
-                "url": "http://localhost:1313/posts/product/65/",
-                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 称取5.8g氯化钠，用5ml水溶解\n称取1.2g王水合硫酸铜，溶解在5ml水中\n称取6.8g咪唑，溶解\n加入50ml无水乙醇醇析出硫酸钠\n加热浓缩至水分蒸干，得到产物\n"
-            },{
-                "title": "化学竞猜1",
-                "url": "http://localhost:1313/posts/theory/2025-02-24-59/",
-                "content": "题目 一种盐无色针状晶体\n阳离子无金属\n阴离子含一种金属\n阴离子有四种元素\n两个五元环两个五元环结构相同\n五元环上有四种元素\n第四种元素在两个五元环间成桥\n不含O和H\n五元环上无金属元素\n五元环上三种相邻的同种元素\n五元环上无金属元素\n五元环上两个双键三个单键\n这个大阴离子是两个拟卤阴离子和一个金属原子络合的\n阳离子三种元素四个六元环\n单独的中心原子非金属\n勉勉强强算个半金属吧\n中心原子非金属\n阳离子有苯环\n有四个苯环连着中心原子\n答案 这个盐是(Ph₄As[Au(SCSN₃)₂])\n叫＂双(叠氮二硫代碳酸根)合金(I)四苯基鉮＂也可以\n"
             },{
                 "title": "化学联合会微信群聊介绍",
                 "url": "http://localhost:1313/posts/discussion/2025-02-24-39/",
@@ -65,6 +45,26 @@
                 "title": "产物制作 5: 硫氰酸三乙二胺合镍",
                 "url": "http://localhost:1313/posts/product/5/",
                 "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解\n加热并不断搅拌直至固体完全溶解\n加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液\n将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色\n水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体\n用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%\n"
+            },{
+                "title": "产物制作 63: 翠绿色一价铬盐",
+                "url": "http://localhost:1313/posts/product/63/",
+                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 将由1.4g三氧化铬配成的浓溶液、由2g氯化羟胺配成的浓溶液加入100ml锥形瓶中,开启磁搅\n将4g氢氧化钾溶于少量水\n混合溶液,冷却\n称取7g氯化钾,配成饱和溶液,混合\n加入2克氯化羟胺溶液 加热搅拌2h至溶液变成深棕色\n冷却，加入50ml乙醇醇析，过滤后得到粗产物(可将粗产物溶于少量水并加入两倍体积的乙醇析晶提纯)\n"
+            },{
+                "title": "产物制作 64: 普鲁士蓝",
+                "url": "http://localhost:1313/posts/product/64/",
+                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 制作普鲁士蓝： 称取 9g 三氯化铁,溶解\n称取 9.2g 亚铁氰化钾,溶解\n混合，产出蓝色沉淀。过滤烘干\n制作滕氏蓝： 称取 9.3g 硫酸亚铁，配成溶液\n称取 7.3g 铁氰化钾，配成溶液\n混合，产出蓝色沉淀。过滤烘干\n事实上，普鲁士蓝 与 滕氏蓝 是同种物质。\n"
+            },{
+                "title": "产物制作 65: 深蓝色二氯二味唑合铜",
+                "url": "http://localhost:1313/posts/product/65/",
+                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 称取5.8g氯化钠，用5ml水溶解\n称取1.2g王水合硫酸铜，溶解在5ml水中\n称取6.8g咪唑，溶解\n加入50ml无水乙醇醇析出硫酸钠\n加热浓缩至水分蒸干，得到产物\n"
+            },{
+                "title": "产物制作 66: 碳酸锰",
+                "url": "http://localhost:1313/posts/product/66/",
+                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 称取19.7g四水合氯化锰溶解\n称取16.8g碳酸氢钠,溶解\n混合,过滤,洗涤,干燥\n"
+            },{
+                "title": "产物制作 68: 六氟砷酸五氮",
+                "url": "http://localhost:1313/posts/product/68/",
+                "content": "反应方程式： \u0026hellip;\u0026hellip;\n步骤 由N₂FAsF₆和氨于-196°C在氟化氢中合成 "
             },{
                 "title": "测试，请忽略",
                 "url": "http://localhost:1313/posts/uncategorized/2025-01-01-62/",
