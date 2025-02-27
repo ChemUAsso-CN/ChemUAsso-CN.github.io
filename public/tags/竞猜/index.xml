@@ -1,43 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>竞猜 on 化学联合协会</title>
-        <link>http://localhost:1313/tags/%E7%AB%9E%E7%8C%9C/</link>
-        <description>Recent content in 竞猜 on 化学联合协会</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>ChemUnionAsso-CN</copyright>
-        <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AB%9E%E7%8C%9C/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>史上最难竞猜题</title>
-        <link>http://localhost:1313/posts/theory/2025-02-24-59/</link>
-        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/posts/theory/2025-02-24-59/</guid>
-        <description>&lt;h2 id=&#34;题目&#34;&gt;题目
-&lt;/h2&gt;&lt;p&gt;一种盐无色针状晶体&lt;/p&gt;
-&lt;p&gt;阳离子无金属&lt;/p&gt;
-&lt;p&gt;阴离子含一种金属&lt;/p&gt;
-&lt;p&gt;阴离子有四种元素&lt;/p&gt;
-&lt;p&gt;两个五元环两个五元环结构相同&lt;/p&gt;
-&lt;p&gt;五元环上有四种元素&lt;/p&gt;
-&lt;p&gt;第四种元素在两个五元环间成桥&lt;/p&gt;
-&lt;p&gt;不含O和H&lt;/p&gt;
-&lt;p&gt;五元环上无金属元素&lt;/p&gt;
-&lt;p&gt;五元环上三种相邻的同种元素&lt;/p&gt;
-&lt;p&gt;五元环上无金属元素&lt;/p&gt;
-&lt;p&gt;五元环上两个双键三个单键&lt;/p&gt;
-&lt;p&gt;这个大阴离子是两个拟卤阴离子和一个金属原子络合的&lt;/p&gt;
-&lt;p&gt;阳离子三种元素四个六元环&lt;/p&gt;
-&lt;p&gt;单独的中心原子非金属&lt;/p&gt;
-&lt;p&gt;勉勉强强算个半金属吧&lt;/p&gt;
-&lt;p&gt;中心原子非金属&lt;/p&gt;
-&lt;p&gt;阳离子有苯环&lt;/p&gt;
-&lt;p&gt;有四个苯环连着中心原子&lt;/p&gt;
-&lt;h2 id=&#34;答案&#34;&gt;答案
-&lt;/h2&gt;&lt;p&gt;这个盐是(Ph4As[Au(SCSN3)2])&lt;/p&gt;
-&lt;p&gt;叫＂双(叠氮二硫代碳酸根)合金(I)四苯基鉮＂也可以&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>竞猜 on 化学联合协会</title>
+    <link>http://localhost:1313/tags/%E7%AB%9E%E7%8C%9C/</link>
+    <description>Recent content in 竞猜 on 化学联合协会</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>ChemUnionAsso-CN</copyright>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%AB%9E%E7%8C%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>史上最难竞猜题</title>
+      <link>http://localhost:1313/posts/theory/2025-02-24-59/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/theory/2025-02-24-59/</guid>
+      <description>&lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;&#xA;&lt;p&gt;一种盐无色针状晶体&lt;/p&gt;&#xA;&lt;p&gt;阳离子无金属&lt;/p&gt;&#xA;&lt;p&gt;阴离子含一种金属&lt;/p&gt;&#xA;&lt;p&gt;阴离子有四种元素&lt;/p&gt;&#xA;&lt;p&gt;两个五元环两个五元环结构相同&lt;/p&gt;&#xA;&lt;p&gt;五元环上有四种元素&lt;/p&gt;&#xA;&lt;p&gt;第四种元素在两个五元环间成桥&lt;/p&gt;&#xA;&lt;p&gt;不含O和H&lt;/p&gt;&#xA;&lt;p&gt;五元环上无金属元素&lt;/p&gt;&#xA;&lt;p&gt;五元环上三种相邻的同种元素&lt;/p&gt;&#xA;&lt;p&gt;五元环上无金属元素&lt;/p&gt;&#xA;&lt;p&gt;五元环上两个双键三个单键&lt;/p&gt;&#xA;&lt;p&gt;这个大阴离子是两个拟卤阴离子和一个金属原子络合的&lt;/p&gt;&#xA;&lt;p&gt;阳离子三种元素四个六元环&lt;/p&gt;&#xA;&lt;p&gt;单独的中心原子非金属&lt;/p&gt;&#xA;&lt;p&gt;勉勉强强算个半金属吧&lt;/p&gt;&#xA;&lt;p&gt;中心原子非金属&lt;/p&gt;&#xA;&lt;p&gt;阳离子有苯环&lt;/p&gt;&#xA;&lt;p&gt;有四个苯环连着中心原子&lt;/p&gt;&#xA;&lt;h2 id=&#34;答案&#34;&gt;答案&lt;/h2&gt;&#xA;&lt;p&gt;这个盐是(Ph4As[Au(SCSN3)2])&lt;/p&gt;&#xA;&lt;p&gt;叫＂双(叠氮二硫代碳酸根)合金(I)四苯基鉮＂也可以&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
