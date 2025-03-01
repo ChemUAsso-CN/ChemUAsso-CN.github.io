@@ -56,11 +56,14 @@
             padding: 0;
             margin: 0 0 20px;
             display: flex;
+            flex-wrap: wrap; /* 允许换行 */
             justify-content: space-between;
         }
 
         .tab-links li {
-            margin: 0 10px;
+            margin: 0 10px 10px 0; /* 调整按钮之间的间距 */
+            flex: 1; /* 每个按钮占据可用空间 */
+            min-width: 150px; /* 设置按钮的最小宽度 */
         }
 
         .tab-links a {
@@ -69,6 +72,8 @@
             padding: 10px 15px;
             border: 1px solid #ddd;
             border-radius: 5px 5px 0 0;
+            display: block; /* 使按钮独占一行 */
+            text-align: center; /* 使按钮内的文字居中 */
         }
 
         .tab-links a.active {
@@ -226,6 +231,7 @@
             <ul class="tab-links">
                 <li><a href="#latex-converter" class="active">化学式转LaTeX</a></li>
                 <li><a href="#concentration-calc">浓度计算工具</a></li>
+                <li><a href="#volume-calc">体积分数计算工具</a></li>
             </ul>
 
             <div id="latex-converter" class="tab-content active">
@@ -279,12 +285,26 @@
                     <label for="molarMass">溶质摩尔质量 (g/mol):</label>
                     <input type="number" id="molarMass" placeholder="输入溶质摩尔质量" required>
     
-                    <label for="volume">溶液体积 (L):</label>
-                    <input type="number" id="volume" placeholder="输入溶液体积" required>
+                    <label for="volumeA">溶液体积 (L):</label>
+                    <input type="number" id="volumeA" placeholder="输入溶液体积" required>
     
                     <button type="button" onclick="calculateConcentration()">计算浓度</button>
                 </form>
                 <div class="result" id="result"></div>
+            </div>
+
+            <div id="volume-calc" class="tab-content">
+                <h1 style="color: #000;">体积分数计算工具</h1>
+                <form id="volumeFractionForm">
+                    <label for="volumeB">溶质体积 (L):</label>
+                    <input type="number" id="volumeB" placeholder="输入溶质体积" required>
+
+                    <label for="totalVolumeB">总体积 (L):</label>
+                    <input type="number" id="totalVolumeB" placeholder="输入总体积" required>
+
+                    <button type="button" onclick="calculateVolumeFraction()">计算体积分数</button>
+                </form>
+                <div class="result" id="volumeFractionResult"></div>
             </div>
         </div>
     </div>
@@ -319,12 +339,12 @@
         function calculateConcentration() {
             const mass = parseFloat(document.getElementById('mass').value); // 溶质质量 (g)
             const molarMass = parseFloat(document.getElementById('molarMass').value); // 溶质摩尔质量 (g/mol)
-            const volume = parseFloat(document.getElementById('volume').value); // 溶液体积 (L)
+            const volumeA = parseFloat(document.getElementById('volumeA').value); // 溶液体积 (L)
 
             const resultDiv = document.getElementById('result');
 
             // 验证输入
-            if (isNaN(mass) || isNaN(molarMass) || isNaN(volume) || mass <= 0 || molarMass <= 0 || volume <= 0) {
+            if (isNaN(mass) || isNaN(molarMass) || isNaN(volumeA) || mass <= 0 || molarMass <= 0 || volumeA <= 0) {
                 resultDiv.textContent = "请输入有效的数值！";
                 resultDiv.classList.add('error');
                 return;
@@ -332,9 +352,30 @@
 
             // 计算摩尔浓度
             const moles = mass / molarMass; // 摩尔数
-            const concentration = moles / volume; // 摩尔浓度 (mol/L)
+            const concentration = moles / volumeA; // 摩尔浓度 (mol/L)
 
             resultDiv.textContent = `溶液浓度为: ${concentration.toFixed(4)} mol/L`;
+            resultDiv.classList.remove('error');
+        }
+
+        // 体积分数计算功能
+        function calculateVolumeFraction() {
+            const volumeB = parseFloat(document.getElementById('volumeB').value); // 溶质体积 (L)
+            const totalVolumeB = parseFloat(document.getElementById('totalVolumeB').value); // 总体积 (L)
+
+            const resultDiv = document.getElementById('volumeFractionResult');
+
+            // 验证输入
+            if (isNaN(volumeB) || isNaN(totalVolumeB) || volumeB <= 0 || totalVolumeB <= 0 || volumeB > totalVolumeB) {
+                resultDiv.textContent = "请输入有效的数值，并确保溶质体积不超过总体积！";
+                resultDiv.classList.add('error');
+                return;
+            }
+
+            // 计算体积分数
+            const volumeFraction = (volumeB / totalVolumeB) * 100; // 体积分数 (%)
+
+            resultDiv.textContent = `体积分数为: ${volumeFraction.toFixed(2)}%`;
             resultDiv.classList.remove('error');
         }
 
@@ -350,7 +391,7 @@
                 .replace(/v/g, '\\downarrow')
                 .replace(/\[(.*?)\]/g, '$1')
                 .replace(/\((\+|\-)?(\d+)\)/g, (match, p1, p2) => {
-                    return p2 ? `\\left(${p1 || '+'}${p2}\\right)` : `\\left(${p1}\right)`;
+                    return p2 ? `\\left(${p1 || '+'}${p2}\\right)` : `\\left(${p1}\\right)`;
                 });
 
             document.getElementById('output').textContent = latexEquation;
