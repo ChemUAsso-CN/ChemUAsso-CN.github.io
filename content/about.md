@@ -21,7 +21,7 @@ draft = false
 - Cursor Editor: Claude-3.5 Sonnet Model
     - 协助绝大多数网页开发与纠错
 
-- 雷酸汞Ag(CNO)2
+- 雷酸汞Hg(CNO)2
     - 网站创始人；网页开发；
 
 - 碱式醋酸铅
@@ -41,5 +41,3 @@ draft = false
 
 - bendy and the ink machine
     - 网站创始人；网页开发
-    
-    
