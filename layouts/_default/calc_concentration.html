@@ -1,0 +1,186 @@
+{{ define "main" }} {{ $style := resources.Get "css/common_html.css" |
+resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+<article class="article single">
+  <header class="article-header">
+    <div class="article-details">
+      <h1 class="article-title">{{ .Title }}</h1>
+    </div>
+  </header>
+
+  <section class="article-content">
+    <div class="card">
+      <div id="input-group" class="tab-content">
+        <!-- <h1 style="color: #000">溶液浓度计算工具</h1> -->
+        <form id="concentrationForm">
+          <label for="mass">溶质质量 (g):</label>
+          <input type="number" id="mass" placeholder="输入溶质质量" required />
+
+          <label for="molarMass">溶质摩尔质量 (g/mol):</label>
+          <input
+            type="number"
+            id="molarMass"
+            placeholder="输入溶质摩尔质量"
+            required
+          />
+
+          <label for="volumeA">溶液体积 (L):</label>
+          <input
+            type="number"
+            id="volumeA"
+            placeholder="输入溶液体积"
+            required
+          />
+
+          <button type="button" onclick="calculateConcentration()">
+            计算浓度
+          </button>
+        </form>
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+  </section>
+</article>
+<!-- 
+<style>
+  .card {
+    background: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }     
+
+    .input-group {
+    margin-bottom: 20px;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    background: var(--card-background);
+    color: var(--body-text-color);
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+  }
+
+    .output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--card-background);
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    min-height: 50px;
+  }
+
+    .tips {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(43, 162, 69, 0.1);
+    border-radius: 4px;
+  }
+
+    
+  .examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+    
+  .example-item {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid var(--card-separator-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+    .example-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  .error {
+    color: red;
+  }
+</style> -->
+
+<script>
+  function calculateConcentration() {
+    const mass = parseFloat(document.getElementById("mass").value);
+    const molarMass = parseFloat(document.getElementById("molarMass").value);
+    const volumeA = parseFloat(document.getElementById("volumeA").value);
+    const resultDiv = document.getElementById("result");
+
+    if (
+      isNaN(mass) ||
+      isNaN(molarMass) ||
+      isNaN(volumeA) ||
+      mass <= 0 ||
+      molarMass <= 0 ||
+      volumeA <= 0
+    ) {
+      resultDiv.textContent = "请输入有效的数值！";
+      resultDiv.classList.add("error");
+      return;
+    }
+
+    const moles = mass / molarMass;
+    const concentration = moles / volumeA;
+
+    resultDiv.textContent = `溶液浓度为: ${concentration.toFixed(4)} mol/L`;
+    resultDiv.classList.remove("error");
+  }
+</script>
+{{end}}

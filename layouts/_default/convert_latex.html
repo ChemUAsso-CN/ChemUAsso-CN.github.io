@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ $style := resources.Get "css/common_html.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
 <article class="article single">
   <header class="article-header">
     <div class="article-details">
@@ -74,7 +77,7 @@
   </section>
 </article>
 
-<style>
+<!-- <style>
   .card {
     background: var(--card-background);
     border: 1px solid var(--card-separator-color);
@@ -150,7 +153,7 @@
     background-color: var(--accent-color);
     color: white;
   }
-</style>
+</style> -->
 
 <script>
   function convertToLaTeX() {

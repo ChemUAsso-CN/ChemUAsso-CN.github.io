@@ -1,83 +1,360 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>产物制作 on 化学联合协会</title>
-    <link>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
-    <description>Recent content in 产物制作 on 化学联合协会</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <copyright>ChemUnionAsso-CN</copyright>
-    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>产物制作 68: 六氟砷酸五氮</title>
-      <link>http://localhost:1313/posts/product/68/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/68/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;由N₂FAsF₆和氨于-196°C在氟化氢中合成&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!--&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;支持 Markdown 格式，语法请参考：https://markdown.com.cn/basic-syntax/&#xD;&#xA;&#xD;&#xA;注意：每段间应该空一行，例如&#xD;&#xA;&#xD;&#xA;✅正确示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;&#xD;&#xA;第一行&#xD;&#xA;&#xD;&#xA;第二行&#xD;&#xA;&#xD;&#xA;❌错误示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;第一行&#xD;&#xA;第二行&#xD;&#xA;--&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 63: 翠绿色一价铬盐</title>
-      <link>http://localhost:1313/posts/product/63/</link>
-      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/63/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;将由1.4g三氧化铬配成的浓溶液、由2g氯化羟胺配成的浓溶液加入100ml锥形瓶中,开启磁搅&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;将4g氢氧化钾溶于少量水&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合溶液,冷却&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取7g氯化钾,配成饱和溶液,混合&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加入2克氯化羟胺溶液 加热搅拌2h至溶液变成深棕色&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;冷却，加入50ml乙醇醇析，过滤后得到粗产物(可将粗产物溶于少量水并加入两倍体积的乙醇析晶提纯)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!--&#xD;&#xA;支持 Markdown 格式：&#xD;&#xA;- 使用 # 表示标题&#xD;&#xA;- 使用 ** ** 表示粗体&#xD;&#xA;- 使用 * * 表示斜体&#xD;&#xA;- 使用 ``` ``` 表示代码块&#xD;&#xA;- 使用 $ $ 表示公式&#xD;&#xA;- 更多格式请参考：https://www.markdownguide.org/basic-syntax/&#xD;&#xA;&#xD;&#xA;markdown每段间应该空一行，如：&#xD;&#xA;&#xD;&#xA;✅正确示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;&#xD;&#xA;第一行&#xD;&#xA;&#xD;&#xA;第二行&#xD;&#xA;&#xD;&#xA;❌错误示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;第一行&#xD;&#xA;第二行&#xD;&#xA;&#xD;&#xA;--&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 66: 碳酸锰</title>
-      <link>http://localhost:1313/posts/product/66/</link>
-      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/66/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取19.7g四水合氯化锰溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取16.8g碳酸氢钠,溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合,过滤,洗涤,干燥&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!--&#xD;&#xA;支持 Markdown 格式：&#xD;&#xA;- 使用 # 表示标题&#xD;&#xA;- 使用 ** ** 表示粗体&#xD;&#xA;- 使用 * * 表示斜体&#xD;&#xA;- 使用  表示代码块&#xD;&#xA;- 使用 $ $ 表示公式&#xD;&#xA;- 更多格式请参考：https://www.markdownguide.org/basic-syntax/&#xD;&#xA;&#xD;&#xA;markdown每段间应该空一行，如：&#xD;&#xA;&#xD;&#xA;✅正确示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;&#xD;&#xA;第一行&#xD;&#xA;&#xD;&#xA;第二行&#xD;&#xA;&#xD;&#xA;❌错误示例：&#xD;&#xA;&#xD;&#xA;## 标题&#xD;&#xA;第一行&#xD;&#xA;第二行&#xD;&#xA;&#xD;&#xA;--&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 64: 普鲁士蓝</title>
-      <link>http://localhost:1313/posts/product/64/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/64/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;h4 id=&#34;制作普鲁士蓝&#34;&gt;制作普鲁士蓝：&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 9g 三氯化铁,溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 9.2g 亚铁氰化钾,溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;制作滕氏蓝&#34;&gt;制作滕氏蓝：&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 9.3g 硫酸亚铁，配成溶液&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 7.3g 铁氰化钾，配成溶液&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;事实上，普鲁士蓝 与 滕氏蓝 是同种物质。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
-      <link>http://localhost:1313/posts/product/65/</link>
-      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/65/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取5.8g氯化钠，用5ml水溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取1.2g王水合硫酸铜，溶解在5ml水中&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取6.8g咪唑，溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加入50ml无水乙醇醇析出硫酸钠&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加热浓缩至水分蒸干，得到产物&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 1: 三草酸合铁酸钾(1)</title>
-      <link>http://localhost:1313/posts/product/1/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/1/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤：&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 24.3g 的六水合三氯化铁&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 55.4g 一水合草酸钾&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合两种药品，加入 160ml 水溶解，加热并不断搅拌直至溶液变为绿色&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;停业加热，低温结晶(放入冰箱)，过滤即得产物&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 2: 四氯络锰酸胍</title>
-      <link>http://localhost:1313/posts/product/2/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/2/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 60g 四水合氯化锰 与 57.5g 盐酸胍，混合&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;量取 28mL 水，滴入 2mL 浓盐酸，并与混合物混合&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;60℃ 恒温加热 10min，直至溶液变为橙色略粘稠状溶液，其间不断搅拌&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;用滤纸覆盖烧杯，静置 3 天，产生红色结晶，即得产物&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 3: 二氯化一氯五氨合钴</title>
-      <link>http://localhost:1313/posts/product/3/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/3/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;p&gt;在锥形瓶中进行实验：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 3g 氯化铵，用 18mL 25% 氨水溶解，不断加热&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 6g 六水合氯化钴，少量多次加入上述溶液中，溶液变为红橙色，后为绿色&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;量取 5mL 30% 过氧化氢，用胶头滴管缓慢加入溶液中，直至溶液不冒气泡&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;量取 18mL 37% 浓盐酸，滴加入溶液中，溶液变为深红色，冒白烟（系$NH_4Cl(g)$）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;将溶液煮沸，并保持沸腾 15min ~ 20min&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;冷却至室温，产生红紫色沉淀&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;用冰水与冰乙醇洗涤产物。得产物约 3.1g，产率 41.9%&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
-      <link>http://localhost:1313/posts/product/4/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/4/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 9.8g 二水合氯化铜 和 5g 氯化钾，混合后用 10mL 水溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加热搅拌，溶液呈深绿色，热水（约60°C）保温&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;量取 120mL 冰乙酸，加热至 60°C&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;混合溶液，产生红色晶体&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;冷却至 40°C，用无水乙醇反复洗涤，干燥产物，得 6.1g，转化率 50.8%&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;注：产物暴露在空气中会吸水变蓝，加热后重新变红&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
-      <link>http://localhost:1313/posts/product/5/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product/5/</guid>
-      <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：&lt;/h3&gt;&#xA;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;&#xA;&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加热并不断搅拌直至固体完全溶解&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>产物制作 on 化学联合协会</title>
+        <link>http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/</link>
+        <description>Recent content in 产物制作 on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright>
+        <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E4%BA%A7%E7%89%A9%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>产物制作 68: 六氟砷酸五氮</title>
+        <link>http://localhost:1313/posts/product/68/</link>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/68/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由N₂FAsF₆和氨于-196°C在氟化氢中合成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+
+
+支持 Markdown 格式，语法请参考：https://markdown.com.cn/basic-syntax/
+
+注意：每段间应该空一行，例如
+
+✅正确示例：
+
+## 标题
+
+第一行
+
+第二行
+
+❌错误示例：
+
+## 标题
+第一行
+第二行
+--&gt;</description>
+        </item>
+        <item>
+        <title>产物制作 63: 翠绿色一价铬盐</title>
+        <link>http://localhost:1313/posts/product/63/</link>
+        <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/63/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将由1.4g三氧化铬配成的浓溶液、由2g氯化羟胺配成的浓溶液加入100ml锥形瓶中,开启磁搅&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将4g氢氧化钾溶于少量水&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合溶液,冷却&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取7g氯化钾,配成饱和溶液,混合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入2克氯化羟胺溶液 加热搅拌2h至溶液变成深棕色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冷却，加入50ml乙醇醇析，过滤后得到粗产物(可将粗产物溶于少量水并加入两倍体积的乙醇析晶提纯)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+支持 Markdown 格式：
+- 使用 # 表示标题
+- 使用 ** ** 表示粗体
+- 使用 * * 表示斜体
+- 使用 ``` ``` 表示代码块
+- 使用 $ $ 表示公式
+- 更多格式请参考：https://www.markdownguide.org/basic-syntax/
+
+markdown每段间应该空一行，如：
+
+✅正确示例：
+
+## 标题
+
+第一行
+
+第二行
+
+❌错误示例：
+
+## 标题
+第一行
+第二行
+
+--&gt;</description>
+        </item>
+        <item>
+        <title>产物制作 66: 碳酸锰</title>
+        <link>http://localhost:1313/posts/product/66/</link>
+        <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/66/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取19.7g四水合氯化锰溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取16.8g碳酸氢钠,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合,过滤,洗涤,干燥&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+支持 Markdown 格式：
+- 使用 # 表示标题
+- 使用 ** ** 表示粗体
+- 使用 * * 表示斜体
+- 使用  表示代码块
+- 使用 $ $ 表示公式
+- 更多格式请参考：https://www.markdownguide.org/basic-syntax/
+
+markdown每段间应该空一行，如：
+
+✅正确示例：
+
+## 标题
+
+第一行
+
+第二行
+
+❌错误示例：
+
+## 标题
+第一行
+第二行
+
+--&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 64: 普鲁士蓝</title>
+        <link>http://localhost:1313/posts/product/64/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/64/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;h4 id=&#34;制作普鲁士蓝&#34;&gt;制作普鲁士蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9g 三氯化铁,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.2g 亚铁氰化钾,溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;制作滕氏蓝&#34;&gt;制作滕氏蓝：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.3g 硫酸亚铁，配成溶液&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 7.3g 铁氰化钾，配成溶液&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合，产出蓝色沉淀。过滤烘干&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;事实上，普鲁士蓝 与 滕氏蓝 是同种物质。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 65: 深蓝色二氯二味唑合铜</title>
+        <link>http://localhost:1313/posts/product/65/</link>
+        <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/65/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取5.8g氯化钠，用5ml水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取1.2g王水合硫酸铜，溶解在5ml水中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取6.8g咪唑，溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入50ml无水乙醇醇析出硫酸钠&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热浓缩至水分蒸干，得到产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 1: 三草酸合铁酸钾(1)</title>
+        <link>http://localhost:1313/posts/product/1/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/1/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;$\mathrm{ Fe^{3+} + {3C_2O_4}^{-} \space \xlongequal \space Fe(C_2O_4)_3 \downarrow }$&lt;/p&gt;
+&lt;p&gt;$\mathrm{ 2Fe(C_2O_4)_3 + 3K_2C_2O_4 \space \xlongequal \space 2K_3[Fe(C_2O_4)_3] \downarrow }$&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 24.3g 的六水合三氯化铁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 55.4g 一水合草酸钾&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合两种药品，加入 160ml 水溶解，加热并不断搅拌直至溶液变为绿色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;停业加热，低温结晶(放入冰箱)，过滤即得产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 2: 四氯络锰酸胍</title>
+        <link>http://localhost:1313/posts/product/2/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/2/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 60g 四水合氯化锰 与 57.5g 盐酸胍，混合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 28mL 水，滴入 2mL 浓盐酸，并与混合物混合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;60℃ 恒温加热 10min，直至溶液变为橙色略粘稠状溶液，其间不断搅拌&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用滤纸覆盖烧杯，静置 3 天，产生红色结晶，即得产物&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 3: 二氯化一氯五氨合钴</title>
+        <link>http://localhost:1313/posts/product/3/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/3/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;p&gt;在锥形瓶中进行实验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 3g 氯化铵，用 18mL 25% 氨水溶解，不断加热&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;称取 6g 六水合氯化钴，少量多次加入上述溶液中，溶液变为红橙色，后为绿色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 5mL 30% 过氧化氢，用胶头滴管缓慢加入溶液中，直至溶液不冒气泡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 18mL 37% 浓盐酸，滴加入溶液中，溶液变为深红色，冒白烟（系$NH_4Cl(g)$）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将溶液煮沸，并保持沸腾 15min ~ 20min&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冷却至室温，产生红紫色沉淀&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用冰水与冰乙醇洗涤产物。得产物约 3.1g，产率 41.9%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 4: 二-桥-氯二（二氯合铜）酸钾</title>
+        <link>http://localhost:1313/posts/product/4/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/4/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 9.8g 二水合氯化铜 和 5g 氯化钾，混合后用 10mL 水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热搅拌，溶液呈深绿色，热水（约60°C）保温&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;量取 120mL 冰乙酸，加热至 60°C&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;混合溶液，产生红色晶体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冷却至 40°C，用无水乙醇反复洗涤，干燥产物，得 6.1g，转化率 50.8%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：产物暴露在空气中会吸水变蓝，加热后重新变红&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>产物制作 5: 硫氰酸三乙二胺合镍</title>
+        <link>http://localhost:1313/posts/product/5/</link>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/product/5/</guid>
+        <description>&lt;h3 id=&#34;反应方程式&#34;&gt;反应方程式：
+&lt;/h3&gt;&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;称取 13.4g 六水合硫酸镍 和 10g 硫氰酸钾，混合后用 65mL 水溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加热并不断搅拌直至固体完全溶解&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加入少量无水乙醇，硫酸钾析出，过滤获得硫氰酸镍溶液&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将硫氰酸镍放入冰水中，加入 10mL 无水乙二胺并不断搅拌。溶液由深绿色变为深蓝色再变为艳紫色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水浴加热，浓缩溶液（直接加热）至溶液浓稠并析出晶体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用无水乙醇洗涤产物，干燥，得到 10g 产物，产率为 56.5%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

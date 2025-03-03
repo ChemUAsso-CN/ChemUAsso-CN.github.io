@@ -1,20 +1,121 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>方程式 on 化学联合协会</title>
-    <link>http://localhost:1313/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
-    <description>Recent content in 方程式 on 化学联合协会</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <copyright>ChemUnionAsso-CN</copyright>
-    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>方程式大全</title>
-      <link>http://localhost:1313/posts/theory/equations/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/theory/equations/</guid>
-      <description>&lt;p&gt;$\mathrm{2H_2O \xlongequal{通电} 2H_2 \uparrow + O_2 \uparrow}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{2NaOH + H_2SO_4 \rightarrow Na_2SO_4 + 2H_2O}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{CaCO_3 \xrightarrow{\Delta} CaO + CO_2 \uparrow}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{Zn + 2HCl \rightarrow ZnCl_2 + H_2 \uparrow}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{2KMnO_4 \xrightarrow{\Delta} K_2MnO_4 + MnO_2 + O_2 \uparrow}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{2KClO_3 \xrightarrow{MnO_2} 2KCl + 3O_2 \uparrow}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{Cu + 2H_2SO_4(浓) \xrightarrow CuSO_4 + SO_2 \uparrow + 2H_2O}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{4Fe + 3O_2 \rightarrow 2Fe_2O_3}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{2Al + Fe_2O_3 \xrightarrow{\Delta} Al_2O_3 + 2Fe}$,&lt;/p&gt;&#xA;&lt;p&gt;$\mathrm{CuO + H_2 \xrightarrow{\Delta} Cu + H_2O}$,&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>方程式 on 化学联合协会</title>
+        <link>http://localhost:1313/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
+        <description>Recent content in 方程式 on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright>
+        <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>方程式大全</title>
+        <link>http://localhost:1313/posts/theory/equations/</link>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/theory/equations/</guid>
+        <description>&lt;p&gt;$\mathrm{2H_2O \xlongequal{通电} 2H_2 \uparrow + O_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2NaOH + H_2SO_4 \rightarrow Na_2SO_4 + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CaCO_3 \xrightarrow{\Delta} CaO + CO_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Zn + 2HCl \rightarrow ZnCl_2 + H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KMnO_4 \xrightarrow{\Delta} K_2MnO_4 + MnO_2 + O_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KClO_3 \xrightarrow{MnO_2} 2KCl + 3O_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Cu + 2H_2SO_4(浓) \xrightarrow CuSO_4 + SO_2 \uparrow + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{4Fe + 3O_2 \rightarrow 2Fe_2O_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2Al + Fe_2O_3 \xrightarrow{\Delta} Al_2O_3 + 2Fe}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CuO + H_2 \xrightarrow{\Delta} Cu + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2Na + 2H_2O \rightarrow 2NaOH + H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Fe + CuSO_4 \rightarrow FeSO_4 + Cu}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{AgNO_3 + NaCl \rightarrow AgCl \downarrow + NaNO_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CaO + H_2O \rightarrow Ca(OH)_2}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{NH_3 + H_2O \rightleftharpoons NH_4^+ + OH^-}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{N_2 + 3H_2 \xlongequal{Fe,450℃} 2NH_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2SO_2 + O_2 \xlongequal{V_2O_5} 2SO_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_4 + 2O_2 \rightarrow CO_2 + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_5OH + 3O_2 \rightarrow 2CO_2 + 3H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Fe^{3+} + 3OH^- \rightarrow Fe(OH)_3 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Ba^{2+} + SO_4^{2-} \rightarrow BaSO_4 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2FeCl_3 + 3H_2S \rightarrow 2FeS \downarrow + 6HCl + S \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Cu(OH)_2 \xrightarrow{\Delta} CuO + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2H_2O_2 \xrightarrow{MnO_2} 2H_2O + O_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_{12}O_6 \xrightarrow{发酵} 2C_2H_5OH + 2CO_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3COOH + CH_3OH \xlongequal{H^+} CH_3COOCH_3 + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_4 + H_2O \xlongequal{H^+} C_2H_5OH}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_2 + 2H_2 \xlongequal{Pd} C_2H_6}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KI + Cl_2 \rightarrow 2KCl + I_2}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2FeCl_2 + Cl_2 \rightarrow 2FeCl_3}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Cu + 4HNO_3 \xrightarrow{浓} Cu(NO_3)_2 + 2NO_2 \uparrow + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{3Cu + 8HNO_3 \xrightarrow{稀} 3Cu(NO_3)_2 + 2NO \uparrow + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Zn + 2NaOH \rightarrow Na_2ZnO_2 + H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Al_2O_3 + 2NaOH + 3H_2O \rightarrow 2Na[Al(OH)_4]}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CuSO_4 + 4NH_3·H_2O \rightarrow [Cu(NH_3)_4]SO_4 + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Fe^{3+} + 3SCN^- \rightarrow [Fe(SCN)_3]}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Ag^+ + 2NH_3·H_2O \rightarrow [Ag(NH_3)_2]^+ + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CuSO_4·5H_2O \xrightarrow{\Delta} CuSO_4 + 5H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{NaHCO_3 \xrightarrow{\Delta} Na_2CO_3 + CO_2 \uparrow + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2NaHCO_3 + Ca(OH)_2 \rightarrow CaCO_3 \downarrow + Na_2CO_3 + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Zn + 2NaOH + 2H_2O \rightarrow Na_2[Zn(OH)_4] + H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KMnO_4 + 16HCl \rightarrow 2KCl + 2MnCl_2 + 8H_2O + 5Cl_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{K_2Cr_2O_7 + 14HCl \rightarrow 2KCl + 2CrCl_3 + 7H_2O + 3Cl_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KMnO_4 + 5H_2C_2O_4 + 3H_2SO_4 \rightarrow K_2SO_4 + 2MnSO_4 + 10CO_2 \uparrow + 8H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3CH_2OH \xrightarrow{K_2Cr_2O_7/H^+} CH_3COOH + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_6 + Cl_2 \xlongequal{FeCl_3} C_6H_5Cl + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_6 + HNO_3 \xlongequal{H_2SO_4} C_6H_5NO_2 + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3COOH + NaHCO_3 \rightarrow CH_3COONa + H_2O + CO_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2C_8H_{18} + 25O_2 \rightarrow 16CO_2 + 18H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2NaCl \xlongequal{电解} 2Na + Cl_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2CuCl_2 \xlongequal{电解} 2Cu + 2Cl_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Pb^{2+} + 2I^- \rightarrow PbI_2 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Pb^{2+} + 2Cl^- \rightarrow PbCl_2 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Ag^+ + Cl^- \rightarrow AgCl \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Ca^{2+} + CO_3^{2-} \rightarrow CaCO_3 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Fe^{2+} + 2OH^- \rightarrow Fe(OH)_2 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{4Fe(OH)_2 + O_2 + 2H_2O \rightarrow 4Fe(OH)_3 \downarrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2FeSO_4 + 2H_2SO_4 + H_2O_2 \rightarrow Fe_2(SO_4)_3 + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{3Fe + 4H_2O \xlongequal{高温} Fe_3O_4 + 4H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Fe_3O_4 + 4CO \xlongequal{高温} 3Fe + 4CO_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CaC_2 + 2H_2O \rightarrow Ca(OH)_2 + C_2H_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Na_2CO_3 + H_2O \rightleftharpoons NaHCO_3 + NaOH}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{NH_4Cl + NaOH \xrightarrow{\Delta} NH_3 \uparrow + NaCl + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2NH_4NO_2 \xrightarrow{\Delta} 2N_2 \uparrow + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{(NH_4)_2Cr_2O_7 \xrightarrow{\Delta} N_2 \uparrow + Cr_2O_3 + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3COOC_2H_5 + NaOH \rightarrow CH_3COONa + C_2H_5OH}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5NO_2 + 6H \xrightarrow{Fe/HCl} C_6H_5NH_2 + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5NH_2 + HCl \rightarrow C_6H_5NH_3Cl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5NH_2 + HONO \xrightarrow{0-5℃} C_6H_5N_2^+Cl^-}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5N_2^+Cl^- + H_2O \rightarrow C_6H_5OH + N_2 \uparrow + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_5OH \xrightarrow{浓H_2SO_4,170℃} C_2H_4 + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3COOH + PCl_5 \rightarrow CH_3COCl + POCl_3 + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_6 + CH_3Cl \xlongequal{AlCl_3} C_6H_5CH_3 + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_5OH \xrightarrow{Cu,300℃} CH_3CHO + H_2}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3CHO + 2[Ag(NH_3)_2]OH \rightarrow CH_3COOH + 2Ag \downarrow + 4NH_3 + H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5CHO + 2Cu(OH)_2 \rightarrow C_6H_5COOH + Cu_2O \downarrow + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3MgBr + H_2O \rightarrow CH_4 + Mg(OH)Br}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5OH + FeCl_3 \rightarrow [C_6H_5O]_3Fe + 3HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_2 + 2Br_2 \rightarrow C_2H_2Br_4}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3COOH + NaHCO_3 \rightarrow CH_3COONa + H_2O + CO_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KClO_3 \xrightarrow{\Delta} 2KCl + 3O_2 \uparrow}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{4HCl + MnO_2 \rightarrow MnCl_2 + Cl_2 \uparrow + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{2KMnO_4 + 10KI + 8H_2SO_4 \rightarrow 2MnSO_4 + 5I_2 + 6K_2SO_4 + 8H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{5CO + I_2O_5 \rightarrow 5CO_2 + I_2}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{4Zn + 10HNO_3 \xrightarrow{稀} 4Zn(NO_3)_2 + NH_4NO_3 + 3H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{3Zn + 8HNO_3 \xrightarrow{稀} 3Zn(NO_3)_2 + 2NO + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{Cu + 4HNO_3 \xrightarrow{浓} Cu(NO_3)_2 + 2NO_2 \uparrow + 2H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{3Cu + 8HNO_3 \xrightarrow{稀} 3Cu(NO_3)_2 + 2NO \uparrow + 4H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{4Zn + 10H^+ + 2NO_3^- \rightarrow 4Zn^{2+} + NH_4^+ + 3H_2O}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_4 + Cl_2 \xrightarrow{光} CH_3Cl + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_3Cl + Cl_2 \xrightarrow{光} CH_2Cl_2 + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CH_2Cl_2 + Cl_2 \xrightarrow{光} CHCl_3 + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{CHCl_3 + Cl_2 \xrightarrow{光} CCl_4 + HCl}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_4 + Br_2 \rightarrow C_2H_4Br_2}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_2 + 2Br_2 \rightarrow C_2H_2Br_4}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_6 + 3Cl_2 \xrightarrow{光} C_6H_6Cl_6}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_6 + 3H_2 \xlongequal{Ni} C_6H_{12}}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_2H_4 + H_2O \xlongequal{H_2SO_4} C_2H_5OH}$,&lt;/p&gt;
+&lt;p&gt;$\mathrm{C_6H_5Cl + 2Na + C_2H_5Cl \rightarrow C_6H_5C_2H_5 + 2NaCl}$
+]&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

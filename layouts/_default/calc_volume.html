@@ -1,0 +1,118 @@
+{{define "main"}}
+{{ $style := resources.Get "css/common_html.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+
+<article class="article single">
+  <header class="article-header">
+    <div class="article-details">
+      <h1 class="article-title">{{ .Title }}</h1>
+    </div>
+  </header>
+
+  <section class="article-content">
+    <div class="card">
+      <form id="volumeFractionForm">
+        <label for="volumeB">溶质体积 (L):</label>
+        <input type="number" id="volumeB" placeholder="输入溶质体积" required />
+
+        <label for="totalVolumeB">总体积 (L):</label>
+        <input
+          type="number"
+          id="totalVolumeB"
+          placeholder="输入总体积"
+          required
+        />
+
+        <button type="button" onclick="calculateVolumeFraction()">
+          计算体积分数
+        </button>
+      </form>
+      <div class="result" id="volumeFractionResult"></div>
+    </div>
+  </section>
+</article>
+<!-- 
+<style>
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+  }
+
+  .error {
+    color: red;
+  }
+</style> -->
+
+<script>
+  function calculateConcentration() {
+    const mass = parseFloat(document.getElementById("mass").value);
+    const molarMass = parseFloat(document.getElementById("molarMass").value);
+    const volumeA = parseFloat(document.getElementById("volumeA").value);
+    const resultDiv = document.getElementById("result");
+
+    if (
+      isNaN(mass) ||
+      isNaN(molarMass) ||
+      isNaN(volumeA) ||
+      mass <= 0 ||
+      molarMass <= 0 ||
+      volumeA <= 0
+    ) {
+      resultDiv.textContent = "请输入有效的数值！";
+      resultDiv.classList.add("error");
+      return;
+    }
+
+    const moles = mass / molarMass;
+    const concentration = moles / volumeA;
+
+    resultDiv.textContent = `溶液浓度为: ${concentration.toFixed(4)} mol/L`;
+    resultDiv.classList.remove("error");
+  }
+</script>
+{{end}}
