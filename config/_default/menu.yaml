@@ -4,17 +4,9 @@ main:
     url: "/"
     weight: 1
 
-  - name: "化学式转LaTeX"
-    url: "/convert_latex/"
+  - name: "化学工具"
+    url: "/tools/"
     weight: 2
-
-  - name: "溶液浓度计算"
-    url: "/calc_concentration/"
-    weight: 3
-
-  - name: "体积分数计算"
-    url: "/calc_volume/"
-    weight: 4
 
   - name: "博客与文章"
     url: "/posts/"

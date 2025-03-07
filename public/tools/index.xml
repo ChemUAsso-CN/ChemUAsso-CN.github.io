@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tools on 化学联合协会</title>
+        <link>http://localhost:1313/tools/</link>
+        <description>Recent content in Tools on 化学联合协会</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ChemUnionAsso-CN</copyright><atom:link href="http://localhost:1313/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>体积分数计算</title>
+        <link>http://localhost:1313/tools/calc_volume/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tools/calc_volume/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>化学式转LaTeX</title>
+        <link>http://localhost:1313/tools/convert_latex/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tools/convert_latex/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>浓度计算</title>
+        <link>http://localhost:1313/tools/calc_concentration/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tools/calc_concentration/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

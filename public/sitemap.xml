@@ -170,15 +170,15 @@
     <loc>http://localhost:1313/tags/%E7%A1%AB%E6%B0%B0%E9%85%B8%E4%B8%89%E4%B9%99%E4%BA%8C%E8%83%BA%E5%90%88%E9%95%8D/</loc>
     <lastmod>2025-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/chem_tools/</loc>
+    <loc>http://localhost:1313/tools/</loc>
   </url><url>
-    <loc>http://localhost:1313/calc_volume/</loc>
+    <loc>http://localhost:1313/tools/calc_volume/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/convert_latex/</loc>
+    <loc>http://localhost:1313/tools/convert_latex/</loc>
   </url><url>
-    <loc>http://localhost:1313/calc_concentration/</loc>
+    <loc>http://localhost:1313/tools/calc_concentration/</loc>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url>
