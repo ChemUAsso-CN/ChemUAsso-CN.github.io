@@ -29,7 +29,6 @@ highlight = true
 since = 2025
 customText = "ChemUnionAsso-CN 化学联合协会"
 
-[markup.goldmark.renderer]
-unsafe = true
-
-
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

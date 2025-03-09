@@ -1,0 +1,132 @@
+/* VSCode Dark+ 风格的代码高亮 */
+
+$code-bgcolor: #1E1E2E;
+
+/* 代码块容器 */
+.article-content {
+    /* 确保代码块容器有边界 */
+    .highlight {
+        background-color: $code-bgcolor !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        margin: 1.5rem 0 !important;
+        border-radius: 16px !important;
+        max-width: 100% !important;
+        padding: 1rem !important;
+        overflow: auto !important;  /* 添加滚动条而不是溢出 */
+    }
+    
+    pre {
+        background-color: $code-bgcolor !important; /* VS Code 背景色 */
+        border-radius: 4px !important;
+        padding: 0 !important; /* 移除内边距，由外层highlight提供 */
+    }
+    
+    /* 去除pre的外边距 */
+    .highlight pre {
+        margin: 0 !important;
+        border-radius: 4px !important;
+        width: 100% !important;
+    }
+    
+    /* 行内代码 */
+    code:not([data-lang]) {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #3a6983 !important; /* VS Code 变量颜色 */
+        padding: 0.2em 0.4em !important;
+        border-radius: 3px !important;
+        font-family: 'Consolas', 'Courier New', monospace !important;
+        font-size: 0.85em !important;
+    }
+    
+    /* 代码块中的代码 */
+    pre code {
+        font-family: 'Consolas', 'Courier New', monospace !important;
+        font-size: 0.9em !important;
+        color: #D4D4D4 !important; /* VS Code 默认文本颜色 */
+        line-height: 1.5 !important;
+        display: block !important;
+        width: auto !important;
+    }
+}
+
+/* 强制应用VSCode Dark+ 语法高亮 - 提高选择器优先级 */
+.article-content .highlight .chroma,
+.article-content div.highlight .chroma,
+body .article-content .highlight .chroma {
+    /* 背景 */
+    background-color: $code-bgcolor !important;
+    color: #D4D4D4 !important;
+    border-radius: 4px !important;
+    
+    /* 关键字 - 紫色 */
+    .k, .kd, .kn, .kp, .kr, .kt { color: #C586C0 !important; }
+    
+    /* 字符串 - 橙色 */
+    .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #CE9178 !important; }
+    
+    /* 注释 - 绿色 */
+    .c, .ch, .cm, .c1, .cs, .cp, .cpf { color: #6A9955 !important; }
+    
+    /* 函数 - 黄色 */
+    .nf, .fm { color: #DCDCAA !important; }
+    
+    /* 数字 - 浅绿色 */
+    .m, .mb, .mf, .mh, .mi, .il, .mo { color: #B5CEA8 !important; }
+    
+    /* 操作符 */
+    .o, .ow { color: #D4D4D4 !important; }
+    
+    /* 类型 - 青色 */
+    .nc, .kt { color: #4EC9B0 !important; }
+    
+    /* 变量 - 浅蓝色 */
+    .n, .na, .nb, .bp, .no, .nd, .ni, .ne, .nl, .nn, .py, .nt, .nv, .vc, .vg, .vi, .vm { color: #9CDCFE !important; }
+    
+    /* 常量 - 亮蓝色 */
+    .kc, .no { color: #4FC1FF !important; }
+    
+    /* 行号样式 */
+    .ln, .lnt { 
+        color: #858585 !important;
+        margin-right: 0.8em !important;
+        padding: 0 0.4em 0 0.4em !important;
+        border-right: 1px solid #404040 !important;
+    }
+    
+    /* 高亮行 */
+    .hl { background-color: #3A3D41 !important; }
+    
+    /* 正则表达式 */
+    .sr { color: #D16969 !important; }
+    
+    /* 字符转义 */
+    .se { color: #D7BA7D !important; }
+}
+
+/* 标题栏 */
+.article-content .highlight pre::before {
+    content: attr(data-lang);
+    display: block;
+    background: #252526;
+    color: #D4D4D4;
+    font-size: 0.75rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+    padding: 0.25rem 1rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #404040;
+}
+
+/* 确保Hugo不使用内联样式覆盖我们的样式 */
+.article-content .highlight {
+    background: $code-bgcolor !important;
+    
+    .chroma .line, .chroma span, .chroma code {
+        background: transparent !important;
+    }
+}
+
+/* 禁用Hugo可能注入的内联样式 */
+.article-content .highlight[style] {
+    background-color: $code-bgcolor !important;
+}

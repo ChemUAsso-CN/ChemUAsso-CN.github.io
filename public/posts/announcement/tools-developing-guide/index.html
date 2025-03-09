@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="详细指导开发者如何在Hugo网站中添加新的化学工具">
+<title>化学工具开发指南</title>
+
+<link rel='canonical' href='http://localhost:1313/posts/announcement/tools-developing-guide/'>
+
+<link rel="stylesheet" href="/scss/style.min.c72f11c092c48e591b413e626349c33d3bee287359ab04331aed299348aa4970.css"><meta property='og:title' content="化学工具开发指南">
+<meta property='og:description' content="详细指导开发者如何在Hugo网站中添加新的化学工具">
+<meta property='og:url' content='http://localhost:1313/posts/announcement/tools-developing-guide/'>
+<meta property='og:site_name' content='化学联合协会'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='auth:Xingyuan55' /><meta property='article:tag' content='公告' /><meta property='article:tag' content='教程' /><meta property='article:tag' content='指南' /><meta property='article:tag' content='开发者' /><meta property='article:published_time' content='2025-03-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-07T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="化学工具开发指南">
+<meta name="twitter:description" content="详细指导开发者如何在Hugo网站中添加新的化学工具">
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🧪</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">化学联合协会</a></h1>
+            <h2 class="site-description">化学联合协会的博客</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tools/' >
+                
+                
+                
+                <span>化学工具</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>博客与文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories/' >
+                
+                
+                
+                <span>分类导航</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags/' >
+                
+                
+                
+                <span>标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>关于我们</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/contact/' >
+                
+                
+                
+                <span>联系方式</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%85%AC%E5%91%8A/" >
+                公告
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/announcement/tools-developing-guide/">化学工具开发指南</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            详细指导开发者如何在Hugo网站中添加新的化学工具
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 07, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>本指南将帮助你了解如何在本站的 Hugo 框架中开发和添加新的化学工具。即使你不熟悉 Hugo，按照以下步骤也能轻松添加自己的工具。</p>
+<h2 id="目录">目录
+</h2><ol>
+<li><a class="link" href="#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" >基础知识</a></li>
+<li><a class="link" href="#%e5%b7%a5%e5%85%b7%e5%bc%80%e5%8f%91%e6%b5%81%e7%a8%8b" >工具开发流程</a></li>
+<li><a class="link" href="#%e8%ae%be%e8%ae%a1%e5%b7%a5%e5%85%b7-html-%e9%a1%b5%e9%9d%a2%e5%ae%9e%e7%8e%b0" >设计工具 html 页面实现</a></li>
+<li><a class="link" href="#%e6%b7%bb%e5%8a%a0%e5%86%85%e5%ae%b9%e6%96%87%e4%bb%b6" >添加内容文件</a></li>
+<li><a class="link" href="#%e5%88%9b%e5%bb%ba%e5%b7%a5%e5%85%b7%e6%a8%a1%e6%9d%bf" >创建工具模板</a></li>
+<li><a class="link" href="#%e6%b5%8b%e8%af%95%e4%b8%8e%e9%83%a8%e7%bd%b2" >测试与部署</a></li>
+<li><a class="link" href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" >常见问题</a></li>
+<li><a class="link" href="#%e7%a4%ba%e4%be%8b%e5%ae%8c%e6%95%b4%e7%9a%84%e5%b7%a5%e5%85%b7%e5%bc%80%e5%8f%91%e8%bf%87%e7%a8%8b" >完整示例</a></li>
+<li><a class="link" href="#%e7%bb%93%e8%af%ad" >结语</a></li>
+</ol>
+<h2 id="基础知识">基础知识
+</h2><h3 id="关键概念">关键概念
+</h3><ul>
+<li><strong>内容文件</strong>：Markdown 文件，存放在<code>content</code>目录中</li>
+<li><strong>布局模板</strong>：HTML 模板文件，存放在<code>layouts</code>目录中</li>
+<li><strong>前置元数据</strong>：Markdown 文件顶部的 YAML/TOML/JSON 格式配置，例如本篇的就是：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;化学工具开发指南&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-03-07</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;详细指导开发者如何在Hugo网站中添加新的化学工具&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;auth:Xingyuan55&#34;</span>, <span style="color:#e6db74">&#34;公告&#34;</span>, <span style="color:#e6db74">&#34;教程&#34;</span>, <span style="color:#e6db74">&#34;指南&#34;</span>, <span style="color:#e6db74">&#34;开发者&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;公告&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div></li>
+<li><strong>静态资源</strong>：CSS、JavaScript 等文件，存放在<code>static</code>或<code>assets</code>目录中</li>
+</ul>
+<h3 id="工具开发流程">工具开发流程
+</h3><p>添加新工具的基本流程如下：</p>
+<ol>
+<li>设计工具 html 页面实现</li>
+<li>添加工具内容文件</li>
+<li>创建布局模板文件并将 html 转换为 Hugo 模板格式</li>
+<li>测试和部署</li>
+</ol>
+<h2 id="设计工具-html-页面实现">设计工具 html 页面实现
+</h2><p>按照你自己的想法，先写出来 html 页面，只需要写出<code>&lt;body&gt;</code>内的内容和<code>&lt;script&gt;</code>代码即可。</p>
+<h2 id="添加内容文件">添加内容文件
+</h2><p>在<code>content/tools/</code>目录下创建一个新的 Markdown 文件，例如<code>my_new_tool.md</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;我的新工具&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#e6db74">&#34;my_new_tool&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-03-07</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>这里的关键是：</p>
+<ul>
+<li><code>title</code>: 工具的显示名称</li>
+<li><code>layout</code>: 必须与你创建的布局模板文件名相同</li>
+<li><code>date</code>: 创建日期，格式必须如此 YYYY-MM-DD</li>
+</ul>
+<h2 id="创建工具模板">创建工具模板
+</h2><p>在<code>layouts/_default/</code>目录下创建一个新的 HTML 文件，命名为你的工具名称，例如<code>my_new_tool.html</code>。</p>
+<h3 id="从普通-html-到-hugo-模板">从普通 HTML 到 Hugo 模板
+</h3><p>如果你已经熟悉 HTML，将普通 HTML 转换为 Hugo 模板只需要几个简单步骤：</p>
+<ul>
+<li>
+<p><strong>添加模板文件头</strong>:</p>
+<ul>
+<li>
+<p>开头不使用<code>&lt;html&gt;</code>和<code>&lt;head&gt;</code>，而是使用如下格式（请阅读注释）:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 定义此HTML块为主内容块，Hugo将把它插入到主题的基础模板中 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ $style := resources.Get &#34;css/common_html.css&#34; | resources.Minify |
+</span></span><span style="display:flex;"><span>resources.Fingerprint }}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 获取CSS文件，保存到变量$style中 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 将处理后的CSS文件链接到页面，使用其永久链接 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article single&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- 主文章容器开始，&#39;single&#39;类表示这是单页内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 文章标题区域 --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- 显示页面标题，.Title值来自内容文件(同名.md)的front matter --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 文章主体内容区域开始，实际工具内容将放在这里。--&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 以下是正文，即&lt;body&gt;中的内容，记得使用变量，不要加&lt;h1&gt;标题 --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span></code></pre></div><p>注意：</p>
+<ul>
+<li>使用 Hugo 变量：用 <code>{{ .Title }}</code> 等变量替换页面标题等静态内容</li>
+<li>使用 Hugo 资源管理：使用 <code>resources.Get</code> 等函数引入 CSS/JS 文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>正文部分使用式类</strong>：</p>
+<p>正文部分就是原来<code>&lt;body&gt;</code>中的内容（但不含<code>&lt;script&gt;</code>的脚本）。每个内容块用 <code>&lt;div class=&quot;...&quot;&gt; &lt;/div&gt;</code>包裹，每个类所显示的样式不同。</p>
+<p>支持的类见<a class="link" href="#%e6%b7%bb%e5%8a%a0%e6%a0%b7%e5%bc%8f" >下文#添加样式</a></p>
+</li>
+<li>
+<p><strong>添加 Js 脚本</strong></p>
+<p>将脚本部分放在文章最后，即<code>&lt;/article&gt;</code>以后，并在文件最后添加 <code>{{ end }}</code></p>
+</li>
+</ul>
+<p>如果您还是不能理解，以下是一个普通 HTML 页面转换为 Hugo 模板的对比：</p>
+<p><strong>普通 HTML 页面</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;我的化学工具&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;styles.css&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;溶液浓度计算器&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- 工具内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;script.js&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// js脚本代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p><strong>转换为 Hugo 模板</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }} {{ $style := resources.Get &#34;css/common_html.css&#34; |
+</span></span><span style="display:flex;"><span>resources.Minify | resources.Fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article single&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- card类可以替换成别的类 --&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- 原有的工具内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 原有的js脚本代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>这是又一个完整的 Hugo 模板文件例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 这行可以理解为Hugo布局模板文件的文件头 --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ $style := resources.Get &#34;css/common_html.css&#34; | resources.Minify |
+</span></span><span style="display:flex;"><span>resources.Fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article single&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tool-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- 工具的输入表单 --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;toolForm&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input1&#34;</span>&gt;输入参数1:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input1&#34;</span> <span style="color:#a6e22e">required</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculateResult()&#34;</span>&gt;计算&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- JavaScript代码 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateResult</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 在这里实现工具的功能逻辑
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;input1&#34;</span>).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;result&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 示例计算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`计算结果: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">input</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><h3 id="添加样式">添加样式
+</h3><p>使用公共样式</p>
+<p>网站已有一个公共 CSS 文件用于所有工具，位于<code>assets/css/common_html.css</code>。模板文件顶部这些行就是引入它：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }} {{ $style := resources.Get &#34;css/common_html.css&#34; |
+</span></span><span style="display:flex;"><span>resources.Minify | resources.Fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 工具内容 --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p><strong>common_html.css 支持的样式类</strong></p>
+<p>我们的 <code>common_html.css</code> 文件提供了一组预定义的 CSS 类，你可以直接在工具中使用：</p>
+<p>以<code>.</code>开头的类用于<code>&lt;div class=...&gt;</code>中，使用时将<code>.</code>去掉，如<code>&lt;div class=&quot;card&quot;&gt;</code></p>
+<p>不以<code>.</code>开头的类是对应标签的样式，如<code>&lt;input type=&quot;text&quot; ...&gt;</code></p>
+<ol>
+<li>
+<p>布局类</p>
+<ul>
+<li><code>.card</code> - 创建一个最基础的带阴影和圆角的卡片容器</li>
+<li><code>.tips</code> - 提示信息容器（浅绿色背景），适合放置使用说明</li>
+<li><code>.examples</code> - 示例容器，使用网格布局，用于展示多个可点击的示例</li>
+<li><code>.example-item</code> - 单个示例项目，通常与 click 事件配合使用</li>
+</ul>
+</li>
+<li>
+<p>表单类</p>
+<ul>
+<li><code>.input-group</code> - 表单输入组，用于将相关的输入字段组合在一起</li>
+<li><code>form</code> - 表单元素默认样式（垂直布局），自动处理间距和排列</li>
+<li><code>label</code> - 标签样式，明确标识每个输入字段的用途</li>
+<li><code>input[type=&quot;text&quot;]</code>, <code>input[type=&quot;number&quot;]</code> - 输入框样式，有合适的内边距和边框</li>
+<li><code>button</code> - 按钮样式，有醒目的颜色和悬停效果</li>
+</ul>
+</li>
+<li>
+<p>结果显示类</p>
+<ul>
+<li><code>.result</code> - 计算结果的容器，用于显示简单的计算结果</li>
+<li><code>.output</code> - 输出内容的容器（类似结果，但用于更复杂的输出），适合多行输出</li>
+<li><code>.error</code> - 错误信息样式（红色文本），用于显示验证失败或计算错误</li>
+</ul>
+</li>
+<li>
+<p>Hugo 文章模板相关类</p>
+<ul>
+<li><code>.article-content</code> - 文章主体内容区域</li>
+<li><code>.article-header</code> - 文章标题区域</li>
+<li><code>.article-title</code> - 文章标题样式</li>
+</ul>
+</li>
+</ol>
+<p>所有元素都有响应式设计，适应不同屏幕大小，您可以自行在本地尝试各个样式类。</p>
+<p><strong>样式使用示例</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input-group&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input1&#34;</span>&gt;输入:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;input1&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;请输入...&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculate()&#34;</span>&gt;计算&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tips&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h3</span>&gt;使用提示&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;这里是一些使用说明...&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;examples&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example-item&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;setExample(&#39;示例1&#39;)&#34;</span>&gt;示例1&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example-item&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;setExample(&#39;示例2&#39;)&#34;</span>&gt;示例2&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><h3 id="添加-javascript-功能">添加 JavaScript 功能
+</h3><p>在模板底部添加<code>&lt;script&gt;</code>标签实现工具的功能：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 获取输入值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;inputId&#34;</span>).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 进行计算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">performCalculation</span>(<span style="color:#a6e22e">input</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 显示结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;result&#34;</span>).<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">performCalculation</span>(<span style="color:#a6e22e">input</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 实现你的计算逻辑
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`计算结果: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">input</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p><strong>验证与错误处理</strong></p>
+<p>务必添加输入验证和错误处理，可以参照如下示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validate</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> parseFloat(document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;input&#34;</span>).<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resultDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;result&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (isNaN(<span style="color:#a6e22e">input</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;请输入有效的正数！&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 在计算函数中使用验证
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculate</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">validate</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 只有验证通过才执行计算
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ...
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="hugo-模板高级语法">Hugo 模板高级语法
+</h3><p>如果你有更高级的编写需求，可以参照以下语法</p>
+<p>如果您只是将 html 转为 Hugo 模板，那么您需要了解的我已经写在上文 添加模板文件头 部分了</p>
+<ol>
+<li>
+<p><strong>变量</strong>：使用 <code>{{ }}</code> 包裹变量和函数</p>
+<ul>
+<li><code>{{ .Title }}</code> - 页面标题（来自 Markdown 前置元数据）</li>
+<li><code>{{ .Content }}</code> - Markdown 内容</li>
+<li><code>{{ .Permalink }}</code> - 页面的完整 URL</li>
+</ul>
+</li>
+<li>
+<p><strong>资源引用</strong>：使用资源管理器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $style := resources.Get &#34;css/common_html.css&#34; | resources.Minify |
+</span></span><span style="display:flex;"><span>resources.Fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span></code></pre></div></li>
+<li>
+<p><strong>条件语句</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Description }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;{{ .Description }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>{{ else }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;没有描述&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>循环</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ range .Site.RegularPages }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div></li>
+<li>
+<p><strong>注释</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{/* 这是Hugo模板中的注释 */}}
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="测试与部署">测试与部署
+</h2><h3 id="本地测试">本地测试
+</h3><ol>
+<li>在终端中运行<code>hugo server</code>启动本地服务器</li>
+<li>访问<code>http://localhost:1313/tools/my_new_tool/</code>测试你的工具</li>
+<li>检查各种输入条件下工具的表现</li>
+<li>测试移动设备上的显示效果</li>
+</ol>
+<h3 id="部署">部署
+</h3><p>当你确认工具正常工作后：</p>
+<ol>
+<li>提交你的变更到 Git 仓库</li>
+<li>Hugo 网站将自动构建和部署</li>
+</ol>
+<h2 id="常见问题">常见问题
+</h2><h3 id="工具不显示在列表中">工具不显示在列表中
+</h3><ol>
+<li>检查 Markdown 文件是否位于<code>content/tools/</code>目录下</li>
+<li>确保前置元数据格式正确</li>
+<li>检查<code>layout</code>值是否与模板文件名一致</li>
+</ol>
+<h3 id="样式问题">样式问题
+</h3><ol>
+<li>确保正确引入了<code>common_html.css</code></li>
+<li>使用浏览器开发者工具检查 CSS 问题</li>
+<li>遵循网站的设计风格</li>
+</ol>
+<h3 id="javascript-不工作">JavaScript 不工作
+</h3><ol>
+<li>检查浏览器控制台是否有错误</li>
+<li>确保 HTML 元素 ID 与 JavaScript 中引用的一致</li>
+<li>使用<code>console.log()</code>调试问题</li>
+</ol>
+<h2 id="示例完整的工具开发过程">示例：完整的工具开发过程
+</h2><p>以下是创建一个新工具&quot;分子量计算器&quot;的完整示例（可能不能工作，仅供示例）：</p>
+<h3 id="1-创建内容文件">1. 创建内容文件
+</h3><p>文件：<code>/content/tools/molecular_weight.md</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;分子量计算器&#34;
+</span></span><span style="display:flex;"><span>layout: &#34;molecular_weight&#34;
+</span></span><span style="display:flex;"><span>date: 2025-03-07
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="2-创建布局模板">2. 创建布局模板
+</h3><p>文件：<code>/layouts/_default/molecular_weight.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }} {{ $style := resources.Get &#34;css/common_html.css&#34; |
+</span></span><span style="display:flex;"><span>resources.Minify | resources.Fingerprint }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article single&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">header</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-details&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">header</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;article-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;card&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;molecular-calc&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;molecularForm&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;formula&#34;</span>&gt;化学式:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">input</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;formula&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;例如: H2O, C6H12O6&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">required</span>
+</span></span><span style="display:flex;"><span>          /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculateMolecularWeight()&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            计算分子量
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;result&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 元素质量表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">atomicWeights</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">H</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1.008</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">He</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4.003</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Li</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">6.941</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Be</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">9.012</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">B</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10.811</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">C</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12.011</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">N</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">14.007</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">O</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15.999</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">F</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18.998</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Ne</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20.18</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Na</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">22.99</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Mg</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">24.305</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Al</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">26.982</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Si</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28.086</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">P</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30.974</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">S</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">32.065</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Cl</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">35.453</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Ar</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39.948</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">K</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39.098</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Ca</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">40.078</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 可以继续添加其他元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateMolecularWeight</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">formula</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;formula&#34;</span>).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resultDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;result&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">formula</span>.<span style="color:#a6e22e">trim</span>()) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;请输入有效的化学式！&#34;</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">totalWeight</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">formula</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 提取元素符号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">symbol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formula</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">formula</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">formula</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[a-z]/</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">symbol</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">formula</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 提取数量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">formula</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">formula</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[0-9]/</span>)) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">count</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">formula</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">?</span> parseInt(<span style="color:#a6e22e">count</span>) <span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">atomicWeights</span>[<span style="color:#a6e22e">symbol</span>]) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`未知元素: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">symbol</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">totalWeight</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">atomicWeights</span>[<span style="color:#a6e22e">symbol</span>] <span style="color:#f92672">*</span> <span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`分子量: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">totalWeight</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">3</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74"> g/mol`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`错误: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resultDiv</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>这个完整示例展示了从设计、实现到部署的整个过程。</p>
+<h2 id="结语">结语
+</h2><p>按照本指南的步骤，你可以轻松地在网站中添加新的化学工具。记住，好的工具应该是：</p>
+<ul>
+<li><strong>简单直观</strong>：用户界面清晰</li>
+<li><strong>功能明确</strong>：解决特定问题</li>
+<li><strong>响应迅速</strong>：计算快速高效</li>
+<li><strong>错误友好</strong>：提供清晰的错误提示</li>
+</ul>
+<p>如果你有任何问题或需要帮助，请联系网站管理员。</p>
+<p>祝你开发顺利！</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/authxingyuan55/">Auth:Xingyuan55</a>
+        
+            <a href="/tags/%E5%85%AC%E5%91%8A/">公告</a>
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+            <a href="/tags/%E6%8C%87%E5%8D%97/">指南</a>
+        
+            <a href="/tags/%E5%BC%80%E5%8F%91%E8%80%85/">开发者</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/announcement/getting-started/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">如何参与化联网站：从投稿到编辑</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/theory/equations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">方程式大全</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/announcement/2025-02-24-6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">支持使用Github Issue投稿了！</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 ChemUnionAsso-CN
+    </section>
+    
+    <section class="powerby">
+        
+            ChemUnionAsso-CN 化学联合协会 <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.fe7e5c048b014d65a72fd0be26b28d9bf594ae005ed8e8d0d816a68e3b51204b.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
