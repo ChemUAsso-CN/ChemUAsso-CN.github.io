@@ -48,3 +48,6 @@ draft = false
 
 - bendy and the ink machine
     - 网站创始人；网页开发
+
+- 门捷列夫
+    - 提出大量有建设性的网站改进意见
