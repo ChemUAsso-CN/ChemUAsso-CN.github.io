@@ -1679,14 +1679,17 @@ $$&lt;/li&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/about/</guid>
-        <description>&lt;h1 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
-&lt;/h1&gt;&lt;h2 id=&#34;化联简介&#34;&gt;化联简介
+        <description>&lt;h2 id=&#34;化学联合协会---关于我们&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;关于我们&lt;/a&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;化联简介&#34;&gt;化联简介
 &lt;/h2&gt;&lt;p&gt;化学联合协会由 化竞六价铁 创立，是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团。在这里可以探讨解决化学及其他问题，分享实验视频、发现和交换化学药品，至今已有近千成员和十余群聊。&lt;/p&gt;
-&lt;p&gt;化学是大家的，因此化学联合协会与化学圈都绝对不可能，存在一个独立的领导者&lt;/p&gt;
 &lt;p&gt;化联官网是由化学联合协会的成员们共同维护的，我们欢迎所有热爱化学、热爱科学、热爱生活、热爱分享的人们加入我们。&lt;/p&gt;
-&lt;p&gt;另：网站页面效果其实不是开发者独自写的，Xingyuan55现在只会添加文章、更新网页，别的一窍不通。&lt;/p&gt;
-&lt;h3 id=&#34;致谢名单&#34;&gt;致谢名单
-&lt;/h3&gt;&lt;p&gt;排名不分先后。&lt;/p&gt;
+&lt;p&gt;我们始终坚信：化学是大家的，化学圈应当是大家的化学圈，因此化学联合协会与化学圈，都绝对不可能存在一个人作为实际的主导者，权力属于大家。化学是自由的，但同时应当循规蹈矩，微信化学圈应当在一定规矩范围内运行。&lt;/p&gt;
+&lt;p&gt;我们强烈反对并谴责包括但不限于“加钠”的中二行为，这是对化学实验的极大不尊重。在化学实验的领域中，安全永远是第一准则，化学实验不是娱乐表演，更不是获取流量的工具。&lt;/p&gt;
+&lt;p&gt;想要加入化学联合协会微信群的，可以参阅&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/contact&#34; &gt;联系方式&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;化联群聊列表&#34;&gt;化联群聊列表
+&lt;/h2&gt;&lt;p&gt;请参阅：&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/discussion/2025-02-24-39.md&#34; &gt;化学联合会微信群聊介绍&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;致谢名单&#34;&gt;致谢名单
+&lt;/h2&gt;&lt;p&gt;排名不分先后。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Cursor Editor: Claude-3.5 Sonnet Model&lt;/p&gt;
@@ -1753,14 +1756,30 @@ $$&lt;/li&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/contact/</guid>
-        <description>&lt;h1 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
-&lt;/h1&gt;&lt;p&gt;不告诉你~&lt;/p&gt;
-&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;发送邮件至：&lt;/p&gt;
+        <description>&lt;h2 id=&#34;化学联合协会---联系方式&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34; &gt;化学联合协会&lt;/a&gt; - &lt;a class=&#34;link&#34; href=&#34;#&#34; &gt;联系方式&lt;/a&gt;
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;若您只是热爱化学，想要加入化联群聊的，请添加：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:dus0963@outlook.com&#34; &gt;mail:dus0963@outlook.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:ChemUnionAsso@outlook.com&#34; &gt;mail:ChemUnionAsso@outlook.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Xingyuan55微信：&lt;code&gt;xingyuan55awa&lt;/code&gt;，请说明来意。&lt;/li&gt;
+&lt;li&gt;化联公众号，微信公众号&lt;code&gt;小氯谈世界2之潜隐批判者&lt;/code&gt;，从中可以找到化联群聊入口（点击&lt;code&gt;化学圈-&amp;gt;找小风入圈&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若您想参与网站建设，请添加：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;网站开发者，Xingyuan55微信：&lt;code&gt;xingyuan55awa&lt;/code&gt;，请说明来意。&lt;/p&gt;
+&lt;p&gt;或发送邮件至以下邮箱：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:dus0963@outlook.com&#34; &gt;mail:dus0963@outlook.com&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:ChemUnionAsso@outlook.com&#34; &gt;mail:ChemUnionAsso@outlook.com&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

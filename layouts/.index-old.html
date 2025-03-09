@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/styles/index.css">
+
+    <style>
+        /* 模态窗口样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover {
+            color: #000;
+            cursor: pointer;
+        }
+
+        /* 标签页样式 */
+        .tab-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            display: flex;
+            flex-wrap: wrap; /* 允许换行 */
+            justify-content: space-between;
+        }
+
+        .tab-links li {
+            margin: 0 10px 10px 0; /* 调整按钮之间的间距 */
+            flex: 1; /* 每个按钮占据可用空间 */
+            min-width: 150px; /* 设置按钮的最小宽度 */
+        }
+
+        .tab-links a {
+            text-decoration: none;
+            color: #666;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px 5px 0 0;
+            display: block; /* 使按钮独占一行 */
+            text-align: center; /* 使按钮内的文字居中 */
+        }
+
+        .tab-links a.active {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* 浓度计算工具样式 */
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            font-size: 1em;
+        }
+
+        /* 其他样式 */
+        .instructions {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .instructions code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/">首页</a>
+            <a href="/about">关于我们</a>
+            <a href="/posts">博客与文章</a>
+            <a href="/contact">联系方式</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>{{ .Site.Title }}</h1>
+        <h2>ChemUnionAsso-CN - 连接化学，共创未来</h2>
+        
+
+        <div class="cta-section">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAATF_HxZUMTA0NlZJMkgxSVA1SkxBQU0yWVg2V0RWUy4u" class="cta-button">表单投稿</a>
+            <a href="https://github.com/ChemUAsso-CN/ChemUAsso-CN.github.io/issues/new?labels=article&template=article.md" class="cta-button github">通过 GitHub 投稿</a>
+            <button id="chemistryToolsButton" class="cta-button">化学工具箱</button>
+            <p class="cta-description">
+                您可以选择通过表单投稿或直接在 GitHub 上创建文章
+                <br>两种方式的内容都会由管理员处理并发布
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <section id="about" class="section animated">
+            <a href="/about"><h2>关于化联</h2></a>
+            <p>化学联合协会是一个全国范围的初高中乃至大学热爱化学的学生组成的学习性社团，成立至今10余年。在这里，我们：</p>
+            <ul>
+                <li>探讨和解决化学问题</li>
+                <li>分享实验经验</li>
+                <li>交流化学知识</li>
+                <li>共同学习进步</li>
+            </ul>
+        </section>
+
+        <section id="latest-posts" class="section animated">
+            <a href="/posts"><h2>最新文章</h2></a>
+            <div class="posts-grid">
+                {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+                <div class="post-card">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+    </div>
+
+    <section id="footer" class="section animated">
+        <p>© {{ now.Format "2006" }} {{ .Site.Title }} - ChemUnionAsso-CN</p>
+    </section>
+
+    <!-- 化学工具箱的模态窗口 -->
+    <div id="chemistryToolsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <ul class="tab-links">
+                <li><a href="#latex-converter" class="active">化学式转LaTeX</a></li>
+                <li><a href="#concentration-calc">浓度计算工具</a></li>
+                <li><a href="#volume-calc">体积分数计算工具</a></li>
+            </ul>
+
+            <div id="latex-converter" class="tab-content active">
+                <h2 style="color: #333;">化学式转LaTeX公式</h2>
+                <p style="color: #333;">在下面的输入框中输入化学式（用 <code>_a</code> 表示原子个数），然后点击“转换”按钮。</p>
+                <input type="text" id="equationInput" placeholder="例如: H_2O 或 2H_2 + O_2 -> 2H_2O">
+                <button onclick="convertToLaTeX()">转换</button>
+                <div class="output" id="output" style="color: #333;"></div>
+
+                <div class="instructions">
+                    <h2 style="color: #333;">使用说明</h2>
+                    <p style="color: #333;">1. 输入化学式时，使用 <code>_a</code> 表示原子个数。例如：</p>
+                    <ul style="color: #333;">
+                        <li>水：<code>H_2O</code></li>
+                        <li>二氧化碳：<code>CO_2</code></li>
+                        <li>葡萄糖：<code>C_6H_12O_6</code></li>
+                    </ul>
+                    <p style="color: #333;">2. 反应箭头用 <code>-></code> 表示。例如：</p>
+                    <ul style="color: #333;">
+                        <li><code>2H_2 + O_2 -> 2H_2O</code></li>
+                    </ul>
+                    <p style="color: #333;">3. 气体符号用 <code>^</code> 表示，沉淀符号用 <code>v</code> 表示。例如：</p>
+                    <ul style="color: #333;">
+                        <li>氧气气体：<code>O_2^</code></li>
+                        <li>沉淀：<code>AgClv</code></li>
+                    </ul>
+                    <p style="color: #333;">4. 离子用 <code>(+n)</code> 或 <code>(-n)</code> 表示电荷。例如：</p>
+                    <ul style="color: #333;">
+                        <li>钠离子：<code>Na^+</code></li>
+                        <li>氯离子：<code>Cl^-</code></li>
+                    </ul>
+                    <p style="color: #333;">5. 反应条件（如催化剂）用 <code>[ ]</code> 表示。例如：</p>
+                    <ul style="color: #333;">
+                        <li>过氧化氢分解：<code>2H_2O_2 -> 2H_2O + O_2^ \ [MnO_2]</code></li>
+                    </ul>
+                    <p style="color: #333;">6. 点击“转换”按钮后，LaTeX 公式会显示在下方。</p>
+                    <p style="color: #333;">7. 复制生成的 LaTeX 公式，粘贴到 LaTeX 编辑器（如 Overleaf）中使用。</p>
+                </div>
+
+                <div class="footer">
+                    <p style="color: #333;">作者：化联网建部(闫梓航) | 微信：locate-Minecraftjava</p>
+                </div>
+            </div>
+
+            <div id="concentration-calc" class="tab-content">
+                <h1 style="color: #000;">溶液浓度计算工具</h1>
+                <form id="concentrationForm">
+                    <label for="mass">溶质质量 (g):</label>
+                    <input type="number" id="mass" placeholder="输入溶质质量" required>
+    
+                    <label for="molarMass">溶质摩尔质量 (g/mol):</label>
+                    <input type="number" id="molarMass" placeholder="输入溶质摩尔质量" required>
+    
+                    <label for="volumeA">溶液体积 (L):</label>
+                    <input type="number" id="volumeA" placeholder="输入溶液体积" required>
+    
+                    <button type="button" onclick="calculateConcentration()">计算浓度</button>
+                </form>
+                <div class="result" id="result"></div>
+            </div>
+
+            <div id="volume-calc" class="tab-content">
+                <h1 style="color: #000;">体积分数计算工具</h1>
+                <form id="volumeFractionForm">
+                    <label for="volumeB">溶质体积 (L):</label>
+                    <input type="number" id="volumeB" placeholder="输入溶质体积" required>
+
+                    <label for="totalVolumeB">总体积 (L):</label>
+                    <input type="number" id="totalVolumeB" placeholder="输入总体积" required>
+
+                    <button type="button" onclick="calculateVolumeFraction()">计算体积分数</button>
+                </form>
+                <div class="result" id="volumeFractionResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 打开模态窗口
+        document.getElementById('chemistryToolsButton').addEventListener('click', function() {
+            document.getElementById('chemistryToolsModal').style.display = 'block';
+        });
+
+        // 关闭模态窗口
+        function closeModal() {
+            document.getElementById('chemistryToolsModal').style.display = 'none';
+        }
+
+        // 标签页切换逻辑
+        const tabLinks = document.querySelectorAll('.tab-links a');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                tabLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.querySelector(this.getAttribute('href')).classList.add('active');
+            });
+        });
+
+        // 浓度计算功能
+        function calculateConcentration() {
+            const mass = parseFloat(document.getElementById('mass').value); // 溶质质量 (g)
+            const molarMass = parseFloat(document.getElementById('molarMass').value); // 溶质摩尔质量 (g/mol)
+            const volumeA = parseFloat(document.getElementById('volumeA').value); // 溶液体积 (L)
+
+            const resultDiv = document.getElementById('result');
+
+            // 验证输入
+            if (isNaN(mass) || isNaN(molarMass) || isNaN(volumeA) || mass <= 0 || molarMass <= 0 || volumeA <= 0) {
+                resultDiv.textContent = "请输入有效的数值！";
+                resultDiv.classList.add('error');
+                return;
+            }
+
+            // 计算摩尔浓度
+            const moles = mass / molarMass; // 摩尔数
+            const concentration = moles / volumeA; // 摩尔浓度 (mol/L)
+
+            resultDiv.textContent = `溶液浓度为: ${concentration.toFixed(4)} mol/L`;
+            resultDiv.classList.remove('error');
+        }
+
+        // 体积分数计算功能
+        function calculateVolumeFraction() {
+            const volumeB = parseFloat(document.getElementById('volumeB').value); // 溶质体积 (L)
+            const totalVolumeB = parseFloat(document.getElementById('totalVolumeB').value); // 总体积 (L)
+
+            const resultDiv = document.getElementById('volumeFractionResult');
+
+            // 验证输入
+            if (isNaN(volumeB) || isNaN(totalVolumeB) || volumeB <= 0 || totalVolumeB <= 0 || volumeB > totalVolumeB) {
+                resultDiv.textContent = "请输入有效的数值，并确保溶质体积不超过总体积！";
+                resultDiv.classList.add('error');
+                return;
+            }
+
+            // 计算体积分数
+            const volumeFraction = (volumeB / totalVolumeB) * 100; // 体积分数 (%)
+
+            resultDiv.textContent = `体积分数为: ${volumeFraction.toFixed(2)}%`;
+            resultDiv.classList.remove('error');
+        }
+
+        // 化学式转LaTeX的逻辑
+        function convertToLaTeX() {
+            const input = document.getElementById('equationInput').value;
+            const latexEquation = input
+                .replace(/_(\d+)/g, '_{$1}')
+                .replace(/->/g, '\\rightarrow')
+                .replace(/\^(\+|\-)?(\d+)?/g, (match, p1, p2) => {
+                    return p2 ? `^{${p1 || '+'}${p2}}` : `^${p1}`;
+                })
+                .replace(/v/g, '\\downarrow')
+                .replace(/\[(.*?)\]/g, '$1')
+                .replace(/\((\+|\-)?(\d+)\)/g, (match, p1, p2) => {
+                    return p2 ? `\\left(${p1 || '+'}${p2}\\right)` : `\\left(${p1}\\right)`;
+                });
+
+            document.getElementById('output').textContent = latexEquation;
+        }
+
+    </script>
+</body>
+</html>
