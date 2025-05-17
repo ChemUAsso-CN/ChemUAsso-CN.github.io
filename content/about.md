@@ -43,7 +43,7 @@ draft = false
 - 一坨过氧化氢
     - 网站创始人；稿件撰写
 
-- ascolta化
+- ascolta
     - 网站创始人；稿件征集
 
 - bendy and the ink machine
